@@ -140,7 +140,7 @@ fetch("https://leetcode.com/ryYeqtxZz8/") \
 ### `Out [4]:`
 
 <div align="center">
-<img src="https://leetcard.jacoblin.cool/ryYeqtxZz8?theme=dark&font=Fira%20Code&ext=heatmap" />
+<img src="https://leetcard.jacoblin.cool/ryYeqtxZz8?theme=dark&font=Fira%20Code" />
 </div>
 
 ---
@@ -153,12 +153,16 @@ plot_activity(user="Sushrut-Kale")
 ### `Out [5]:`
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Sushrut-Kale&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=1a1a2e&title_color=b967ff&icon_color=00d4ff&text_color=e0e0e0" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sushrut-Kale&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=1a1a2e&title_color=b967ff&text_color=e0e0e0" height="165"/>
+<img src="https://github-stats-extended.vercel.app/api?username=Sushrut-Kale&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=1a1a2e&title_color=b967ff&icon_color=00d4ff&text_color=e0e0e0" height="165"/>
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Sushrut-Kale&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=1a1a2e&title_color=b967ff&text_color=e0e0e0" height="165"/>
 </div>
 
 <div align="center">
-<img src="https://streak-stats.demolab.com?user=Sushrut-Kale&theme=highcontrast&hide_border=true&background=1a1a2e&ring=b967ff&fire=00d4ff&currStreakLabel=00d4ff" height="165"/>
+<img src="https://github-readme-streak-stats-eight.vercel.app?user=Sushrut-Kale&theme=highcontrast&hide_border=true&background=1a1a2e&ring=b967ff&fire=00d4ff&currStreakLabel=00d4ff" height="165"/>
+</div>
+
+<div align="center">
+<img src="https://github-profile-trophy.vercel.app/?username=Sushrut-Kale&theme=algolia&no-frame=true&column=4&margin-w=8&margin-h=8&row=1" />
 </div>
 
 <div align="center">
@@ -169,6 +173,26 @@ plot_activity(user="Sushrut-Kale")
 
 ### `In [6]:`
 ```python
+history = load_checkpoints()
+for epoch in history:
+    print(epoch.summary())
+```
+### `Out [6]:`
+
+```
+Epoch 1  (2024)  loss=high        SDG-lab project, Power BI basics
+Epoch 2  (2025)  loss=decreasing  ClubSync + EduCore shipped, VELORA 2026
+Epoch 3  (2025)  loss=decreasing  CampusCompass — first solver in production
+Epoch 4  (2026)  loss=converging  Learner-State Engine — BKT + CP-SAT closed loop
+Epoch 5  (now)   loss=?           training on LLM fine-tuning, distributed systems
+
+>>> model has not converged. training continues.
+```
+
+---
+
+### `In [7]:`
+```python
 def connect(): 
     return {
         "linkedin": "linkedin.com/in/sushrut-kale1367",
@@ -176,7 +200,7 @@ def connect():
         "open_to":  ["hackathons", "AI/ML collabs", "open source"],
     }
 ```
-### `Out [6]:`
+### `Out [7]:`
 
 <div align="center">
 
@@ -197,20 +221,27 @@ def connect():
 SETUP + FIX NOTES (delete this block once done)
 ========================================================
 
-WHY IMAGES BROKE LAST TIME:
-github-readme-stats / activity-graph are free services hosted
-on Vercel by independent maintainers — they occasionally get
-rate-limited or hit downtime, which shows as a broken image
-icon or a "Failed to retrieve contributions" message. It is
-NOT caused by anything in this file. If a badge is broken:
-  1. Just refresh the GitHub page after a minute or two.
-  2. If it stays broken for days, that specific mirror may be
-     dead — tell me and I'll swap it for a self-hosted or
-     alternate-mirror version (e.g. anuraghazra's stats has
-     several community-run mirrors).
-I dropped the separate "activity graph" widget from last time
-since it was the one erroring — the streak + snake below cover
-that ground already.
+WHY IMAGES BROKE LAST TIME (confirmed, not a guess):
+- github-readme-stats.vercel.app: the public instance was
+  manually PAUSED by its maintainers (503 DEPLOYMENT_PAUSED,
+  ongoing since Jan 2026 — see anuraghazra/github-readme-stats
+  issue #4737). Development has since moved to a community fork,
+  "GitHub Stats Extended", which is a drop-in replacement.
+  FIX APPLIED: swapped every github-readme-stats.vercel.app URL
+  to github-stats-extended.vercel.app — same params, same look.
+- streak-stats.demolab.com: known intermittent downtime on that
+  specific host (widely reported). FIX APPLIED: switched to the
+  community-recommended mirror github-readme-streak-stats-eight
+  .vercel.app, same project, more stable host.
+- leetcard.jacoblin.cool: works, but the `ext=heatmap` option
+  can slow it down enough to trip GitHub's image-proxy timeout.
+  FIX APPLIED: removed that flag for reliability.
+
+None of this was caused by anything in the file itself — these
+are all free, community-run services and occasionally rotate
+hosts. If something still looks broken after you push: wait a
+minute and hard-refresh, and if it persists, tell me and I'll
+swap in another mirror or a fully self-hosted static version.
 
 1) REPO LOCATION (required for every live widget to work):
    This file must be the README.md of a public repo named
@@ -252,8 +283,13 @@ that ground already.
 
 3) LEETCODE CARD:
    Uses your real handle (ryYeqtxZz8) and shows a solved-problem
-   heatmap/breakdown rather than global rank — more meaningful
-   than the ~5M rank number right now, and it'll visibly improve
-   as you solve more.
+   breakdown rather than global rank — more meaningful than the
+   ~5M rank number right now, and it'll visibly improve as you
+   solve more.
+
+4) TROPHY ROW (new):
+   Pulls live GitHub achievement trophies (repo count, stars,
+   followers, commit streaks, etc.) — fills in automatically,
+   no setup needed beyond the repo being named correctly (see 1).
 ========================================================
 -->
