@@ -47,7 +47,7 @@
 
 `XP TO NEXT LEVEL` &nbsp;<img src="https://progress-bar.xyz/89/?title=&width=260&color=00ffe1&suffix=%25"/>
 
-This build specializes in systems that model uncertainty instead of running on hard-coded rules trained on Bayesian inference and constraint solving, and recently respec'd into real-time 3D worlds and pathfinding.
+This build specializes in systems that model uncertainty instead of running on hard-coded rules — trained on Bayesian inference and constraint solving, and recently respec'd into real-time 3D worlds and pathfinding.
 
 ```yaml
 active_quest:   "EduCore — role-based classroom collaboration platform"
@@ -91,7 +91,7 @@ guild_status:   "open to hackathons, AI/ML collabs, open source"
 <table>
 <tr><td width="50%" valign="top">
 
-**Unlocked Core & Optimization**
+**Unlocked — Core & Optimization**
 ```
 python        3.10+  ML tooling, general use
 javascript/ts ES2022 frontend logic
@@ -102,7 +102,7 @@ sql           —      relational queries
 
 </td><td width="50%" valign="top">
 
-**Unlocked Engine & Backend**
+**Unlocked — Engine & Backend**
 ```
 three.js/r3f  —      real-time 3D rendering
 zustand       —      hook-based state mgmt
@@ -132,10 +132,10 @@ mongodb/fb    —      document store, auth
 | **TradeVision 2030** | Side Quest | ★★☆☆☆ | Power BI · DAX · Snowflake Schema | `CLEARED` |
 
 <details>
-<summary><b>▸ Quest Log Entry Learner-State Engine</b></summary>
+<summary><b>▸ Quest Log Entry — Learner-State Engine</b></summary>
 <br>
 
-A closed-loop personal learning agent. Keeps a **live, per-topic Bayesian mastery model (BKT)** for each learner and continuously **re-plans their study path via CP-SAT** the moment that model changes every decision driven by verified mastery, never a proxy like "video watched." A transparent, rule-based risk engine (never an LLM call) can shrink tasks or trigger nudges when pace drops; every automated decision is logged to an append-only trace.
+A closed-loop personal learning agent. Keeps a **live, per-topic Bayesian mastery model (BKT)** for each learner and continuously **re-plans their study path via CP-SAT** the moment that model changes — every decision driven by verified mastery, never a proxy like "video watched." A transparent, rule-based risk engine (never an LLM call) can shrink tasks or trigger nudges when pace drops; every automated decision is logged to an append-only trace.
 
 `Python` `FastAPI` `React` `MongoDB` `Gemini API` `Ollama (offline fallback)`
 
@@ -145,17 +145,17 @@ A closed-loop personal learning agent. Keeps a **live, per-topic Bayesian master
 <summary><b>▸ Quest Log Entry — CampusCompass</b></summary>
 <br>
 
-Automated timetable generator for MIT Academy of Engineering. A coordinator uploads a Faculty/Rooms/Time Excel workbook; a **CP-SAT constraint solver** (Google OR-Tools) generates a conflict-free weekly schedule, browsable by faculty, room, and division. Deliberately zero-database on the solver side persistence lives entirely in the Next.js layer.
+Automated timetable generator for MIT Academy of Engineering. A coordinator uploads a Faculty/Rooms/Time Excel workbook; a **CP-SAT constraint solver** (Google OR-Tools) generates a conflict-free weekly schedule, browsable by faculty, room, and division. Deliberately zero-database on the solver side — persistence lives entirely in the Next.js layer.
 
 `Next.js 16` `FastAPI` `OR-Tools`
 
 </details>
 
 <details>
-<summary><b>▸ Quest Log Entry ClubSync</b></summary>
+<summary><b>▸ Quest Log Entry — ClubSync</b></summary>
 <br>
 
-AI-powered college club management platform role-based access (Admin / Club Head / Student), QR-code attendance, real-time notifications, and **Gemini-powered club recommendations**.
+AI-powered college club management platform — role-based access (Admin / Club Head / Student), QR-code attendance, real-time notifications, and **Gemini-powered club recommendations**.
 
 [![Live](https://img.shields.io/badge/Live-Demo-6366f1?style=flat-square&logo=vercel)](https://clubsync-4qua.vercel.app/)
 
@@ -263,19 +263,6 @@ deploy:     Vercel (SPA rewrite config included)
 <img src="https://github-profile-trophy.vercel.app/?username=Sushrut-Kale&theme=algolia&no-frame=true&column=4&margin-w=8&margin-h=8&row=1"/>
 </div>
 
-**World Map — 3D Contribution Terrain**
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/main/profile-3d-contrib/profile-night-rainbow.svg" width="90%"/>
-<br/><sub>⚙️ Needs a one-time GitHub Action — see setup notes at the bottom.</sub>
-</div>
-
-**Combo Streak — Contribution Snake**
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/github-contribution-grid-snake.svg" width="90%"/>
-</div>
-
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
 ---
@@ -347,70 +334,16 @@ SETUP NOTES — read before pushing (delete once done)
      URL_HERE" (3 spots: top badges, continue() JSON, continue
      badges).
 
-3) CONTRIBUTION SNAKE (one-time, ~2 min):
-   .github/workflows/snake.yml :
+3) OPTIONAL EXTRAS (removed for now, easy to re-add):
+   The 3D contribution terrain and animated snake were dropped
+   from the Leaderboard section — both need a self-hosted GitHub
+   Action to generate an SVG into your own repo (not a live API
+   like the cards above them), which is more setup than you
+   wanted right now. If you ever want either back, just ask and
+   I'll re-add the section + give you the exact workflow file to
+   paste in — each is a ~2 minute copy/paste + one manual run.
 
-   name: generate animated snake
-   on:
-     schedule:
-       - cron: "0 */6 * * *"
-     workflow_dispatch: {}
-     push:
-       branches:
-         - main
-   jobs:
-     generate:
-       runs-on: ubuntu-latest
-       steps:
-         - uses: actions/checkout@v4
-         - uses: Platane/snk@v3
-           id: snake
-           with:
-             github_user_name: Sushrut-Kale
-             outputs: |
-               dist/github-contribution-grid-snake.svg
-               dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-         - uses: crazy-max/ghaction-github-pages@v4
-           with:
-             target_branch: output
-             build_dir: dist
-           env:
-             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-   Settings > Actions > General > enable "Read and write
-   permissions", then run the workflow once manually.
-
-4) 3D CONTRIBUTION TERRAIN (one-time, ~2 min):
-   .github/workflows/3d-contrib.yml :
-
-   name: GitHub-Profile-3D-Contrib
-   on:
-     schedule:
-       - cron: "0 18 * * *"
-     workflow_dispatch: {}
-   permissions:
-     contents: write
-   jobs:
-     build:
-       runs-on: ubuntu-latest
-       steps:
-         - uses: actions/checkout@v4
-         - uses: yoshi389111/github-profile-3d-contrib@latest
-           env:
-             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-             USERNAME: ${{ github.repository_owner }}
-         - name: Commit & Push
-           run: |
-             git config user.name github-actions
-             git config user.email github-actions@github.com
-             git add -A .
-             if git commit -m "generated"; then git push; fi
-
-   Run it once manually from the Actions tab. Swap the filename
-   referenced above (profile-night-rainbow.svg) for any other
-   variant it generates if you prefer a different palette.
-
-5) WHY EARLIER SERVICE URLS WERE SWAPPED:
+4) WHY EARLIER SERVICE URLS WERE SWAPPED:
    github-readme-stats.vercel.app was manually paused by its
    maintainers (503, ongoing) — using the maintained fork
    github-stats-extended.vercel.app throughout instead.
@@ -418,7 +351,7 @@ SETUP NOTES — read before pushing (delete once done)
    using the stable mirror github-readme-streak-stats-eight
    .vercel.app instead.
 
-6) FONT NOTE:
+5) FONT NOTE:
    The header typing animation uses "Press Start 2P" (retro
    arcade font) — it's a Google Font pulled automatically by
    the typing-svg service, no install needed on your end.
