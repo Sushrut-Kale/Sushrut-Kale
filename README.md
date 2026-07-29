@@ -47,7 +47,7 @@
 
 `XP TO NEXT LEVEL` &nbsp;<img src="https://progress-bar.xyz/89/?title=&width=260&color=00ffe1&suffix=%25"/>
 
-This build specializes in systems that model uncertainty instead of running on hard-coded rules — trained on Bayesian inference and constraint solving, and recently respec'd into real-time 3D worlds and pathfinding.
+This build specializes in systems that model uncertainty instead of running on hard-coded rules trained on Bayesian inference and constraint solving, and recently respec'd into real-time 3D worlds and pathfinding.
 
 ```yaml
 active_quest:   "EduCore — role-based classroom collaboration platform"
@@ -91,7 +91,7 @@ guild_status:   "open to hackathons, AI/ML collabs, open source"
 <table>
 <tr><td width="50%" valign="top">
 
-**Unlocked — Core & Optimization**
+**Unlocked Core & Optimization**
 ```
 python        3.10+  ML tooling, general use
 javascript/ts ES2022 frontend logic
@@ -102,7 +102,7 @@ sql           —      relational queries
 
 </td><td width="50%" valign="top">
 
-**Unlocked — Engine & Backend**
+**Unlocked Engine & Backend**
 ```
 three.js/r3f  —      real-time 3D rendering
 zustand       —      hook-based state mgmt
@@ -132,10 +132,10 @@ mongodb/fb    —      document store, auth
 | **TradeVision 2030** | Side Quest | ★★☆☆☆ | Power BI · DAX · Snowflake Schema | `CLEARED` |
 
 <details>
-<summary><b>▸ Quest Log Entry — Learner-State Engine</b></summary>
+<summary><b>▸ Quest Log Entry Learner-State Engine</b></summary>
 <br>
 
-A closed-loop personal learning agent. Keeps a **live, per-topic Bayesian mastery model (BKT)** for each learner and continuously **re-plans their study path via CP-SAT** the moment that model changes — every decision driven by verified mastery, never a proxy like "video watched." A transparent, rule-based risk engine (never an LLM call) can shrink tasks or trigger nudges when pace drops; every automated decision is logged to an append-only trace.
+A closed-loop personal learning agent. Keeps a **live, per-topic Bayesian mastery model (BKT)** for each learner and continuously **re-plans their study path via CP-SAT** the moment that model changes every decision driven by verified mastery, never a proxy like "video watched." A transparent, rule-based risk engine (never an LLM call) can shrink tasks or trigger nudges when pace drops; every automated decision is logged to an append-only trace.
 
 `Python` `FastAPI` `React` `MongoDB` `Gemini API` `Ollama (offline fallback)`
 
@@ -145,17 +145,17 @@ A closed-loop personal learning agent. Keeps a **live, per-topic Bayesian master
 <summary><b>▸ Quest Log Entry — CampusCompass</b></summary>
 <br>
 
-Automated timetable generator for MIT Academy of Engineering. A coordinator uploads a Faculty/Rooms/Time Excel workbook; a **CP-SAT constraint solver** (Google OR-Tools) generates a conflict-free weekly schedule, browsable by faculty, room, and division. Deliberately zero-database on the solver side — persistence lives entirely in the Next.js layer.
+Automated timetable generator for MIT Academy of Engineering. A coordinator uploads a Faculty/Rooms/Time Excel workbook; a **CP-SAT constraint solver** (Google OR-Tools) generates a conflict-free weekly schedule, browsable by faculty, room, and division. Deliberately zero-database on the solver side persistence lives entirely in the Next.js layer.
 
 `Next.js 16` `FastAPI` `OR-Tools`
 
 </details>
 
 <details>
-<summary><b>▸ Quest Log Entry — ClubSync</b></summary>
+<summary><b>▸ Quest Log Entry ClubSync</b></summary>
 <br>
 
-AI-powered college club management platform — role-based access (Admin / Club Head / Student), QR-code attendance, real-time notifications, and **Gemini-powered club recommendations**.
+AI-powered college club management platform role-based access (Admin / Club Head / Student), QR-code attendance, real-time notifications, and **Gemini-powered club recommendations**.
 
 [![Live](https://img.shields.io/badge/Live-Demo-6366f1?style=flat-square&logo=vercel)](https://clubsync-4qua.vercel.app/)
 
