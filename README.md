@@ -1,58 +1,62 @@
 <a name="top"></a>
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:1a0033,50:2d0b5a,100:0d1b2a&height=210&section=header&text=PLAYER_ONE:%20SUSHRUT_KALE&fontSize=32&fontColor=00ffe1&animation=fadeIn&fontAlignY=42&desc=CLASS:%20AI%2FML%20Engineer%20%C3%97%20Full-Stack%20%C3%97%203D%20Dev&descAlignY=62&descSize=15&descColor=b967ff" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF0080,25:7928CA,50:0070F3,75:00DFD8,100:FF0080&height=280&section=header&text=SUSHRUT%20KALE&fontSize=70&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=AI%2FML%20Engineer%20%E2%9A%94%EF%B8%8F%20Full-Stack%20Wizard%20%E2%9A%94%EF%B8%8F%203D%20Worldbuilder&descAlignY=55&descSize=22&descColor=00FFE1"/>
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=13&duration=3200&pause=1200&color=00FFE1&center=true&vCenter=true&width=780&height=60&lines=LOADING+PLAYER+PROFILE...;CLASS%3A+AI%2FML+%2B+GAME+DEV;CURRENT+QUEST%3A+EduCore;%3E+INSERT+COIN+TO+CONTINUE" alt="Typing SVG"/>
-</a>
+<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=16&duration=2200&pause=800&color=00FFE1&center=true&vCenter=true&multiline=true&repeat=true&width=900&height=100&lines=%3E+SYSTEM+BOOT...+OK;%3E+LOADING+PLAYER_ONE...;%3E+CLASS%3A+AI%2FML+%2B+3D+DEV;%3E+8.9+CGPA+UNLOCKED;%3E+PRESS+START+TO+CONTINUE" alt="Typing SVG"/>
 
 <br/>
 
-<img src="https://img.shields.io/badge/LEVEL-2ND%20YEAR-b967ff?style=for-the-badge&labelColor=1a0033"/>
-<img src="https://img.shields.io/badge/POWER-8.9%20CGPA-00ffe1?style=for-the-badge&labelColor=1a0033"/>
-<img src="https://img.shields.io/badge/GUILD-MIT%20AOE%2C%20PUNE-ff2e97?style=for-the-badge&labelColor=1a0033"/>
+![Profile Views](https://komarev.com/ghpvc/?username=Sushrut-Kale&style=for-the-badge&color=FF0080&label=PLAYERS+WHO+VISITED&labelColor=0d0221)
+[![GitHub followers](https://img.shields.io/github/followers/Sushrut-Kale?style=for-the-badge&color=00FFE1&labelColor=0d0221&logo=github)](https://github.com/Sushrut-Kale?tab=followers)
+
+<br/>
+
+<img src="https://img.shields.io/badge/LEVEL-2ND%20YEAR-b967ff?style=for-the-badge&labelColor=0d0221"/>
+<img src="https://img.shields.io/badge/POWER-8.9%20CGPA-00ffe1?style=for-the-badge&labelColor=0d0221"/>
+<img src="https://img.shields.io/badge/GUILD-MIT%20AOE%2C%20PUNE-ff2e97?style=for-the-badge&labelColor=0d0221"/>
+<img src="https://img.shields.io/badge/STATUS-GRINDING%20XP-FFD700?style=for-the-badge&labelColor=0d0221"/>
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/sushrut-kale1367/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:sushrutkale13@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://leetcode.com/u/ryYeqtxZz8/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a>
-<a href="#"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sushrut-kale1367/)
+[![Gmail](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sushrutkale13@gmail.com)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/ryYeqtxZz8/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](#)
+
+<br/>
+
+<code>[ <a href="#status">STATUS</a> ]&nbsp;[ <a href="#skilltree">SKILL&nbsp;TREE</a> ]&nbsp;[ <a href="#questlog">QUEST&nbsp;LOG</a> ]&nbsp;[ <a href="#boss">BOSS&nbsp;LEVEL</a> ]&nbsp;[ <a href="#leaderboard">LEADERBOARD</a> ]&nbsp;[ <a href="#checkpoints">CHECKPOINTS</a> ]&nbsp;[ <a href="#continue">CONTINUE?</a> ]</code>
 
 <br/><br/>
 
-<img src="https://komarev.com/ghpvc/?username=Sushrut-Kale&style=for-the-badge&color=b967ff&label=PLAYERS+WHO+VISITED&labelColor=1a0033"/>
-
-<br/><br/>
-
-<code>[ <a href="#status">STATUS</a> ]&nbsp;&nbsp;[ <a href="#skilltree">SKILL TREE</a> ]&nbsp;&nbsp;[ <a href="#questlog">QUEST LOG</a> ]&nbsp;&nbsp;[ <a href="#boss">BOSS LEVEL</a> ]&nbsp;&nbsp;[ <a href="#leaderboard">LEADERBOARD</a> ]&nbsp;&nbsp;[ <a href="#checkpoints">CHECKPOINTS</a> ]&nbsp;&nbsp;[ <a href="#continue">CONTINUE?</a> ]</code>
+![divider](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif)
 
 </div>
 
-<br/>
-
 <a name="status"></a>
-## `[ PLAYER STATUS ]`
+## `[ 🎮 PLAYER STATUS ]`
+
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=B967FF&center=true&vCenter=true&width=800&lines=Systems+that+model+uncertainty%2C+not+hard-coded+rules;Trained+on+Bayesian+inference+%2B+constraint+solving;Recently+respec'd+into+real-time+3D+worlds"/>
+</div>
 
 ```
-══════════════════════════════════════════════
+══════════════════════════════════════════════════════
   PLAYER   Sushrut Kale
   CLASS    AI/ML Engineer × Full-Stack × 3D Dev
   LEVEL    2nd Year — CSE (AI/ML)
   GUILD    MIT Academy of Engineering, Pune
   POWER    8.9 CGPA
-══════════════════════════════════════════════
+══════════════════════════════════════════════════════
 ```
 
-`XP TO NEXT LEVEL` &nbsp;<img src="https://progress-bar.xyz/89/?title=&width=260&color=00ffe1&suffix=%25"/>
-
-This build specializes in systems that model uncertainty instead of running on hard-coded rules — trained on Bayesian inference and constraint solving, and recently respec'd into real-time 3D worlds and pathfinding.
+`XP TO NEXT LEVEL` &nbsp;<img src="https://progress-bar.xyz/89/?title=&width=280&color=00ffe1&suffix=%25"/> 🔥
 
 ```yaml
 active_quest:   "EduCore — role-based classroom collaboration platform"
 grinding:       ["LLM fine-tuning", "distributed systems", "3D engines"]
-guild_status:   "open to hackathons, AI/ML collabs, open source"
+guild_status:   "🟢 OPEN — hackathons, AI/ML collabs, open source"
 ```
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
@@ -60,7 +64,7 @@ guild_status:   "open to hackathons, AI/ML collabs, open source"
 ---
 
 <a name="skilltree"></a>
-## `[ SKILL TREE ]`
+## `[ 🌳 SKILL TREE ]`
 
 <div align="center">
 <img src="https://skillicons.dev/icons?i=python,js,ts,react,threejs,nextjs,nodejs,fastapi,mongodb,firebase,tailwind,vite,git,github,vercel,docker&theme=dark&perline=8"/>
@@ -68,30 +72,28 @@ guild_status:   "open to hackathons, AI/ML collabs, open source"
 
 <br/>
 
-**Skill points allocated:**
-
 <div align="center">
 
-`Python` &nbsp;<img src="https://progress-bar.xyz/90/?title=&width=220&color=00ffe1&suffix=%25"/>
+`Python` &nbsp;<img src="https://progress-bar.xyz/90/?title=&width=240&color=00ffe1&suffix=%25"/>
 <br/>
-`Optimization (OR-Tools / CP-SAT)` &nbsp;<img src="https://progress-bar.xyz/80/?title=&width=140&color=b967ff&suffix=%25"/>
+`Optimization (OR-Tools / CP-SAT)` &nbsp;<img src="https://progress-bar.xyz/80/?title=&width=150&color=b967ff&suffix=%25"/>
 <br/>
-`3D Engines (Three.js / R3F)` &nbsp;<img src="https://progress-bar.xyz/72/?title=&width=175&color=ff2e97&suffix=%25"/>
+`3D Engines (Three.js / R3F)` &nbsp;<img src="https://progress-bar.xyz/72/?title=&width=185&color=ff2e97&suffix=%25"/>
 <br/>
-`React / Next.js` &nbsp;<img src="https://progress-bar.xyz/78/?title=&width=170&color=00ffe1&suffix=%25"/>
+`React / Next.js` &nbsp;<img src="https://progress-bar.xyz/78/?title=&width=180&color=00ffe1&suffix=%25"/>
 <br/>
-`JavaScript / TypeScript` &nbsp;<img src="https://progress-bar.xyz/75/?title=&width=155&color=b967ff&suffix=%25"/>
+`JavaScript / TypeScript` &nbsp;<img src="https://progress-bar.xyz/75/?title=&width=165&color=b967ff&suffix=%25"/>
 <br/>
-`Game Systems (pathfinding, camera, controls)` &nbsp;<img src="https://progress-bar.xyz/68/?title=&width=110&color=ff2e97&suffix=%25"/>
+`Game Systems (pathfinding, camera, controls)` &nbsp;<img src="https://progress-bar.xyz/68/?title=&width=120&color=ff2e97&suffix=%25"/>
 <br/>
-`AI/ML (Gemini API, applied ML)` &nbsp;<img src="https://progress-bar.xyz/65/?title=&width=125&color=00ffe1&suffix=%25"/>
+`AI/ML (Gemini API, applied ML)` &nbsp;<img src="https://progress-bar.xyz/65/?title=&width=135&color=00ffe1&suffix=%25"/>
 
 </div>
 
 <table>
 <tr><td width="50%" valign="top">
 
-**Unlocked — Core & Optimization**
+**⚡ Unlocked — Core & Optimization**
 ```
 python        3.10+  ML tooling, general use
 javascript/ts ES2022 frontend logic
@@ -102,7 +104,7 @@ sql           —      relational queries
 
 </td><td width="50%" valign="top">
 
-**Unlocked — Engine & Backend**
+**⚡ Unlocked — Engine & Backend**
 ```
 three.js/r3f  —      real-time 3D rendering
 zustand       —      hook-based state mgmt
@@ -119,17 +121,18 @@ mongodb/fb    —      document store, auth
 ---
 
 <a name="questlog"></a>
-## `[ QUEST LOG ]`
+## `[ 📜 QUEST LOG ]`
 
 | quest | type | difficulty | reward (stack) | status |
 |---|---|---|---|---|
-| **Learner-State Engine** | Main Quest | ★★★★★ | Python · FastAPI · React · MongoDB · Gemini | `ONGOING` |
-| **Campus Twin** | Boss Level | ★★★★★ | React · Three.js · R3F · Zustand · Fuse.js | `CLEARED` |
-| **CampusCompass** | Main Quest | ★★★★☆ | Next.js 16 · FastAPI · OR-Tools | `CLEARED` |
-| **ClubSync** | Main Quest | ★★★☆☆ | React · Node.js · MongoDB · Firebase · Gemini | [`LIVE`](https://clubsync-4qua.vercel.app/) |
-| **EduCore** | Side Quest | ★★★☆☆ | React · Vite · Firebase · Tailwind | [`LIVE`](https://edu-core-blush.vercel.app/) |
-| **Manim Showcase** | Side Quest | ★★★☆☆ | Python · Manim CE · NumPy | `CLEARED` |
-| **TradeVision 2030** | Side Quest | ★★☆☆☆ | Power BI · DAX · Snowflake Schema | `CLEARED` |
+| **Learner-State Engine** | Main Quest | ★★★★★ | Python · FastAPI · React · MongoDB · Gemini | 🟡 `ONGOING` |
+| **Campus Twin** | Boss Level | ★★★★★ | React · Three.js · R3F · Zustand · Fuse.js | ✅ `CLEARED` |
+| **CampusCompass** | Main Quest | ★★★★☆ | Next.js 16 · FastAPI · OR-Tools | ✅ `CLEARED` |
+| **ClubSync** | Main Quest | ★★★☆☆ | React · Node.js · MongoDB · Firebase · Gemini | 🟢 [`LIVE`](https://clubsync-4qua.vercel.app/) |
+| **EduCore** | Side Quest | ★★★☆☆ | React · Vite · Firebase · Tailwind | 🟢 [`LIVE`](https://edu-core-blush.vercel.app/) |
+| **IntelliForge** | Side Quest | ★★★☆☆ | JavaScript | 🟣 [`REPO`](https://github.com/Sushrut-Kale/intelliforge) |
+| **Manim Showcase** | Side Quest | ★★★☆☆ | Python · Manim CE · NumPy | ✅ `CLEARED` |
+| **TradeVision 2030** | Side Quest | ★★☆☆☆ | Power BI · DAX · Snowflake Schema | ✅ `CLEARED` |
 
 <details>
 <summary><b>▸ Quest Log Entry — Learner-State Engine</b></summary>
@@ -168,13 +171,15 @@ AI-powered college club management platform — role-based access (Admin / Club 
 ---
 
 <a name="boss"></a>
-## `[ BOSS LEVEL ]` — Campus Twin
+## `[ 👹 BOSS LEVEL ]` — Campus Twin
 
 <div align="center">
 
 ### 🌐 3D Interactive Campus Navigator
 
 <img src="https://skillicons.dev/icons?i=react,threejs,vite&theme=dark"/>
+
+<img src="https://capsule-render.vercel.app/api?type=slice&color=gradient&customColorList=6,11,20&height=3&section=header"/>
 
 </div>
 
@@ -221,46 +226,46 @@ deploy:     Vercel (SPA rewrite config included)
 <a href="https://github.com/Sushrut-Kale/mitaoe3d"><img src="https://img.shields.io/badge/Repo-mitaoe3d-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
 </div>
 
-<sub>⚠️ No live link was given for this one — tell me the deployed URL (or say "repo only") and I'll swap the placeholder badge above.</sub>
+<sub>⚠️ No live link was given for this one — swap in your deployed URL or say "repo only".</sub>
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
 ---
 
 <a name="leaderboard"></a>
-## `[ LEADERBOARD ]`
+## `[ 🏆 LEADERBOARD ]`
+
+<div align="center">
 
 **LeetCode Rank**
 
-<div align="center">
-<img src="https://leetcard.jacoblin.cool/ryYeqtxZz8?theme=dark&font=Fira%20Code"/>
-</div>
+<img src="https://leetcard.jacoblin.cool/ryYeqtxZz8?theme=dark&font=Fira%20Code&extension=activity"/>
 
-**Player Card — animated on load**
+**Player Card**
 
-<div align="center">
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Sushrut-Kale&theme=github_dark&animation=rise" width="48%"/>
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Sushrut-Kale&theme=github_dark&animation=draw" width="48%"/>
-</div>
 
-<div align="center">
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Sushrut-Kale&theme=github_dark&animation=stagger" width="48%"/>
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Sushrut-Kale&theme=github_dark&animation=stagger" width="48%"/>
-</div>
 
 **Core Stats**
 
-<div align="center">
-<img src="https://github-stats-extended.vercel.app/api?username=Sushrut-Kale&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=1a0033&title_color=b967ff&icon_color=00ffe1&text_color=e0e0e0" height="165"/>
-<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Sushrut-Kale&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=1a0033&title_color=b967ff&text_color=e0e0e0" height="165"/>
-</div>
+<img src="https://github-stats-extended.vercel.app/api?username=Sushrut-Kale&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0d0221&title_color=b967ff&icon_color=00ffe1&text_color=e0e0e0" height="165"/>
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Sushrut-Kale&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d0221&title_color=b967ff&text_color=e0e0e0" height="165"/>
 
-<div align="center">
-<img src="https://github-readme-streak-stats-eight.vercel.app?user=Sushrut-Kale&theme=highcontrast&hide_border=true&background=1a0033&ring=b967ff&fire=ff2e97&currStreakLabel=00ffe1" height="165"/>
-</div>
+**Streak**
 
-<div align="center">
+<img src="https://github-readme-streak-stats-eight.vercel.app?user=Sushrut-Kale&theme=highcontrast&hide_border=true&background=0d0221&ring=b967ff&fire=ff2e97&currStreakLabel=00ffe1" height="165"/>
+
+**Trophy Case**
+
 <img src="https://github-profile-trophy.vercel.app/?username=Sushrut-Kale&theme=algolia&no-frame=true&column=4&margin-w=8&margin-h=8&row=1"/>
+
+**Activity Graph**
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Sushrut-Kale&theme=react-dark&bg_color=0d0221&color=00ffe1&line=ff2e97&point=b967ff&hide_border=true" width="90%"/>
+
 </div>
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
@@ -268,7 +273,7 @@ deploy:     Vercel (SPA rewrite config included)
 ---
 
 <a name="checkpoints"></a>
-## `[ CHECKPOINT LOG ]`
+## `[ 💾 CHECKPOINT LOG ]`
 
 ```
 CHECKPOINT 1  (2024)  loss=high        SDG-lab project, Power BI basics
@@ -281,12 +286,16 @@ CHECKPOINT 6  (now)   loss=?           grinding: LLM fine-tuning, distributed sy
 >>> save file not yet complete. game continues.
 ```
 
+<div align="center">
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.gif" width="100%"/>
+</div>
+
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
 ---
 
 <a name="continue"></a>
-## `[ CONTINUE? ]`
+## `[ 🕹️ CONTINUE? ]`
 
 ```json
 {
@@ -300,15 +309,15 @@ CHECKPOINT 6  (now)   loss=?           grinding: LLM fine-tuning, distributed sy
 
 <div align="center">
 
-<a href="https://www.linkedin.com/in/sushrut-kale1367/"><img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:sushrutkale13@gmail.com"><img src="https://img.shields.io/badge/Say_Hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="#"><img src="https://img.shields.io/badge/View_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
+[![Connect on LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sushrut-kale1367/)
+[![Say Hi](https://img.shields.io/badge/Say_Hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sushrutkale13@gmail.com)
+[![View Portfolio](https://img.shields.io/badge/View_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](#)
 
-<br/><br/>
+<br/>
 
-<sub>Player idle. Autosave complete.</sub>
+<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=13&duration=2500&pause=1000&color=FF2E97&center=true&vCenter=true&width=700&lines=PLAYER+IDLE...;AUTOSAVE+COMPLETE;THANKS+FOR+VISITING+%E2%99%A5" alt="Typing SVG"/>
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1b2a,50:2d0b5a,100:1a0033&height=120&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF0080,50:7928CA,100:0070F3&height=150&section=footer"/>
 
 </div>
 
@@ -322,38 +331,41 @@ SETUP NOTES — read before pushing (delete once done)
    Sushrut-Kale/Sushrut-Kale.
 
 2) THINGS I NEEDED FROM YOU AND GUESSED/PLACEHELD:
-   - Pin/repo slugs: used "mitaoe3d" for Campus Twin (matches
-     the folder name in your doc) — confirm on github.com/
-     Sushrut-Kale?tab=repositories, fix if different.
-   - Campus Twin live demo link: left a placeholder badge under
+   - Pin/repo slugs: confirmed live pins are "intelliforge",
+     "portfolio", "manim" (github.com/Sushrut-Kale?tab=repositories).
+     Kept "mitaoe3d" for Campus Twin from your prior doc — confirm
+     it matches your actual repo name.
+   - Campus Twin live demo link: still a placeholder badge under
      [ BOSS LEVEL ] — send the URL or say "repo only" and I'll
-     adjust (repo-only projects just drop the live badge).
-   - Learner-State Engine / CampusCompass repo slugs from last
-     round are still unconfirmed — same placeholders as before.
+     drop the live badge entirely.
    - Portfolio link: replace every "#" / "ADD_YOUR_PORTFOLIO_
      URL_HERE" (3 spots: top badges, continue() JSON, continue
      badges).
 
-3) OPTIONAL EXTRAS (removed for now, easy to re-add):
-   The 3D contribution terrain and animated snake were dropped
-   from the Leaderboard section — both need a self-hosted GitHub
-   Action to generate an SVG into your own repo (not a live API
-   like the cards above them), which is more setup than you
-   wanted right now. If you ever want either back, just ask and
-   I'll re-add the section + give you the exact workflow file to
-   paste in — each is a ~2 minute copy/paste + one manual run.
+3) WHAT GOT CRANKED UP FOR "OVER HYPED":
+   - Waving gradient header (multi-stop pink→purple→blue) instead
+     of flat venom banner, with twinkle animation.
+   - Multi-line looping typing SVG intro + a second typing SVG
+     under STATUS for a "boot sequence" feel.
+   - Added a GitHub Activity Graph (react-dark theme) to the
+     Leaderboard section — new widget not in the original.
+   - Rainbow animated divider lines under the header and above
+     Checkpoints.
+   - Slice-gradient mini divider under the Boss Level heading.
+   - Follower-count badge next to the visitor counter.
+   - Emoji section markers (🎮 📜 👹 🏆 💾 🕹️) for faster scanning.
+   - Added IntelliForge (confirmed real pinned repo) to the Quest
+     Log, since it wasn't in your previous draft.
 
-4) WHY EARLIER SERVICE URLS WERE SWAPPED:
-   github-readme-stats.vercel.app was manually paused by its
-   maintainers (503, ongoing) — using the maintained fork
-   github-stats-extended.vercel.app throughout instead.
-   streak-stats.demolab.com has known intermittent downtime —
-   using the stable mirror github-readme-streak-stats-eight
-   .vercel.app instead.
+4) OPTIONAL EXTRAS NOT ADDED (ask if you want them — each needs a
+   one-time GitHub Action set up in YOUR repo, not a live API):
+   - 3D contribution terrain
+   - Animated contribution snake
+   - A live "now playing" Spotify widget (needs Spotify OAuth)
 
 5) FONT NOTE:
    The header typing animation uses "Press Start 2P" (retro
-   arcade font) — it's a Google Font pulled automatically by
-   the typing-svg service, no install needed on your end.
+   arcade font) — it's a Google Font pulled automatically by the
+   typing-svg service, no install needed on your end.
 ========================================================
 -->
