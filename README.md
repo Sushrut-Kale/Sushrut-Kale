@@ -26,7 +26,7 @@
 
 <br/>
 
-<code>[ <a href="#status">STATUS</a> ]&nbsp;[ <a href="#skilltree">SKILL&nbsp;TREE</a> ]&nbsp;[ <a href="#questlog">QUEST&nbsp;LOG</a> ]&nbsp;[ <a href="#boss">BOSS&nbsp;LEVEL</a> ]&nbsp;[ <a href="#leaderboard">LEADERBOARD</a> ]&nbsp;[ <a href="#checkpoints">CHECKPOINTS</a> ]&nbsp;[ <a href="#continue">CONTINUE?</a> ]</code>
+<code>[ <a href="#status">STATUS</a> ]&nbsp;[ <a href="#skilltree">SKILL&nbsp;TREE</a> ]&nbsp;[ <a href="#questlog">QUEST&nbsp;LOG</a> ]&nbsp;[ <a href="#boss">BOSS&nbsp;LEVEL</a> ]&nbsp;[ <a href="#vitals">VITALS</a> ]&nbsp;[ <a href="#achievements">ACHIEVEMENTS</a> ]&nbsp;[ <a href="#leaderboard">LEADERBOARD</a> ]&nbsp;[ <a href="#randomdrop">RANDOM&nbsp;DROP</a> ]&nbsp;[ <a href="#checkpoints">CHECKPOINTS</a> ]&nbsp;[ <a href="#continue">CONTINUE?</a> ]</code>
 
 <br/><br/>
 
@@ -232,14 +232,51 @@ deploy:     Vercel (SPA rewrite config included)
 
 ---
 
+<a name="vitals"></a>
+## `[ 🧬 VITALS ]`
+
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&duration=2000&pause=600&color=FF2E97&center=true&vCenter=true&width=700&lines=running+diagnostics+on+player+one..." alt="Typing SVG"/>
+</div>
+
+```
+COFFEE LEVEL     ████████████████████░░  92%   [ CRITICAL — DO NOT INTERRUPT ]
+DEBUG RAGE       ██████████░░░░░░░░░░░░  45%   [ stable, mostly console.log ]
+SLEEP DEBT       ██████████████████░░░░  81%   [ compounding interest ]
+MOTIVATION       ████████████████████████ 99%   [ overclocked ]
+STACK OVERFLOW   ██████████████░░░░░░░░  63%   [ tabs open: unknown ]
+```
+
+<div align="center"><sub>⚠️ vitals are flavor text, not a cry for help — read the README, not the vibes</sub></div>
+
+<div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
+
+---
+
+<a name="achievements"></a>
+## `[ 🏅 ACHIEVEMENTS UNLOCKED ]`
+
+<div align="center">
+
+![Achievement](https://img.shields.io/badge/🏆-Shipped_5_Live_Projects-FFD700?style=for-the-badge&labelColor=0d0221)
+![Achievement](https://img.shields.io/badge/🧠-Built_a_Bayesian_Brain-00FFE1?style=for-the-badge&labelColor=0d0221)
+![Achievement](https://img.shields.io/badge/🌐-Rendered_a_Whole_Campus_in_3D-B967FF?style=for-the-badge&labelColor=0d0221)
+![Achievement](https://img.shields.io/badge/🧩-Solved_NP--Hard_Timetables-FF2E97?style=for-the-badge&labelColor=0d0221)
+<br/>
+![Achievement](https://img.shields.io/badge/🐛-Survived_WebGL_Context_Loss-00FFE1?style=for-the-badge&labelColor=0d0221)
+![Achievement](https://img.shields.io/badge/☕-Speedran_a_CGPA_of_8.9-FFD700?style=for-the-badge&labelColor=0d0221)
+![Achievement](https://img.shields.io/badge/🔓-Still_Grinding_LLM_Fine--Tuning-B967FF?style=for-the-badge&labelColor=0d0221)
+
+</div>
+
+<div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
+
+---
+
 <a name="leaderboard"></a>
 ## `[ 🏆 LEADERBOARD ]`
 
 <div align="center">
-
-**LeetCode Rank**
-
-<img src="https://leetcard.jacoblin.cool/ryYeqtxZz8?theme=dark&font=Fira%20Code&extension=activity"/>
 
 **Player Card**
 
@@ -266,6 +303,21 @@ deploy:     Vercel (SPA rewrite config included)
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sushrut-Kale&theme=react-dark&bg_color=0d0221&color=00ffe1&line=ff2e97&point=b967ff&hide_border=true" width="90%"/>
 
+</div>
+
+<div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
+
+---
+
+<a name="randomdrop"></a>
+## `[ 🎲 RANDOM DROP ]`
+
+<div align="center">
+<sub>refreshes on every page load — a wild dev joke and quote appear</sub>
+<br/><br/>
+<img src="https://readme-jokes.vercel.app/api" alt="Random dev joke"/>
+<br/><br/>
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random dev quote"/>
 </div>
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
@@ -357,13 +409,26 @@ SETUP NOTES — read before pushing (delete once done)
    - Added IntelliForge (confirmed real pinned repo) to the Quest
      Log, since it wasn't in your previous draft.
 
-4) OPTIONAL EXTRAS NOT ADDED (ask if you want them — each needs a
+4) LATEST ROUND OF CHANGES:
+   - Removed the LeetCode card entirely, as requested.
+   - Added VITALS — a joke "system diagnostics" stat block (Coffee
+     Level, Debug Rage, etc). Pure flavor text, easy to delete if
+     not your style.
+   - Added ACHIEVEMENTS UNLOCKED — a row of gamified badges
+     summarizing your real projects (Campus Twin, CampusCompass,
+     CGPA, etc).
+   - Added RANDOM DROP — two LIVE, self-refreshing widgets: a
+     random dev joke (readme-jokes.vercel.app) and a random dev
+     quote (quotes-github-readme.vercel.app). Both re-roll every
+     time someone opens your profile — no setup needed.
+
+5) OPTIONAL EXTRAS NOT ADDED (ask if you want them — each needs a
    one-time GitHub Action set up in YOUR repo, not a live API):
    - 3D contribution terrain
    - Animated contribution snake
    - A live "now playing" Spotify widget (needs Spotify OAuth)
 
-5) FONT NOTE:
+6) FONT NOTE:
    The header typing animation uses "Press Start 2P" (retro
    arcade font) — it's a Google Font pulled automatically by the
    typing-svg service, no install needed on your end.
