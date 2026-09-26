@@ -328,7 +328,11 @@ STACK OVERFLOW   ██████████████░░░░░░░
 ## `[ 🐍 CONTRIBUTION SNAKE ]`
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/github-contribution-grid-snake.svg" alt="contribution snake eating your commit graph"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/github-contribution-grid-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/github-contribution-grid-snake.svg"/>
+  <img alt="contribution snake eating your commit graph" src="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/github-contribution-grid-snake.svg"/>
+</picture>
 </div>
 
 <div align="center"><sub>⚙️ powered by a GitHub Action (<code>snake.yml</code>) that redraws itself daily from your real contribution graph</sub></div>
@@ -343,7 +347,7 @@ STACK OVERFLOW   ██████████████░░░░░░░
 <div align="center">
 <sub>refreshes on every page load — a wild dev joke and quote appear</sub>
 <br/><br/>
-<img src="https://readme-jokes.vercel.app/api?bgColor=0d0221&borderColor=b967ff&qColor=00ffe1&aColor=ff2e97&textColor=e0e0e0" alt="Random dev joke"/>
+<img src="https://readme-jokes.vercel.app/api?bgColor=%230d0221&borderColor=%23b967ff&qColor=%2300ffe1&aColor=%23ff2e97&textColor=%23e0e0e0" alt="Random dev joke"/>
 <br/><br/>
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&border=true" alt="Random dev quote"/>
 </div>
@@ -437,39 +441,34 @@ SETUP NOTES — read before pushing (delete once done)
    - Added IntelliForge (confirmed real pinned repo) to the Quest
      Log, since it wasn't in your previous draft.
 
-4) LATEST ROUND OF CHANGES:
-   - Removed the LeetCode card entirely, as requested.
-   - Added VITALS — a joke "system diagnostics" stat block (Coffee
-     Level, Debug Rage, etc). Pure flavor text, easy to delete if
-     not your style.
-   - Added ACHIEVEMENTS UNLOCKED — a row of gamified badges
-     summarizing your real projects (Campus Twin, CampusCompass,
-     CGPA, etc).
-   - Added a full "📦 inventory" tech-stack TABLE under Skill Tree
-     (languages / ai-ml / optimization / frontend / backend /
-     databases / devops / other), inspired by the categorized
-     badge-table style you liked — built from your actual stack,
-     not copied from anyone else's list.
-   - Added a CONTRIBUTION SNAKE section (the animated snake that
-     eats your commit graph). This is the one thing that is NOT
-     a plug-and-play API — it only works after you add a GitHub
-     Action to your OWN repo. Say the word and I'll generate the
-     exact `snake.yml` workflow file for you to paste into
-     `.github/workflows/`; until then this image will 404.
-   - FIXED the Random Drop scene: the joke card previously came
-     back with a random neon-green border / orange text that
-     clashed with your cyan-purple-pink palette. It now passes
-     explicit bgColor/borderColor/qColor/aColor params so it's
-     always dark-navy + purple border + cyan question + pink
-     answer. Gave the quote card a matching border too.
+4) SNAKE SETUP — this is the ONLY piece that needs manual work:
+   a. In your Sushrut-Kale/Sushrut-Kale repo, create the path
+      .github/workflows/snake.yml and paste in the snake.yml
+      file provided alongside this README.
+   b. Go to the repo's Settings → Actions → General → Workflow
+      permissions, and set it to "Read and write permissions"
+      (the action needs this to push the generated SVG to an
+      "output" branch it creates automatically).
+   c. Go to the Actions tab → "generate contribution snake" →
+      "Run workflow" to trigger it once by hand instead of
+      waiting for the daily midnight cron.
+   d. After it runs successfully, the output branch will exist
+      and both image URLs in the README will resolve instead
+      of 404ing. It then re-runs automatically every day.
 
-5) OPTIONAL EXTRAS NOT ADDED (ask if you want them — each needs a
-   one-time GitHub Action set up in YOUR repo, not a live API):
+5) FIXED: the joke card's colors weren't taking effect because
+   the hex values need to be URL-encoded with %23 in place of
+   the # symbol (?bgColor=%230d0221 etc.) — passing them as raw
+   hex silently fails and the card falls back to unreadable
+   default text. It should now show cyan question / pink answer
+   text on a dark navy card exactly like the rest of the page.
+
+6) OPTIONAL EXTRAS NOT ADDED (ask if you want them):
    - 3D contribution terrain
    - A live "now playing" Spotify widget (needs Spotify OAuth)
    - A "buy me a coffee" support badge
 
-6) FONT NOTE:
+7) FONT NOTE:
    The header typing animation uses "Press Start 2P" (retro
    arcade font) — it's a Google Font pulled automatically by the
    typing-svg service, no install needed on your end.
