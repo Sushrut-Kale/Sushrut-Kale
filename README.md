@@ -26,7 +26,7 @@
 
 <br/>
 
-<code>[ <a href="#status">STATUS</a> ]&nbsp;[ <a href="#skilltree">SKILL&nbsp;TREE</a> ]&nbsp;[ <a href="#questlog">QUEST&nbsp;LOG</a> ]&nbsp;[ <a href="#boss">BOSS&nbsp;LEVEL</a> ]&nbsp;[ <a href="#vitals">VITALS</a> ]&nbsp;[ <a href="#achievements">ACHIEVEMENTS</a> ]&nbsp;[ <a href="#leaderboard">LEADERBOARD</a> ]&nbsp;[ <a href="#randomdrop">RANDOM&nbsp;DROP</a> ]&nbsp;[ <a href="#checkpoints">CHECKPOINTS</a> ]&nbsp;[ <a href="#continue">CONTINUE?</a> ]</code>
+<code>[ <a href="#status">STATUS</a> ]&nbsp;[ <a href="#skilltree">SKILL&nbsp;TREE</a> ]&nbsp;[ <a href="#questlog">QUEST&nbsp;LOG</a> ]&nbsp;[ <a href="#boss">BOSS&nbsp;LEVEL</a> ]&nbsp;[ <a href="#vitals">VITALS</a> ]&nbsp;[ <a href="#achievements">ACHIEVEMENTS</a> ]&nbsp;[ <a href="#leaderboard">LEADERBOARD</a> ]&nbsp;[ <a href="#snake">SNAKE</a> ]&nbsp;[ <a href="#randomdrop">RANDOM&nbsp;DROP</a> ]&nbsp;[ <a href="#checkpoints">CHECKPOINTS</a> ]&nbsp;[ <a href="#continue">CONTINUE?</a> ]</code>
 
 <br/><br/>
 
@@ -115,6 +115,21 @@ mongodb/fb    —      document store, auth
 
 </td></tr>
 </table>
+
+<br/>
+
+**📦 Full inventory (item-by-item drop table)**
+
+| category | loot |
+|---|---|
+| **languages** | ![python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54) ![javascript](https://img.shields.io/badge/javascript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![typescript](https://img.shields.io/badge/typescript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![sql](https://img.shields.io/badge/sql-4479A1?style=flat-square&logo=postgresql&logoColor=white) |
+| **ai / ml** | ![gemini](https://img.shields.io/badge/gemini_api-8E75B2?style=flat-square&logo=googlegemini&logoColor=white) ![manim](https://img.shields.io/badge/manim_ce-000000?style=flat-square&logo=python&logoColor=white) ![ollama](https://img.shields.io/badge/ollama-000000?style=flat-square&logo=ollama&logoColor=white) |
+| **optimization** | ![ortools](https://img.shields.io/badge/OR--Tools-4285F4?style=flat-square&logo=google&logoColor=white) `CP-SAT · constraint solving` |
+| **frontend / 3d** | ![react](https://img.shields.io/badge/react-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![nextjs](https://img.shields.io/badge/next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![threejs](https://img.shields.io/badge/three.js-000000?style=flat-square&logo=three.js&logoColor=white) ![tailwind](https://img.shields.io/badge/tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![vite](https://img.shields.io/badge/vite-646CFF?style=flat-square&logo=vite&logoColor=white) |
+| **backend** | ![node](https://img.shields.io/badge/node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![fastapi](https://img.shields.io/badge/fastapi-009688?style=flat-square&logo=fastapi&logoColor=white) ![zustand](https://img.shields.io/badge/zustand-000000?style=flat-square&logo=react&logoColor=white) ![fusejs](https://img.shields.io/badge/fuse.js-000000?style=flat-square&logo=javascript&logoColor=yellow) |
+| **databases** | ![mongodb](https://img.shields.io/badge/mongodb-47A248?style=flat-square&logo=mongodb&logoColor=white) ![firebase](https://img.shields.io/badge/firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black) |
+| **devops / cloud** | ![git](https://img.shields.io/badge/git-F05032?style=flat-square&logo=git&logoColor=white) ![github](https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white) ![vercel](https://img.shields.io/badge/vercel-000000?style=flat-square&logo=vercel&logoColor=white) ![docker](https://img.shields.io/badge/docker-2496ED?style=flat-square&logo=docker&logoColor=white) |
+| **other** | ![powerbi](https://img.shields.io/badge/power_bi-F2C811?style=flat-square&logo=powerbi&logoColor=black) ![numpy](https://img.shields.io/badge/numpy-013243?style=flat-square&logo=numpy&logoColor=white) |
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
@@ -309,15 +324,28 @@ STACK OVERFLOW   ██████████████░░░░░░░
 
 ---
 
+<a name="snake"></a>
+## `[ 🐍 CONTRIBUTION SNAKE ]`
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/github-contribution-grid-snake.svg" alt="contribution snake eating your commit graph"/>
+</div>
+
+<div align="center"><sub>⚙️ powered by a GitHub Action (<code>snake.yml</code>) that redraws itself daily from your real contribution graph</sub></div>
+
+<div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
+
+---
+
 <a name="randomdrop"></a>
 ## `[ 🎲 RANDOM DROP ]`
 
 <div align="center">
 <sub>refreshes on every page load — a wild dev joke and quote appear</sub>
 <br/><br/>
-<img src="https://readme-jokes.vercel.app/api" alt="Random dev joke"/>
+<img src="https://readme-jokes.vercel.app/api?bgColor=0d0221&borderColor=b967ff&qColor=00ffe1&aColor=ff2e97&textColor=e0e0e0" alt="Random dev joke"/>
 <br/><br/>
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random dev quote"/>
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&border=true" alt="Random dev quote"/>
 </div>
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
@@ -417,16 +445,29 @@ SETUP NOTES — read before pushing (delete once done)
    - Added ACHIEVEMENTS UNLOCKED — a row of gamified badges
      summarizing your real projects (Campus Twin, CampusCompass,
      CGPA, etc).
-   - Added RANDOM DROP — two LIVE, self-refreshing widgets: a
-     random dev joke (readme-jokes.vercel.app) and a random dev
-     quote (quotes-github-readme.vercel.app). Both re-roll every
-     time someone opens your profile — no setup needed.
+   - Added a full "📦 inventory" tech-stack TABLE under Skill Tree
+     (languages / ai-ml / optimization / frontend / backend /
+     databases / devops / other), inspired by the categorized
+     badge-table style you liked — built from your actual stack,
+     not copied from anyone else's list.
+   - Added a CONTRIBUTION SNAKE section (the animated snake that
+     eats your commit graph). This is the one thing that is NOT
+     a plug-and-play API — it only works after you add a GitHub
+     Action to your OWN repo. Say the word and I'll generate the
+     exact `snake.yml` workflow file for you to paste into
+     `.github/workflows/`; until then this image will 404.
+   - FIXED the Random Drop scene: the joke card previously came
+     back with a random neon-green border / orange text that
+     clashed with your cyan-purple-pink palette. It now passes
+     explicit bgColor/borderColor/qColor/aColor params so it's
+     always dark-navy + purple border + cyan question + pink
+     answer. Gave the quote card a matching border too.
 
 5) OPTIONAL EXTRAS NOT ADDED (ask if you want them — each needs a
    one-time GitHub Action set up in YOUR repo, not a live API):
    - 3D contribution terrain
-   - Animated contribution snake
    - A live "now playing" Spotify widget (needs Spotify OAuth)
+   - A "buy me a coffee" support badge
 
 6) FONT NOTE:
    The header typing animation uses "Press Start 2P" (retro
