@@ -341,11 +341,11 @@ STACK OVERFLOW   ██████████████░░░░░░░
 
 **Player Card**
 
-<img src="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/profile-summary-card-output/github_dark/0-profile-details.svg" width="48%"/>
-<img src="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/profile-summary-card-output/github_dark/3-stats.svg" width="48%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Sushrut-Kale&theme=github_dark" width="48%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Sushrut-Kale&theme=github_dark" width="48%"/>
 
-<img src="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/profile-summary-card-output/github_dark/1-repos-per-language.svg" width="48%"/>
-<img src="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/profile-summary-card-output/github_dark/2-most-commit-language.svg" width="48%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Sushrut-Kale&theme=github_dark" width="48%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Sushrut-Kale&theme=github_dark" width="48%"/>
 
 **Core Stats**
 
@@ -358,7 +358,7 @@ STACK OVERFLOW   ██████████████░░░░░░░
 
 **Productive Time**
 
-<img src="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/profile-summary-card-output/github_dark/4-productive-time.svg" width="48%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Sushrut-Kale&theme=github_dark&utcOffset=5.5" width="48%"/>
 
 </div>
 
