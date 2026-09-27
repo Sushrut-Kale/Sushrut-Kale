@@ -265,9 +265,11 @@ deploy:     Vercel (SPA rewrite config included)
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
-<!-- ═══════════ ANIMATED DIVIDER — Venom Drip ═══════════ -->
+<!-- ═══════════ ANIMATED DIVIDER — Neon Triple Line ═══════════ -->
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:b967ff,50:ff2e97,100:00ffe1&height=120&section=header&text=&fontSize=1&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d0221,20:ff2e97,50:b967ff,80:00ffe1,100:0d0221&height=2&section=header" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=transparent&color=auto&height=2&section=header&text=&fontSize=1" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d0221,30:00ffe1,50:b967ff,70:ff2e97,100:0d0221&height=1&section=header" width="100%"/>
 </div>
 
 ---
@@ -352,13 +354,9 @@ STACK OVERFLOW   ██████████████░░░░░░░
 
 <img src="https://github-readme-streak-stats-eight.vercel.app?user=Sushrut-Kale&theme=highcontrast&hide_border=true&background=0d0221&ring=b967ff&fire=ff2e97&currStreakLabel=00ffe1" height="165"/>
 
-**Trophy Case**
+**Productive Time**
 
-<img src="https://github-profile-trophy.vercel.app/?username=Sushrut-Kale&theme=algolia&no-frame=true&column=4&margin-w=8&margin-h=8&row=1"/>
-
-**Activity Graph**
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Sushrut-Kale&theme=react-dark&bg_color=0d0221&color=00ffe1&line=ff2e97&point=b967ff&hide_border=true" width="90%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Sushrut-Kale&theme=github_dark&utcOffset=5.5" width="48%"/>
 
 </div>
 
