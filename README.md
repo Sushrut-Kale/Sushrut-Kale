@@ -3,6 +3,8 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF0080,25:7928CA,50:0070F3,75:00DFD8,100:FF0080&height=280&section=header&text=SUSHRUT%20KALE&fontSize=70&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=AI%2FML%20Engineer%20%E2%9A%94%EF%B8%8F%20Full-Stack%20Wizard%20%E2%9A%94%EF%B8%8F%203D%20Worldbuilder&descAlignY=55&descSize=22&descColor=00FFE1"/>
 
+<img src="./assets/logo.jpg" width="280" alt="SUSHRUT — cyberpunk logo"/>
+
 <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=16&duration=2200&pause=800&color=00FFE1&center=true&vCenter=true&multiline=true&repeat=true&width=900&height=100&lines=%3E+SYSTEM+BOOT...+OK;%3E+LOADING+PLAYER_ONE...;%3E+CLASS%3A+AI%2FML+%2B+3D+DEV;%3E+8.9+CGPA+UNLOCKED;%3E+PRESS+START+TO+CONTINUE" alt="Typing SVG"/>
 
 <br/>
