@@ -61,6 +61,13 @@ guild_status:   "🟢 OPEN — hackathons, AI/ML collabs, open source"
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
+<!-- ═══════════ ANIMATED DIVIDER — Glitch/Cyber Line ═══════════ -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d0221,20:b967ff,40:ff2e97,60:00ffe1,80:b967ff,100:0d0221&height=2&section=header" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=transparent&color=auto&height=1&section=header&text=&fontSize=1" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d0221,30:00ffe1,50:ff2e97,70:b967ff,100:0d0221&height=1&section=header" width="100%"/>
+</div>
+
 ---
 
 <a name="skilltree"></a>
@@ -133,7 +140,15 @@ mongodb/fb    —      document store, auth
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
----
+<!-- ═══════════ ANIMATED DIVIDER — Waving Neon ═══════════ -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:b967ff,50:00ffe1,100:ff2e97&height=80&section=header&text=&fontSize=1&animation=twinkling" width="100%"/>
+</div>
+
+<!-- ═══════════ ANIMATED TYPING — Pre–Quest Loading ═══════════ -->
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=12&duration=2500&pause=1200&color=FFD700&center=true&vCenter=true&repeat=true&width=650&height=35&lines=%E2%96%B6+LOADING+NEXT+QUEST...;%E2%96%B6+PARSING+QUEST+LOG...;%E2%96%B6+INITIALIZING+OBJECTIVES...;%E2%96%B6+QUEST+DATA+READY" alt="Typing SVG"/>
+</div>
 
 <a name="questlog"></a>
 ## `[ 📜 QUEST LOG ]`
@@ -182,6 +197,11 @@ AI-powered college club management platform — role-based access (Admin / Club 
 </details>
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
+
+<!-- ═══════════ ANIMATED DIVIDER — Soft Cylinder ═══════════ -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:0d0221,50:b967ff,100:0d0221&height=40&section=header&text=&fontSize=1&animation=fadeIn" width="100%"/>
+</div>
 
 ---
 
@@ -245,6 +265,11 @@ deploy:     Vercel (SPA rewrite config included)
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
+<!-- ═══════════ ANIMATED DIVIDER — Venom Drip ═══════════ -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:b967ff,50:ff2e97,100:00ffe1&height=120&section=header&text=&fontSize=1&animation=fadeIn" width="100%"/>
+</div>
+
 ---
 
 <a name="vitals"></a>
@@ -266,6 +291,11 @@ STACK OVERFLOW   ██████████████░░░░░░░
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
+<!-- ═══════════ ANIMATED DIVIDER — Soft Wave ═══════════ -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:0d0221,30:ff2e97,60:b967ff,100:0d0221&height=8&section=header&text=&fontSize=1&animation=scaleIn" width="100%"/>
+</div>
+
 ---
 
 <a name="achievements"></a>
@@ -286,10 +316,22 @@ STACK OVERFLOW   ██████████████░░░░░░░
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
+<!-- ═══════════ ANIMATED DIVIDER — Shark Tooth ═══════════ -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=shark&color=0:00ffe1,50:b967ff,100:ff2e97&height=30&section=header&text=&fontSize=1&animation=fadeIn&fontColor=0d0221" width="100%"/>
+</div>
+
 ---
 
 <a name="leaderboard"></a>
 ## `[ 🏆 LEADERBOARD ]`
+
+<!-- ═══════════ ANIMATED TYPING — Stats Loading ═══════════ -->
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=11&duration=1800&pause=900&color=00FFE1&center=true&vCenter=true&repeat=true&width=500&height=30&lines=%E2%96%B6+FETCHING+LIVE+STATS...;%E2%96%B6+AGGREGATING+XP+DATA...;%E2%96%B6+RENDERING+LEADERBOARD..." alt="Typing SVG"/>
+</div>
+
+<br/>
 
 <div align="center">
 
@@ -322,6 +364,11 @@ STACK OVERFLOW   ██████████████░░░░░░░
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
+<!-- ═══════════ ANIMATED DIVIDER — Waving Neon (variant) ═══════════ -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff2e97,50:b967ff,100:00ffe1&height=70&section=footer&text=&fontSize=1&animation=twinkling" width="100%"/>
+</div>
+
 ---
 
 <a name="snake"></a>
@@ -339,6 +386,11 @@ STACK OVERFLOW   ██████████████░░░░░░░
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
 
+<!-- ═══════════ ANIMATED DIVIDER — Cylinder Neon ═══════════ -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:0d0221,30:00ffe1,60:ff2e97,100:0d0221&height=35&section=header&text=&fontSize=1&animation=fadeIn" width="100%"/>
+</div>
+
 ---
 
 <a name="randomdrop"></a>
@@ -353,6 +405,11 @@ STACK OVERFLOW   ██████████████░░░░░░░
 </div>
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
+
+<!-- ═══════════ ANIMATED DIVIDER — Venom Variant ═══════════ -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=shark&color=0:b967ff,50:00ffe1,100:ff2e97&height=25&section=footer&text=&fontSize=1&animation=fadeIn" width="100%"/>
+</div>
 
 ---
 
@@ -375,6 +432,32 @@ CHECKPOINT 6  (now)   loss=?           grinding: LLM fine-tuning, distributed sy
 </div>
 
 <div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
+
+---
+
+<!-- ═══════════ ANIMATED SECTION — Currently Grinding ═══════════ -->
+<a name="grinding"></a>
+## `[ 🔊 NOW PLAYING ]`
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=10&duration=3000&pause=1500&color=FFD700&center=true&vCenter=true&repeat=true&width=500&height=25&lines=%F0%9F%8E%B5+NOW+GRINDING:+LLM+fine-tuning;%F0%9F%8E%B5+NOW+GRINDING:+distributed+systems;%F0%9F%8E%B5+NOW+GRINDING:+real-time+3D+engines;%F0%9F%8E%B5+NOW+GRINDING:+Bayesian+inference" alt="Currently Grinding"/>
+
+<br/>
+
+<!-- Animated "equalizer bars" via shields.io — a visual heartbeat -->
+<img src="https://img.shields.io/badge/%E2%96%81%E2%96%83%E2%96%85%E2%96%87%E2%96%85%E2%96%83%E2%96%81%E2%96%83%E2%96%85%E2%96%87-00ffe1?style=flat-square&labelColor=0d0221&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHRleHQgeT0iMTQiIGZvbnQtc2l6ZT0iMTQiPvCfjLk8L3RleHQ+PC9zdmc+" alt="grinding bars"/>
+<img src="https://img.shields.io/badge/%E2%96%87%E2%96%85%E2%96%83%E2%96%81%E2%96%83%E2%96%85%E2%96%87%E2%96%85%E2%96%83%E2%96%81-b967ff?style=flat-square&labelColor=0d0221" alt="grinding bars"/>
+<img src="https://img.shields.io/badge/%E2%96%83%E2%96%85%E2%96%87%E2%96%85%E2%96%83%E2%96%81%E2%96%83%E2%96%85%E2%96%87%E2%96%85-ff2e97?style=flat-square&labelColor=0d0221" alt="grinding bars"/>
+
+</div>
+
+<div align="right"><a href="#top"><sub>▲ back to top</sub></a></div>
+
+<!-- ═══════════ ANIMATED DIVIDER — Waving Neon (bottom) ═══════════ -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ffe1,30:b967ff,70:ff2e97,100:00ffe1&height=60&section=footer&text=&fontSize=1&animation=twinkling" width="100%"/>
+</div>
 
 ---
 
@@ -442,9 +525,8 @@ SETUP NOTES — read before pushing (delete once done)
      Log, since it wasn't in your previous draft.
 
 4) SNAKE SETUP — this is the ONLY piece that needs manual work:
-   a. In your Sushrut-Kale/Sushrut-Kale repo, create the path
-      .github/workflows/snake.yml and paste in the snake.yml
-      file provided alongside this README.
+   a. The workflow file is now at .github/workflows/snake.yml
+      (previously it was in the repo root, which GitHub ignores).
    b. Go to the repo's Settings → Actions → General → Workflow
       permissions, and set it to "Read and write permissions"
       (the action needs this to push the generated SVG to an
