@@ -1,0 +1,39 @@
+name: Generate Repo Cards
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "scripts/fetch_repos.py"
+      - "scripts/generate_repo_cards.py"
+      - ".github/workflows/repo-cards.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch and generate cards
+        run: |
+          python scripts/fetch_repos.py
+          python scripts/generate_repo_cards.py
+
+      - name: Deploy cards to output branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
+          keep_files: true

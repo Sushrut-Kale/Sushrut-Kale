@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 130" width="380" height="130">
+  <defs>
+    <linearGradient id="bg_timetable" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F1A"/>
+      <stop offset="100%" stop-color="#141B2D"/>
+    </linearGradient>
+    <linearGradient id="border_timetable" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A00"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    <filter id="glow_timetable" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="2" y="2" width="376" height="126" rx="8" fill="url(#bg_timetable)" stroke="url(#border_timetable)" stroke-width="1.6"/>
+
+  <!-- Left Chakra Accent Bar -->
+  <rect x="2" y="2" width="5" height="126" rx="2" fill="#FF6A00"/>
+
+  <!-- Rank Badge -->
+  <g transform="translate(18, 16)">
+    <rect x="0" y="0" width="65" height="18" rx="4" fill="#FF6A00" opacity="0.2"/>
+    <rect x="0" y="0" width="65" height="18" rx="4" fill="none" stroke="#FF6A00" stroke-width="1"/>
+    <text x="32.5" y="13" fill="#FF6A00" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="800" text-anchor="middle">A-RANK</text>
+  </g>
+
+  <!-- Repo Title -->
+  <text x="92" y="30" fill="#F2E3C0" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700">timetable</text>
+
+  <!-- Live indicator or repo star -->
+  <g transform="translate(340, 20)">
+    <circle cx="0" cy="5" r="3" fill="#FFD700"/>
+  </g>
+
+  <!-- Description -->
+  <text x="18" y="58" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500">Shinobi engineering project in JavaScript.</text>
+  <text x="18" y="74" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500"></text>
+
+  <!-- Bottom Metadata Row -->
+  <g transform="translate(18, 102)">
+    <!-- Language dot -->
+    <circle cx="5" cy="5" r="4.5" fill="#F7DF1E"/>
+    <text x="16" y="9" fill="#F2E3C0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">JavaScript</text>
+
+    <!-- Status badge -->
+    <text x="110" y="9" fill="#FF6A00" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">📜 SHINOBI REPO</text>
+  </g>
+
+  <!-- Tiny Animated Chakra Pulse in bottom right corner -->
+  <circle cx="355" cy="107" r="3" fill="#FFD700">
+    <animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

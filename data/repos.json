@@ -1,0 +1,233 @@
+[
+  {
+    "name": "Sushrut-Kale",
+    "description": "Master Shinobi profile repository and dynamic jutsu assets.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "Python",
+    "topics": [],
+    "pushed_at": "2026-10-20T18:17:29Z",
+    "html_url": "https://github.com/Sushrut-Kale/Sushrut-Kale"
+  },
+  {
+    "name": "AI-challenge",
+    "description": "Shinobi engineering project in TypeScript.",
+    "homepage": "https://agentcraft-phi.vercel.app",
+    "stars": 0,
+    "forks": 0,
+    "language": "TypeScript",
+    "topics": [],
+    "pushed_at": "2026-10-20T17:30:31Z",
+    "html_url": "https://github.com/Sushrut-Kale/AI-challenge"
+  },
+  {
+    "name": "E-cell",
+    "description": "Shinobi engineering project in TypeScript.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "TypeScript",
+    "topics": [],
+    "pushed_at": "2026-10-19T11:40:27Z",
+    "html_url": "https://github.com/Sushrut-Kale/E-cell"
+  },
+  {
+    "name": "OOP_Lab",
+    "description": "Shinobi engineering project in C++.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "C++",
+    "topics": [],
+    "pushed_at": "2026-10-16T04:29:55Z",
+    "html_url": "https://github.com/Sushrut-Kale/OOP_Lab"
+  },
+  {
+    "name": "portfolio",
+    "description": "High-fidelity React + Vite developer portfolio with motion-driven, performance-first design and project showcases.",
+    "homepage": "https://portfolio-seven-omega-o9wgw7dd59.vercel.app",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript",
+    "topics": [],
+    "pushed_at": "2026-10-14T23:50:45Z",
+    "html_url": "https://github.com/Sushrut-Kale/portfolio"
+  },
+  {
+    "name": "maze_AI",
+    "description": "Interactive C++/OpenGL last-mile delivery route simulator comparing BFS, DFS, and A* search across custom road networks with weighted traffic costs.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "C++",
+    "topics": [],
+    "pushed_at": "2026-10-14T04:07:33Z",
+    "html_url": "https://github.com/Sushrut-Kale/maze_AI"
+  },
+  {
+    "name": "AgriN-Regenerative-Agricultural-Intelligence",
+    "description": "agriculture, agritech, machine-learning, fastapi, react, python, soil-health, shap, explainable-ai, regenerative-agriculture",
+    "homepage": "",
+    "stars": 0,
+    "forks": 1,
+    "language": "Python",
+    "topics": [],
+    "pushed_at": "2026-10-13T16:58:27Z",
+    "html_url": "https://github.com/Sushrut-Kale/AgriN-Regenerative-Agricultural-Intelligence"
+  },
+  {
+    "name": "HBTM",
+    "description": "IABTM is an AI-powered personal growth platform that transforms digital consumption into personalized learning, identity development, and meaningful self-evolution.",
+    "homepage": "https://hbtm-delta.vercel.app",
+    "stars": 0,
+    "forks": 0,
+    "language": "Python",
+    "topics": [],
+    "pushed_at": "2026-08-03T03:39:39Z",
+    "html_url": "https://github.com/Sushrut-Kale/HBTM"
+  },
+  {
+    "name": "vtx_mail",
+    "description": "Shinobi engineering project in HTML.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "HTML",
+    "topics": [],
+    "pushed_at": "2026-10-07T19:33:50Z",
+    "html_url": "https://github.com/Sushrut-Kale/vtx_mail"
+  },
+  {
+    "name": "paytm",
+    "description": "FinPath AI is a goal-first financial platform that transforms real-life financial goals into structured, personalized journeys with AI-powered guidance, document intelligence, readiness scoring, and actionable next steps.",
+    "homepage": "https://finpath-ai-three.vercel.app/",
+    "stars": 0,
+    "forks": 1,
+    "language": "TypeScript",
+    "topics": [],
+    "pushed_at": "2026-09-25T11:53:25Z",
+    "html_url": "https://github.com/Sushrut-Kale/paytm"
+  },
+  {
+    "name": "AI-Learning-Conductor",
+    "description": "AI-powered classroom intelligence platform that transforms student assessment evidence and teacher observations into learning insights, instructional support, adaptive teaching, and school-level intelligence.",
+    "homepage": "https://ai-learning-conductor.vercel.app/",
+    "stars": 0,
+    "forks": 0,
+    "language": "TypeScript",
+    "topics": [],
+    "pushed_at": "2026-09-27T16:45:35Z",
+    "html_url": "https://github.com/Sushrut-Kale/AI-Learning-Conductor"
+  },
+  {
+    "name": "Task-Manager-Ecosystem",
+    "description": "FocusFlow is an offline-first personal task manager for Android and Windows, featuring local storage, smart reminders, desktop/mobile widgets, and direct Bluetooth synchronization without cloud servers.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "Kotlin",
+    "topics": [],
+    "pushed_at": "2026-09-27T11:29:47Z",
+    "html_url": "https://github.com/Sushrut-Kale/Task-Manager-Ecosystem"
+  },
+  {
+    "name": "cisco",
+    "description": "Shinobi engineering project in Python.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "Python",
+    "topics": [],
+    "pushed_at": "2026-08-30T12:45:48Z",
+    "html_url": "https://github.com/Sushrut-Kale/cisco"
+  },
+  {
+    "name": "Campus-3D",
+    "description": "\ud83c\udf10 A 3D interactive digital twin of the MITAOE campus built with React & Three.js, featuring A* pathfinding, intelligent search, immersive first-person navigation, and real-time campus exploration.",
+    "homepage": "https://mitaoe1.vercel.app",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript",
+    "topics": [],
+    "pushed_at": "2026-08-14T04:58:27Z",
+    "html_url": "https://github.com/Sushrut-Kale/Campus-3D"
+  },
+  {
+    "name": "farm-friend",
+    "description": "\ud83c\udf31 FarmFriend AI is a data-driven agricultural decision-support system that helps farmers identify suitable crops using soil-test values, climate, season, irrigation, and regional agricultural data. It combines Machine Learning, crop calendars, agronomic rules, explainable AI,  and farmer feedback for transparent crop recommendations.",
+    "homepage": "https://farm-friend-chi.vercel.app",
+    "stars": 0,
+    "forks": 0,
+    "language": "Python",
+    "topics": [],
+    "pushed_at": "2026-08-13T18:43:10Z",
+    "html_url": "https://github.com/Sushrut-Kale/farm-friend"
+  },
+  {
+    "name": "timetable",
+    "description": "Shinobi engineering project in JavaScript.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript",
+    "topics": [],
+    "pushed_at": "2026-08-07T05:51:56Z",
+    "html_url": "https://github.com/Sushrut-Kale/timetable"
+  },
+  {
+    "name": "Ultrasonic-Radar-Detection",
+    "description": "\ud83d\udce1 A web-based ultrasonic radar simulation built with HTML, CSS, and JavaScript to visualize real-time object detection, distance measurement, and radar scanning.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "HTML",
+    "topics": [],
+    "pushed_at": "2026-07-27T04:43:48Z",
+    "html_url": "https://github.com/Sushrut-Kale/Ultrasonic-Radar-Detection"
+  },
+  {
+    "name": "clubsync",
+    "description": "\ud83c\udf93 An AI-powered club management platform built with React, Node.js, MongoDB, Firebase, and Gemini AI for smart event management, member engagement, and campus collaboration.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript",
+    "topics": [],
+    "pushed_at": "2026-07-27T07:24:41Z",
+    "html_url": "https://github.com/Sushrut-Kale/clubsync"
+  },
+  {
+    "name": "Data-visualization-",
+    "description": "\ud83d\udcca An interactive Power BI dashboard analyzing global retail performance through advanced DAX, Snowflake modeling, time intelligence, and SDG-driven business analytics.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "Code",
+    "topics": [],
+    "pushed_at": "2026-07-27T04:16:24Z",
+    "html_url": "https://github.com/Sushrut-Kale/Data-visualization-"
+  },
+  {
+    "name": "intelliforge",
+    "description": "\ud83c\udf93 A modern role-based education platform built with React & Firebase for assignment management, resource sharing, and seamless student-teacher collaboration.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "JavaScript",
+    "topics": [],
+    "pushed_at": "2026-04-12T05:32:20Z",
+    "html_url": "https://github.com/Sushrut-Kale/intelliforge"
+  },
+  {
+    "name": "manim",
+    "description": "\ud83c\udfa5 A showcase of educational animations and scientific visualizations built with Manim, bringing mathematics, physics, algorithms, and AI concepts to life through Python.",
+    "homepage": "",
+    "stars": 0,
+    "forks": 0,
+    "language": "Python",
+    "topics": [],
+    "pushed_at": "2026-07-27T04:31:55Z",
+    "html_url": "https://github.com/Sushrut-Kale/manim"
+  }
+]

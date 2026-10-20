@@ -2,37 +2,49 @@ name: Naruto Rasengan Contribution Strike
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # runs once a day at midnight UTC
-  workflow_dispatch: {}    # lets you trigger it manually from the Actions tab
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}
   push:
     branches:
-      - main               # regenerates whenever you push to main
+      - main
+    paths:
+      - "scripts/generate_naruto_contrib.py"
+      - ".github/workflows/naruto-contrib.yml"
 
 permissions:
   contents: write
 
 jobs:
-  generate-naruto-strike:
+  generate-contrib:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Generate Naruto Rasengan Contribution SVGs
+      - name: Generate Naruto Rasengan SVG
+        id: generate-svg
         run: |
-          python scripts/generate_naruto_contrib.py --username Sushrut-Kale
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          python scripts/generate_naruto_contrib.py --token "${{ secrets.GITHUB_TOKEN }}"
+        continue-on-error: true
 
-      - name: Deploy SVGs to output branch
-        uses: crazy-max/ghaction-github-pages@v4
+      - name: Fallback to Platane/snk if generator failed
+        if: steps.generate-svg.outcome == 'failure'
+        uses: Platane/snk/svg-only@v3
         with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_user_name: Sushrut-Kale
+          outputs: |
+            dist/naruto-contrib-dark.svg?palette=github-dark&color_snake=#FF6A00&color_dots=#1a1f2e,#5c2a00,#a34400,#FF6A00,#FFB347
+            dist/naruto-contrib-light.svg?color_snake=#FF6A00&color_dots=#e8dcbe,#ff944d,#ff6a00,#d44800,#8a1c00
+
+      - name: Deploy to output branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
+          force_orphan: true
