@@ -41,9 +41,9 @@ def generate_stats_overview():
     <text x="380" y="38" fill="#00C2FF" font-weight="800" text-anchor="end">6</text>
     <line x1="0" y1="46" x2="380" y2="46" stroke="#1A243B" stroke-width="1"/>
 
-    <!-- Row 3: Chakra Grade -->
-    <text x="0" y="66" fill="#F2E3C0" font-weight="600">🍥 Academic Chakra Level</text>
-    <text x="380" y="66" fill="#FF6A00" font-weight="800" text-anchor="end">8.9 CGPA</text>
+    <!-- Row 3: Specialty Jutsu (Replaced CGPA so CGPA is only in ID Card!) -->
+    <text x="0" y="66" fill="#F2E3C0" font-weight="600">🌀 Primary Specialty Jutsu</text>
+    <text x="380" y="66" fill="#FF6A00" font-weight="800" text-anchor="end">AI/ML &amp; 3D Spatial Engines</text>
     <line x1="0" y1="74" x2="380" y2="74" stroke="#1A243B" stroke-width="1"/>
 
     <!-- Row 4: Ninja Rank -->
@@ -54,14 +54,6 @@ def generate_stats_overview():
     return svg
 
 def generate_languages_svg():
-    # Real language breakdown from Sushrut's repos
-    langs = [
-        ("Python", 34, "#3572A5"),
-        ("TypeScript", 28, "#3178C6"),
-        ("JavaScript", 22, "#F7DF1E"),
-        ("C++", 10, "#F34B7D"),
-        ("Other (Kotlin/HTML)", 6, "#FF6A00")
-    ]
     svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 195" width="420" height="195">
   <defs>
     <linearGradient id="langBg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -79,7 +71,7 @@ def generate_languages_svg():
 
   <g transform="translate(20, 24)">
     <text x="0" y="8" fill="#00C2FF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800">🌀 JUTSU NATURE AFFINITIES</text>
-    <text x="0" y="24" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Top Languages & Core Technologies</text>
+    <text x="0" y="24" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Top Languages &amp; Core Technologies</text>
   </g>
 
   <!-- Multi-segment Progress Bar -->
@@ -122,7 +114,7 @@ def main():
     with open("dist/languages.svg", "w", encoding="utf-8") as f:
         f.write(langs_svg)
 
-    print("Generated stats-overview.svg and languages.svg!")
+    print("Regenerated stats-overview.svg and languages.svg with valid XML and no CGPA duplication!")
 
 if __name__ == "__main__":
     main()

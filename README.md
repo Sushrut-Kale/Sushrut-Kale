@@ -11,14 +11,14 @@
   <img src="./assets/rasengan.svg" width="180" height="180" alt="Spinning Rasengan"/>
 </p>
 
-<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=14&duration=2500&pause=900&color=FF6A00&center=true&vCenter=true&repeat=true&width=750&height=35&lines=BELIEVE+IT!+DATTEBAYO!;CHAKRA+RESERVE%3A+8.9+CGPA;RANK%3A+GENIN+-%3E+CHUNIN;NEXT+JUTSU%3A+LLM+FINE-TUNING" alt="Typing SVG"/>
+<img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=14&duration=2500&pause=900&color=FF6A00&center=true&vCenter=true&repeat=true&width=780&height=35&lines=BELIEVE+IT!+DATTEBAYO!;SHINOBI+RANK%3A+GENIN+-%3E+CHUNIN;SPECIALTY%3A+AI%2FML+%26+3D+WORLDS;NEXT+JUTSU%3A+LLM+FINE-TUNING" alt="Typing SVG"/>
 
 <br/><br/>
 
 [![Shinobi Visitors](https://komarev.com/ghpvc/?username=Sushrut-Kale&style=for-the-badge&color=FF6A00&label=SHINOBI+VISITORS&labelColor=0B0F1A)](https://github.com/Sushrut-Kale)
 [![Shinobi Squad](https://img.shields.io/github/followers/Sushrut-Kale?style=for-the-badge&color=00C2FF&labelColor=0B0F1A&logo=github&label=SHINOBI+SQUAD)](https://github.com/Sushrut-Kale?tab=followers)
 <img src="https://img.shields.io/badge/RANK-GENIN%20%E2%9E%94%20CHUNIN-E8590C?style=for-the-badge&labelColor=0B0F1A" alt="Rank"/>
-<img src="https://img.shields.io/badge/CHAKRA-8.9%20CGPA-00C2FF?style=for-the-badge&labelColor=0B0F1A" alt="CGPA"/>
+<img src="https://img.shields.io/badge/VILLAGE-MIT%20AOE%2C%20PUNE-3FA34D?style=for-the-badge&labelColor=0B0F1A" alt="Village"/>
 
 <br/><br/>
 
@@ -57,6 +57,10 @@
 
 <br/><br/>
 
+<p align="center">
+  <img src="./assets/sharingan.svg" width="140" height="140" alt="Sharingan"/>
+</p>
+
 <img src="./assets/falling-leaves.svg" width="100%" alt="Divider"/>
 </div>
 
@@ -69,49 +73,49 @@
 <table align="center" border="0" cellpadding="6" cellspacing="0">
   <tr>
     <td align="center">
-      <a href="https://github.com/Sushrut-Kale/Campus-3D">
+      <a href="https://mitaoe1.vercel.app">
         <img src="./assets/cards/Campus-3D.svg" width="370" alt="Campus-3D"/>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Sushrut-Kale/portfolio">
+      <a href="https://portfolio-seven-omega-o9wgw7dd59.vercel.app">
         <img src="./assets/cards/portfolio.svg" width="370" alt="Portfolio"/>
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/Sushrut-Kale/AI-challenge">
+      <a href="https://agentcraft-phi.vercel.app">
         <img src="./assets/cards/AI-challenge.svg" width="370" alt="AgentCraft"/>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Sushrut-Kale/paytm">
+      <a href="https://finpath-ai-three.vercel.app/">
         <img src="./assets/cards/paytm.svg" width="370" alt="FinPath AI"/>
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/Sushrut-Kale/AI-Learning-Conductor">
+      <a href="https://ai-learning-conductor.vercel.app/">
         <img src="./assets/cards/AI-Learning-Conductor.svg" width="370" alt="AI Learning Conductor"/>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Sushrut-Kale/clubsync">
-        <img src="./assets/cards/clubsync.svg" width="370" alt="ClubSync"/>
+      <a href="https://hbtm-delta.vercel.app">
+        <img src="./assets/cards/HBTM.svg" width="370" alt="HBTM"/>
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/Sushrut-Kale/farm-friend">
-        <img src="./assets/cards/farm-friend.svg" width="370" alt="FarmFriend AI"/>
+      <a href="https://clubsync-4qua.vercel.app/">
+        <img src="./assets/cards/clubsync.svg" width="370" alt="ClubSync"/>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Sushrut-Kale/timetable">
-        <img src="./assets/cards/timetable.svg" width="370" alt="CampusCompass Timetable"/>
+      <a href="https://farm-friend-chi.vercel.app">
+        <img src="./assets/cards/farm-friend.svg" width="370" alt="FarmFriend AI"/>
       </a>
     </td>
   </tr>
@@ -128,7 +132,7 @@
 
 <br/>
 
-<img src="./assets/final-valley-banner.svg" width="760" alt="Campus Twin 3D Banner"/>
+<img src="./assets/final-valley-banner.svg" width="800" alt="Campus Twin 3D Banner"/>
 
 <br/><br/>
 
@@ -136,6 +140,10 @@
 <a href="https://github.com/Sushrut-Kale/Campus-3D"><img src="https://img.shields.io/badge/Repo-Campus--3D-0B0F1A?style=for-the-badge&logo=github&logoColor=white" alt="Repo"/></a>
 
 <br/><br/>
+
+<p align="center">
+  <img src="./assets/kurama-eyes.svg" width="460" alt="Kurama Nine Tails Eyes"/>
+</p>
 
 <img src="./assets/chakra-pulse.svg" width="100%" alt="Divider"/>
 </div>
@@ -172,13 +180,11 @@
 
 <br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/naruto-contrib-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sushrut-Kale/Sushrut-Kale/output/naruto-contrib-light.svg"/>
-  <img alt="Rasengan Contribution Heatmap" src="./assets/naruto-contrib-dark.svg" width="880"/>
-</picture>
+<p align="center">
+  <img src="./assets/naruto-contrib-dark.svg" width="880" alt="Rasengan Contribution Heatmap"/>
+</p>
 
-<br/><br/>
+<br/>
 
 <img src="./assets/shuriken-divider.svg" width="100%" alt="Divider"/>
 </div>

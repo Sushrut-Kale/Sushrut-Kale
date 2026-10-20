@@ -80,17 +80,17 @@ def generate_demo_grid():
 
 def get_palette_color(count, is_dark):
     if is_dark:
-        if count == 0: return "#1a1f2e"
-        if count <= 2: return "#5c2a00"
-        if count <= 5: return "#a34400"
+        if count == 0: return "#161B26"
+        if count <= 2: return "#5C2A00"
+        if count <= 5: return "#A34400"
         if count <= 9: return "#FF6A00"
         return "#FFB347"
     else:
-        if count == 0: return "#e8dcbe"
-        if count <= 2: return "#ff944d"
-        if count <= 5: return "#ff6a00"
-        if count <= 9: return "#d44800"
-        return "#8a1c00"
+        if count == 0: return "#E8DCBE"
+        if count <= 2: return "#FF944D"
+        if count <= 5: return "#FF6A00"
+        if count <= 9: return "#D44800"
+        return "#8A1C00"
 
 def build_svg(total, weeks, is_dark=True):
     theme_name = "dark" if is_dark else "light"
@@ -110,11 +110,9 @@ def build_svg(total, weeks, is_dark=True):
     
     num_weeks = min(len(weeks), 53)
     grid_width = num_weeks * step_x
-    D = 12.0  # Master loop duration in seconds
+    D = 10.0  # Master loop duration in seconds
 
-    # Cells construction
     cells_svg = []
-    bursts_svg = []
 
     for c in range(num_weeks):
         w = weeks[c]
@@ -125,9 +123,8 @@ def build_svg(total, weeks, is_dark=True):
         t0 = max(0.0, pass_time - 0.001)
         t1 = pass_time
         t2 = min(1.0, pass_time + 0.02)
-        t3 = min(1.0, pass_time + 0.08)
+        t3 = min(1.0, pass_time + 0.07)
         
-        # Format keytimes
         kt_str = f"0;{t0:.4f};{t1:.4f};{t2:.4f};{t3:.4f};1"
         
         days = w.get("contributionDays", [])
@@ -138,15 +135,13 @@ def build_svg(total, weeks, is_dark=True):
             color = get_palette_color(count, is_dark)
             
             if count > 0:
-                # Cell burst animation
+                # Cell burst animation via clean fill & opacity (valid XML and SVG compliant)
                 cell_el = f'''<rect x="{col_x}" y="{row_y}" width="{cell_size}" height="{cell_size}" rx="2" fill="{color}">
-  <animate attributeName="fill" values="{color};{color};#7DF9FF;#FFD700;{color};{color}"
-    keyTimes="{kt_str}" dur="{D}s" repeatCount="indefinite"/>
-  <animate attributeName="transform" type="scale"
-    values="1;1;1.4;1.2;1;1"
-    keyTimes="{kt_str}" dur="{D}s" repeatCount="indefinite"
-    additive="sum"/>
-</rect>'''
+    <animate attributeName="fill" values="{color};{color};#7DF9FF;#FFD700;{color};{color}"
+      keyTimes="{kt_str}" dur="{D}s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.75;0.75;1;0.9;0.75;0.75"
+      keyTimes="{kt_str}" dur="{D}s" repeatCount="indefinite"/>
+  </rect>'''
             else:
                 cell_el = f'<rect x="{col_x}" y="{row_y}" width="{cell_size}" height="{cell_size}" rx="2" fill="{color}"/>'
             cells_svg.append(cell_el)
@@ -168,7 +163,7 @@ def build_svg(total, weeks, is_dark=True):
         if mx < grid_x0 + grid_width - 15:
             months_svg.append(f'<text x="{mx}" y="{grid_y0 - 8}" fill="{text_muted}" font-family="monospace" font-size="9" font-weight="700">{m_name}</text>')
 
-    runner_y = grid_y0 + int(3.5 * step_y) - 18
+    runner_y = grid_y0 + int(3.5 * step_y) - 20
     runner_start_x = grid_x0 - 45
     runner_end_x = grid_x0 + grid_width + 30
 
@@ -180,10 +175,17 @@ def build_svg(total, weeks, is_dark=True):
     </linearGradient>
     <radialGradient id="rasenganGlow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="40%" stop-color="#7DF9FF"/>
-      <stop offset="70%" stop-color="#00C2FF"/>
+      <stop offset="30%" stop-color="#7DF9FF"/>
+      <stop offset="65%" stop-color="#00C2FF"/>
       <stop offset="100%" stop-color="rgba(0,194,255,0)"/>
     </radialGradient>
+    <filter id="chakraFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
   <!-- Frame Background -->
@@ -217,33 +219,37 @@ def build_svg(total, weeks, is_dark=True):
       repeatCount="indefinite"/>
 
     <!-- Trailing Spark Particles -->
-    <circle cx="-12" cy="14" r="3" fill="#FF6A00">
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="0.5s" repeatCount="indefinite"/>
+    <circle cx="-12" cy="16" r="3" fill="#FF6A00">
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="0.4s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="-22" cy="10" r="2.5" fill="#00C2FF">
-      <animate attributeName="opacity" values="0.9;0;0.9" dur="0.4s" repeatCount="indefinite"/>
+    <circle cx="-22" cy="12" r="2.5" fill="#00C2FF">
+      <animate attributeName="opacity" values="0.9;0;0.9" dur="0.35s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-32" cy="18" r="2" fill="#FFD700">
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="0.5s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- Pixel Art Naruto Runner -->
-    <g transform="translate(0, 0)">
+    <!-- Pixel Art Naruto Runner with bobbing running motion -->
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 0,-2.5; 0,0" dur="0.3s" repeatCount="indefinite"/>
       <!-- Yellow Hair -->
-      <rect x="6" y="0" width="16" height="6" fill="#FFD700"/>
-      <rect x="4" y="2" width="20" height="4" fill="#FFD700"/>
+      <polygon points="4,2 10,-4 15,1 20,-5 25,2 20,6 6,6" fill="#FFD700"/>
       <!-- Navy Headband & Metal Plate -->
-      <rect x="4" y="6" width="20" height="4" fill="#1C2E56"/>
-      <rect x="8" y="7" width="12" height="2" fill="#E2E8F0"/>
+      <rect x="5" y="6" width="18" height="4" fill="#1C2E56"/>
+      <rect x="8" y="7" width="12" height="2.5" fill="#E2E8F0"/>
       <!-- Face -->
       <rect x="6" y="10" width="16" height="7" fill="#FFD2A8"/>
-      <!-- Blue Eye -->
+      <!-- Eye -->
       <rect x="16" y="11" width="2" height="2" fill="#00C2FF"/>
       <!-- Orange Torso -->
       <rect x="4" y="17" width="18" height="12" fill="#FF6A00"/>
       <rect x="8" y="17" width="10" height="3" fill="#FFFFFF"/>
       <rect x="6" y="20" width="4" height="4" fill="#1C2E56"/>
-      <!-- Trailing Arm -->
-      <rect x="-4" y="18" width="8" height="4" fill="#FF6A00"/>
-      <!-- Lead Arm wielding Rasengan -->
-      <rect x="22" y="17" width="8" height="4" fill="#FF6A00"/>
+      <!-- Back arm -->
+      <rect x="-4" y="18" width="8" height="3.5" fill="#FF6A00"/>
+      <!-- Front arm pointing forward holding Rasengan -->
+      <rect x="22" y="16" width="12" height="4" fill="#FF6A00"/>
       <!-- Running Legs -->
       <rect x="4" y="29" width="5" height="9" fill="#FF6A00"/>
       <rect x="15" y="29" width="5" height="9" fill="#FF6A00"/>
@@ -251,18 +257,20 @@ def build_svg(total, weeks, is_dark=True):
       <rect x="17" y="38" width="7" height="3" fill="#1C2E56"/>
     </g>
 
-    <!-- Spinning Cyan Rasengan -->
-    <g transform="translate(38, 18)">
-      <circle cx="0" cy="0" r="14" fill="url(#rasenganGlow)">
-        <animate attributeName="r" values="12;15;12" dur="0.3s" repeatCount="indefinite"/>
+    <!-- Spinning Cyan Rasengan in front of Naruto -->
+    <g transform="translate(42, 18)" filter="url(#chakraFilter)">
+      <!-- Outer Pulsing Aura -->
+      <circle cx="0" cy="0" r="16" fill="url(#rasenganGlow)">
+        <animate attributeName="r" values="14;18;14" dur="0.3s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="0" cy="0" r="6" fill="#FFFFFF"/>
+      <!-- Core -->
+      <circle cx="0" cy="0" r="7" fill="#FFFFFF"/>
       <!-- Rotating Swirls -->
       <g>
         <animateTransform attributeName="transform" type="rotate"
-          from="0" to="360" dur="0.25s" repeatCount="indefinite"/>
-        <path d="M-8,0 C-8,-5 0,-8 0,0 C0,5 8,8 8,0" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
-        <path d="M0,-8 C5,-8 8,0 0,0 C-5,0 -8,8 0,8" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round"/>
+          from="0 0 0" to="360 0 0" dur="0.25s" repeatCount="indefinite"/>
+        <path d="M-9,0 C-9,-6 0,-9 0,0 C0,6 9,9 9,0" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+        <path d="M0,-9 C6,-9 9,0 0,0 C-6,0 -9,9 0,9" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round"/>
       </g>
     </g>
   </g>
@@ -270,9 +278,9 @@ def build_svg(total, weeks, is_dark=True):
   <!-- Legend in Footer -->
   <g transform="translate({total_w - 220}, {total_h - 14})">
     <text x="-40" y="8" fill="{text_muted}" font-family="monospace" font-size="9" font-weight="600">LESS</text>
-    <rect x="0" y="0" width="9" height="9" rx="2" fill="{'#1a1f2e' if is_dark else '#e8dcbe'}"/>
-    <rect x="14" y="0" width="9" height="9" rx="2" fill="{'#5c2a00' if is_dark else '#ff944d'}"/>
-    <rect x="28" y="0" width="9" height="9" rx="2" fill="{'#a34400' if is_dark else '#ff6a00'}"/>
+    <rect x="0" y="0" width="9" height="9" rx="2" fill="{'#161B26' if is_dark else '#e8dcbe'}"/>
+    <rect x="14" y="0" width="9" height="9" rx="2" fill="{'#5C2A00' if is_dark else '#ff944d'}"/>
+    <rect x="28" y="0" width="9" height="9" rx="2" fill="{'#A34400' if is_dark else '#ff6a00'}"/>
     <rect x="42" y="0" width="9" height="9" rx="2" fill="{'#FF6A00' if is_dark else '#d44800'}"/>
     <rect x="56" y="0" width="9" height="9" rx="2" fill="{'#FFB347' if is_dark else '#8a1c00'}"/>
     <text x="74" y="8" fill="{text_muted}" font-family="monospace" font-size="9" font-weight="600">MORE</text>

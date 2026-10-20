@@ -31,9 +31,9 @@
     <text x="380" y="38" fill="#00C2FF" font-weight="800" text-anchor="end">6</text>
     <line x1="0" y1="46" x2="380" y2="46" stroke="#1A243B" stroke-width="1"/>
 
-    <!-- Row 3: Chakra Grade -->
-    <text x="0" y="66" fill="#F2E3C0" font-weight="600">🍥 Academic Chakra Level</text>
-    <text x="380" y="66" fill="#FF6A00" font-weight="800" text-anchor="end">8.9 CGPA</text>
+    <!-- Row 3: Specialty Jutsu (Replaced CGPA so CGPA is only in ID Card!) -->
+    <text x="0" y="66" fill="#F2E3C0" font-weight="600">🌀 Primary Specialty Jutsu</text>
+    <text x="380" y="66" fill="#FF6A00" font-weight="800" text-anchor="end">AI/ML &amp; 3D Spatial Engines</text>
     <line x1="0" y1="74" x2="380" y2="74" stroke="#1A243B" stroke-width="1"/>
 
     <!-- Row 4: Ninja Rank -->

@@ -15,7 +15,7 @@
 
   <g transform="translate(20, 24)">
     <text x="0" y="8" fill="#00C2FF" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800">🌀 JUTSU NATURE AFFINITIES</text>
-    <text x="0" y="24" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Top Languages & Core Technologies</text>
+    <text x="0" y="24" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Top Languages &amp; Core Technologies</text>
   </g>
 
   <!-- Multi-segment Progress Bar -->

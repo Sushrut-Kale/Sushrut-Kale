@@ -26,6 +26,8 @@ def get_lang_color(lang):
     }
     return colors.get(lang, "#8E9BB0")
 
+import html
+
 def clean_desc(text, max_len=75):
     # Strip emojis and clean
     clean = re.sub(r'[^\x00-\x7F]+', '', text).strip()
@@ -33,7 +35,7 @@ def clean_desc(text, max_len=75):
         clean = "Shinobi engineering and applied intelligent systems."
     if len(clean) > max_len:
         clean = clean[:max_len-3] + "..."
-    return clean
+    return html.escape(clean)
 
 def generate_svg_card(repo):
     name = repo["name"]
