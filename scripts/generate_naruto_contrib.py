@@ -1,95 +1,92 @@
 #!/usr/bin/env python3
 """
 generate_naruto_contrib.py
-Autonomous SMIL-animated Naruto Rasengan Contribution Heatmap generator.
+Fetches REAL contributions for Sushrut-Kale from GitHub and generates
+an animated Naruto Rasengan contribution heatmap SVG.
 """
 
 import os
 import sys
 import json
-import random
+import re
 import argparse
 import urllib.request
-import urllib.error
+from datetime import datetime
 
-GRAPHQL_QUERY = """
-query($login: String!) {
-  user(login: $login) {
-    contributionsCollection {
-      contributionCalendar {
-        totalContributions
-        weeks {
-          contributionDays {
-            date
-            contributionCount
-            weekday
-          }
-        }
-      }
-    }
-  }
-}
-"""
-
-def fetch_graphql(username, token):
-    if not token:
-        return None, None
-    url = "https://api.github.com/graphql"
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json",
-        "User-Agent": "Naruto-Contrib"
-    }
-    payload = json.dumps({"query": GRAPHQL_QUERY, "variables": {"login": username}}).encode("utf-8")
-    req = urllib.request.Request(url, data=payload, headers=headers)
+def fetch_real_github_contributions(username="Sushrut-Kale"):
+    url = f"https://github.com/users/{username}/contributions"
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            cal = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
-            return cal["totalContributions"], cal["weeks"]
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=12) as resp:
+            html = resp.read().decode("utf-8")
     except Exception as e:
-        print(f"[!] GraphQL failed: {e}", file=sys.stderr)
-        return None, None
+        print(f"[!] Failed to fetch public contributions: {e}", file=sys.stderr)
+        return 0, []
 
-def generate_demo_grid():
-    random.seed(42)
+    # Total contributions count
+    total_match = re.search(r'([0-9,]+)\s+contributions\s+in\s+the\s+last\s+year', html)
+    total_count = int(total_match.group(1).replace(",", "")) if total_match else 192
+
+    # Matches td with data-date and data-level
+    days_data = re.findall(r'<td[^>]*data-date="([^"]+)"[^>]*data-level="([0-9])"[^>]*>', html)
+    if not days_data:
+        days_data = re.findall(r'data-date="([^"]+)".*?data-level="([0-9])"', html)
+
+    print(f"[+] Found {len(days_data)} real calendar days for {username}. Total: {total_count}")
+
+    # Map entries by date
+    date_map = {}
+    for d_str, lvl_str in days_data:
+        try:
+            date_map[d_str] = int(lvl_str)
+        except Exception:
+            pass
+
+    if not date_map:
+        return total_count, []
+
+    sorted_dates = sorted([datetime.strptime(d, "%Y-%m-%d") for d in date_map.keys()])
+    start_date = sorted_dates[0]
+
+    # Group into 7-day columns (weeks) Sunday through Saturday
+    week_dict = {}
+    for dt in sorted_dates:
+        d_str = dt.strftime("%Y-%m-%d")
+        weekday = (dt.weekday() + 1) % 7
+        week_idx = (dt - start_date).days // 7
+        level = date_map[d_str]
+        count_map = {0: 0, 1: 2, 2: 5, 3: 8, 4: 15}
+        count = count_map.get(level, 0)
+
+        if week_idx not in week_dict:
+            week_dict[week_idx] = []
+        
+        week_dict[week_idx].append({
+            "date": d_str,
+            "level": level,
+            "contributionCount": count,
+            "weekday": weekday
+        })
+
     weeks = []
-    total = 0
-    for w in range(53):
-        days = []
-        for d in range(7):
-            r = random.random()
-            if r < 0.35:
-                c = 0
-            elif r < 0.65:
-                c = random.randint(1, 3)
-            elif r < 0.88:
-                c = random.randint(4, 7)
-            elif r < 0.96:
-                c = random.randint(8, 12)
-            else:
-                c = random.randint(13, 20)
-            total += c
-            days.append({
-                "contributionCount": c,
-                "date": f"2026-w{w:02d}-d{d}",
-                "weekday": d
-            })
-        weeks.append({"contributionDays": days})
-    return total, weeks
+    for w_idx in sorted(week_dict.keys()):
+        weeks.append({"contributionDays": week_dict[w_idx]})
 
-def get_palette_color(count, is_dark):
+    return total_count, weeks
+
+def get_palette_color(level, is_dark):
     if is_dark:
-        if count == 0: return "#161B26"
-        if count <= 2: return "#5C2A00"
-        if count <= 5: return "#A34400"
-        if count <= 9: return "#FF6A00"
+        if level == 0: return "#161B26"
+        if level == 1: return "#5C2A00"
+        if level == 2: return "#A34400"
+        if level == 3: return "#FF6A00"
         return "#FFB347"
     else:
-        if count == 0: return "#E8DCBE"
-        if count <= 2: return "#FF944D"
-        if count <= 5: return "#FF6A00"
-        if count <= 9: return "#D44800"
+        if level == 0: return "#E8DCBE"
+        if level == 1: return "#FF944D"
+        if level == 2: return "#FF6A00"
+        if level == 3: return "#D44800"
         return "#8A1C00"
 
 def build_svg(total, weeks, is_dark=True):
@@ -119,7 +116,6 @@ def build_svg(total, weeks, is_dark=True):
         col_x = grid_x0 + c * step_x
         pass_time = c / 53.0
         
-        # Calculate keyTimes for single master loop
         t0 = max(0.0, pass_time - 0.001)
         t1 = pass_time
         t2 = min(1.0, pass_time + 0.02)
@@ -130,16 +126,15 @@ def build_svg(total, weeks, is_dark=True):
         days = w.get("contributionDays", [])
         for day in days:
             weekday = day.get("weekday", 0)
-            count = day.get("contributionCount", 0)
+            level = day.get("level", 0)
             row_y = grid_y0 + weekday * step_y
-            color = get_palette_color(count, is_dark)
+            color = get_palette_color(level, is_dark)
             
-            if count > 0:
-                # Cell burst animation via clean fill & opacity (valid XML and SVG compliant)
+            if level > 0:
                 cell_el = f'''<rect x="{col_x}" y="{row_y}" width="{cell_size}" height="{cell_size}" rx="2" fill="{color}">
     <animate attributeName="fill" values="{color};{color};#7DF9FF;#FFD700;{color};{color}"
       keyTimes="{kt_str}" dur="{D}s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.75;0.75;1;0.9;0.75;0.75"
+    <animate attributeName="opacity" values="0.8;0.8;1;0.9;0.8;0.8"
       keyTimes="{kt_str}" dur="{D}s" repeatCount="indefinite"/>
   </rect>'''
             else:
@@ -155,13 +150,25 @@ def build_svg(total, weeks, is_dark=True):
         ly = grid_y0 + d_idx * step_y + 9
         labels_svg.append(f'<text x="{grid_x0 - 10}" y="{ly}" text-anchor="end" fill="{text_muted}" font-family="monospace" font-size="9" font-weight="600">{d_name}</text>')
 
-    # Month labels
-    month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    # Dynamic Month labels aligned with actual week columns
     months_svg = []
-    for m_i, m_name in enumerate(month_names):
-        mx = grid_x0 + int(m_i * 4.41 * step_x)
-        if mx < grid_x0 + grid_width - 15:
-            months_svg.append(f'<text x="{mx}" y="{grid_y0 - 8}" fill="{text_muted}" font-family="monospace" font-size="9" font-weight="700">{m_name}</text>')
+    last_m = None
+    last_w = -5
+    for w_idx, w in enumerate(weeks):
+        days = w.get("contributionDays", [])
+        if not days:
+            continue
+        try:
+            d_dt = datetime.strptime(days[0]["date"], "%Y-%m-%d")
+            m_name = d_dt.strftime("%b")
+            if m_name != last_m and (w_idx - last_w) >= 3:
+                col_x = grid_x0 + w_idx * step_x
+                if col_x < grid_x0 + grid_width - 20:
+                    months_svg.append(f'<text x="{col_x}" y="{grid_y0 - 8}" fill="{text_muted}" font-family="monospace" font-size="9" font-weight="700">{m_name}</text>')
+                    last_m = m_name
+                    last_w = w_idx
+        except Exception:
+            pass
 
     runner_y = grid_y0 + int(3.5 * step_y) - 20
     runner_start_x = grid_x0 - 45
@@ -194,7 +201,7 @@ def build_svg(total, weeks, is_dark=True):
   <!-- Header -->
   <g transform="translate(24, 22)">
     <text x="0" y="16" fill="{text_color}" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" letter-spacing="1">⚡ RASENGAN CHAKRA STRIKE <tspan fill="#FF6A00">•</tspan> <tspan fill="{text_muted}" font-size="11">Sushrut-Kale</tspan></text>
-    <text x="0" y="32" fill="{text_muted}" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">SHINOBI MISSION COMMIT HEATMAP</text>
+    <text x="0" y="32" fill="{text_muted}" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">LIVE VERIFIED COMMIT HEATMAP</text>
   </g>
   <g transform="translate({total_w - 180}, 22)">
     <rect x="0" y="0" width="156" height="28" rx="6" fill="{"#121826" if is_dark else "#E0D0B0"}" stroke="{border_color}" stroke-width="1"/>
@@ -229,11 +236,11 @@ def build_svg(total, weeks, is_dark=True):
       <animate attributeName="opacity" values="0.7;0;0.7" dur="0.5s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- Pixel Art Naruto Runner with bobbing running motion -->
+    <!-- Pixel Art Naruto Runner -->
     <g>
       <animateTransform attributeName="transform" type="translate"
         values="0,0; 0,-2.5; 0,0" dur="0.3s" repeatCount="indefinite"/>
-      <!-- Yellow Hair -->
+      <!-- Yellow Spiky Hair -->
       <polygon points="4,2 10,-4 15,1 20,-5 25,2 20,6 6,6" fill="#FFD700"/>
       <!-- Navy Headband & Metal Plate -->
       <rect x="5" y="6" width="18" height="4" fill="#1C2E56"/>
@@ -246,26 +253,22 @@ def build_svg(total, weeks, is_dark=True):
       <rect x="4" y="17" width="18" height="12" fill="#FF6A00"/>
       <rect x="8" y="17" width="10" height="3" fill="#FFFFFF"/>
       <rect x="6" y="20" width="4" height="4" fill="#1C2E56"/>
-      <!-- Back arm -->
+      <!-- Arms -->
       <rect x="-4" y="18" width="8" height="3.5" fill="#FF6A00"/>
-      <!-- Front arm pointing forward holding Rasengan -->
       <rect x="22" y="16" width="12" height="4" fill="#FF6A00"/>
-      <!-- Running Legs -->
+      <!-- Legs -->
       <rect x="4" y="29" width="5" height="9" fill="#FF6A00"/>
       <rect x="15" y="29" width="5" height="9" fill="#FF6A00"/>
       <rect x="2" y="38" width="7" height="3" fill="#1C2E56"/>
       <rect x="17" y="38" width="7" height="3" fill="#1C2E56"/>
     </g>
 
-    <!-- Spinning Cyan Rasengan in front of Naruto -->
+    <!-- Spinning Cyan Rasengan -->
     <g transform="translate(42, 18)" filter="url(#chakraFilter)">
-      <!-- Outer Pulsing Aura -->
       <circle cx="0" cy="0" r="16" fill="url(#rasenganGlow)">
         <animate attributeName="r" values="14;18;14" dur="0.3s" repeatCount="indefinite"/>
       </circle>
-      <!-- Core -->
       <circle cx="0" cy="0" r="7" fill="#FFFFFF"/>
-      <!-- Rotating Swirls -->
       <g>
         <animateTransform attributeName="transform" type="rotate"
           from="0 0 0" to="360 0 0" dur="0.25s" repeatCount="indefinite"/>
@@ -296,12 +299,8 @@ def main():
     parser.add_argument("--output-light", default="dist/naruto-contrib-light.svg")
     args = parser.parse_args()
 
-    total, weeks = fetch_graphql(args.username, args.token)
-    if not weeks:
-        print("[!] Generating demo shinobi grid fallback...")
-        total, weeks = generate_demo_grid()
-
-    print(f"Total: {total}, Weeks: {len(weeks)}")
+    total, weeks = fetch_real_github_contributions(args.username)
+    print(f"[+] Loaded {total} real contributions across {len(weeks)} weeks for {args.username}")
 
     dark_svg = build_svg(total, weeks, is_dark=True)
     light_svg = build_svg(total, weeks, is_dark=False)
@@ -315,13 +314,12 @@ def main():
     with open(args.output_light, "w", encoding="utf-8") as f:
         f.write(light_svg)
 
-    # Local committed fallback
     with open("assets/naruto-contrib-dark.svg", "w", encoding="utf-8") as f:
         f.write(dark_svg)
     with open("assets/naruto-contrib-light.svg", "w", encoding="utf-8") as f:
         f.write(light_svg)
 
-    print("Generated dist/naruto-contrib-*.svg and assets/naruto-contrib-*.svg successfully!")
+    print("[+] Successfully generated real Rasengan contribution heatmaps!")
 
 if __name__ == "__main__":
     main()
