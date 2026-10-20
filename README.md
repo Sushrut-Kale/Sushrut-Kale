@@ -1,6 +1,23 @@
 <a name="top"></a>
 <div align="center">
 
+<!-- Shinobi Background Audio Engine & Mute Control -->
+<p align="center">
+  <a href="https://sushrut-kale.github.io/Sushrut-Kale/player.html" title="Play Classic Naruto Theme"><img src="https://img.shields.io/badge/%F0%9F%94%8A%20AUDIO%20THEME-NARUTO%20%7C%20THE%20RISING%20FIGHTING%20SPIRIT-FF6A00?style=for-the-badge&logo=soundcharts&logoColor=white&labelColor=0B0F1A" alt="Audio Theme"/></a>
+  <a href="https://sushrut-kale.github.io/Sushrut-Kale/player.html?muted=true" title="Mute Theme Audio"><img src="https://img.shields.io/badge/%F0%9F%94%87%20MUTE-D00000?style=for-the-badge&labelColor=0B0F1A" alt="Mute Audio"/></a>
+  <a href="https://sushrut-kale.github.io/Sushrut-Kale/player.html" title="Open Interactive Chakra Player"><img src="https://img.shields.io/badge/%E2%9A%A1%20CHAKRA%20PLAYER-00C2FF?style=for-the-badge&logo=youtube&logoColor=white&labelColor=0B0F1A" alt="Chakra Player"/></a>
+</p>
+
+<details>
+<summary align="center"><b>🎧 <i>Click to reveal Built-In Video Player &amp; Audio Visualizer</i></b></summary>
+<br/>
+<p align="center">
+  <video src="https://github.com/Sushrut-Kale/Sushrut-Kale/raw/main/assets/audio/naruto-theme.mp4" controls width="640"></video>
+</p>
+</details>
+
+<br/>
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6A00,25:E8590C,50:D00000,75:00C2FF,100:0B0F1A&height=220&section=header&text=SUSHRUT%20KALE&fontSize=65&fontColor=F2E3C0&animation=twinkling&fontAlignY=38&desc=Shinobi%20of%20Code%20%E2%80%A2%20AI%2FML%20%E2%80%A2%203D%20Worlds&descAlignY=58&descSize=20&descColor=7DF9FF" width="100%" alt="Sushrut Kale Banner"/>
 
 <p align="center">
@@ -72,7 +89,7 @@
 
 <a name="stack"></a>
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:FF6A00,50:00C2FF,100:0B0F1A&height=95&section=header&text=TECH%20STACK%20%26%20ARCHITECTURE&fontSize=32&fontColor=F2E3C0" width="100%" alt="Tech Stack Section"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:FF6A00,50:00C2FF,100:0B0F1A&height=95&section=header&text=SHINOBI%20TECH%20ARSENAL&fontSize=32&fontColor=F2E3C0" width="100%" alt="Tech Stack Section"/>
 
 <br/>
 
