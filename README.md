@@ -1,16 +1,15 @@
 <a name="top"></a>
 <div align="center">
 
-<!-- Shinobi Background Audio Engine & Mute Control -->
+<!-- Shinobi Audio Player (Naruto: Rise of a Ninja Theme) -->
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=daPo6npLQcs" target="_blank" title="Click to Play Classic Naruto Theme: The Rising Fighting Spirit">
-    <img src="./assets/audio-player.svg" width="700" alt="Naruto Theme Shinobi Audio Engine"/>
-  </a>
+  <img src="./assets/audio-player.svg" width="720" alt="Naruto: Rise of a Ninja Audio Player"/>
 </p>
+
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=daPo6npLQcs" target="_blank"><img src="https://img.shields.io/badge/%E2%96%B6%EF%B8%8F%20PLAY%20THEME-THE%20RISING%20FIGHTING%20SPIRIT-FF6A00?style=for-the-badge&logo=youtube&logoColor=white&labelColor=0B0F1A" alt="Play Theme"/></a>
-  <a href="https://www.youtube.com/watch?v=daPo6npLQcs" target="_blank" title="Control volume or mute on YouTube player"><img src="https://img.shields.io/badge/%F0%9F%94%87%20MUTE-D00000?style=for-the-badge&labelColor=0B0F1A" alt="Mute Audio"/></a>
-  <a href="./assets/audio/naruto-theme.mp3" download title="Download Local MP3 Soundtrack"><img src="https://img.shields.io/badge/%F0%9F%8E%B5%20LOCAL-MP3-00C2FF?style=for-the-badge&labelColor=0B0F1A" alt="Download MP3"/></a>
+  <video src="https://github.com/Sushrut-Kale/Sushrut-Kale/raw/main/assets/audio/naruto-theme.mp4" controls width="720" height="72" poster="./assets/audio/player-poster.png">
+    <audio controls src="./assets/audio/naruto-theme.mp3"></audio>
+  </video>
 </p>
 
 <br/>
