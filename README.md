@@ -64,6 +64,14 @@
 <br/><br/>
 
 <p align="center">
+  <img src="./assets/kakashi_handsigns.gif" width="220" alt="Kakashi Lightning Handsigns"/>
+  <br/>
+  <sub>⚡ <i>Speedrunning handsigns to push hotfixes straight to production!</i></sub>
+</p>
+
+<br/>
+
+<p align="center">
   <img src="./assets/sharingan.svg" width="130" height="130" alt="Sharingan"/>
 </p>
 
@@ -260,6 +268,14 @@
 
 <br/><br/>
 
+<p align="center">
+  <img src="./assets/naruto_shadow_clones.gif" width="220" alt="Multi-Shadow Clones"/>
+  <br/>
+  <sub>👥 <i>Multi-Shadow Clone Jutsu: Spawning concurrent microservices &amp; worker threads!</i></sub>
+</p>
+
+<br/>
+
 <img src="./assets/falling-leaves.svg" width="100%" alt="Divider"/>
 </div>
 
@@ -289,6 +305,14 @@
 
 <br/><br/>
 
+<p align="center">
+  <img src="./assets/naruto_ramen.gif" width="220" alt="Naruto Eating Ramen"/>
+  <br/>
+  <sub>🍜 <i>Fueling up with Ichiraku Ramen between high-stakes coding missions!</i></sub>
+</p>
+
+<br/>
+
 <img src="./assets/chakra-pulse.svg" width="100%" alt="Divider"/>
 </div>
 
@@ -310,6 +334,14 @@
   <a href="https://leetcode.com/u/ryYeqtxZz8/"><img src="https://img.shields.io/badge/LEETCODE-FFD700?style=for-the-badge&logo=leetcode&logoColor=black&labelColor=161B26" alt="LeetCode"/></a>
   <a href="https://www.instagram.com/me_sushrut.13"><img src="https://img.shields.io/badge/INSTAGRAM-D00000?style=for-the-badge&logo=instagram&logoColor=white&labelColor=161B26" alt="Instagram"/></a>
 </p>
+
+<p align="center">
+  <img src="./assets/naruto_ninja_way.gif" width="220" alt="Naruto Ninja Way"/>
+  <br/>
+  <sub>🍥 <i>"I never go back on my code... that's my Ninja Way!"</i></sub>
+</p>
+
+<br/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=12&duration=2500&pause=1000&color=FF6A00&center=true&vCenter=true&width=700&lines=SEE+YOU+IN+THE+NEXT+MISSION!;BELIEVE+IT!+DATTEBAYO!" alt="Closing Typing"/>
 
