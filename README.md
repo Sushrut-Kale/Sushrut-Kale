@@ -269,9 +269,9 @@
 
 <br/>
 
-<!-- Real Verified Live Contribution Heatmap with Naruto Runner Animation -->
+<!-- Real Verified Live Contribution Heatmap with Naruto Snake Animation -->
 <p align="center">
-  <img src="./assets/naruto-contrib-dark.svg" width="880" alt="Rasengan Contribution Heatmap"/>
+  <img src="./assets/naruto-contrib-dark.svg" width="980" alt="Rasengan Snake Contribution Heatmap"/>
 </p>
 
 <br/>
