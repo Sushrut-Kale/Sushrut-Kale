@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 110" width="480" height="110">
+  <defs>
+    <!-- Metal Plate Gradient -->
+    <linearGradient id="metalPlateGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="15%" stop-color="#CBD5E1"/>
+      <stop offset="45%" stop-color="#94A3B8"/>
+      <stop offset="55%" stop-color="#64748B"/>
+      <stop offset="85%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+
+    <!-- Metal Gleam Shine Animation -->
+    <linearGradient id="gleamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="45%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.7)"/>
+      <stop offset="55%" stop-color="rgba(0,194,255,0.8)"/>
+      <stop offset="60%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+
+    <!-- Headband Cloth Gradient -->
+    <linearGradient id="clothGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0B0F1A"/>
+      <stop offset="25%" stop-color="#151D2F"/>
+      <stop offset="50%" stop-color="#1E2A44"/>
+      <stop offset="75%" stop-color="#151D2F"/>
+      <stop offset="100%" stop-color="#0B0F1A"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="chakraGleam" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="leafShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="1.5" stdDeviation="1" flood-color="#0F172A" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+
+  <!-- Cloth Fabric Band -->
+  <path d="M 20,40 Q 120,48 240,48 Q 360,48 460,40 L 470,70 Q 360,78 240,78 Q 120,78 10,70 Z" fill="url(#clothGrad)" stroke="#FF6A00" stroke-width="1" opacity="0.95"/>
+  <!-- Fabric folds / stitches -->
+  <path d="M 20,43 Q 120,50 240,50 Q 360,50 460,43" fill="none" stroke="#2D3B59" stroke-width="1.2" stroke-dasharray="4,4"/>
+  <path d="M 12,67 Q 120,75 240,75 Q 360,75 468,67" fill="none" stroke="#2D3B59" stroke-width="1.2" stroke-dasharray="4,4"/>
+
+  <!-- Metal Forehead Plate -->
+  <g transform="translate(130, 26)">
+    <!-- Plate Shadow -->
+    <rect x="2" y="4" width="220" height="60" rx="8" fill="#000000" opacity="0.5"/>
+
+    <!-- Plate Base -->
+    <rect x="0" y="0" width="220" height="60" rx="8" fill="url(#metalPlateGrad)" stroke="#1E293B" stroke-width="1.8"/>
+
+    <!-- Beveled Inner Rim -->
+    <rect x="4" y="4" width="212" height="52" rx="6" fill="none" stroke="#F8FAFC" stroke-width="1" opacity="0.6"/>
+    <rect x="5" y="5" width="210" height="50" rx="5" fill="none" stroke="#334155" stroke-width="1" opacity="0.8"/>
+
+    <!-- Rivets / Screws (6 ninja rivets) -->
+    <!-- Left top/bottom/mid -->
+    <circle cx="14" cy="14" r="3.2" fill="#334155"/>
+    <circle cx="14" cy="14" r="2.2" fill="#CBD5E1"/>
+    <line x1="12.5" y1="14" x2="15.5" y2="14" stroke="#475569" stroke-width="0.8"/>
+
+    <circle cx="14" cy="46" r="3.2" fill="#334155"/>
+    <circle cx="14" cy="46" r="2.2" fill="#CBD5E1"/>
+    <line x1="12.5" y1="46" x2="15.5" y2="46" stroke="#475569" stroke-width="0.8"/>
+
+    <!-- Right top/bottom/mid -->
+    <circle cx="206" cy="14" r="3.2" fill="#334155"/>
+    <circle cx="206" cy="14" r="2.2" fill="#CBD5E1"/>
+    <line x1="204.5" y1="14" x2="207.5" y2="14" stroke="#475569" stroke-width="0.8"/>
+
+    <circle cx="206" cy="46" r="3.2" fill="#334155"/>
+    <circle cx="206" cy="46" r="2.2" fill="#CBD5E1"/>
+    <line x1="204.5" y1="46" x2="207.5" y2="46" stroke="#475569" stroke-width="0.8"/>
+
+    <!-- Center Konoha Leaf Insignia (Engraved deeply into metal) -->
+    <g transform="translate(110, 30)" filter="url(#leafShadow)">
+      <!-- Outer Leaf Arc + Spiral -->
+      <path d="M -14,8 C -22,-2 -15,-16 0,-16 C 18,-16 26,-2 18,10 C 12,18 -4,18 -12,10 C -18,2 -10,-8 0,-8 C 7,-8 10,-2 6,4 C 3,8 -2,7 -4,4 C -5,1 -3,-2 0,-2 C 2,-2 3,0 2,2" 
+            fill="none" stroke="#1E293B" stroke-width="4.2" stroke-linecap="round"/>
+      <path d="M -14,8 C -22,-2 -15,-16 0,-16 C 18,-16 26,-2 18,10 C 12,18 -4,18 -12,10 C -18,2 -10,-8 0,-8 C 7,-8 10,-2 6,4 C 3,8 -2,7 -4,4 C -5,1 -3,-2 0,-2 C 2,-2 3,0 2,2" 
+            fill="none" stroke="#FF6A00" stroke-width="2.2" stroke-linecap="round"/>
+
+      <!-- Leaf Triangular Tail Slash -->
+      <polygon points="12,-16 26,-24 16,-10" fill="#1E293B"/>
+      <polygon points="13,-15 24,-22 16,-10" fill="#FF6A00"/>
+    </g>
+
+    <!-- Animated Light Gleam Across Metal -->
+    <rect x="0" y="0" width="220" height="60" rx="8" fill="url(#gleamGrad)" opacity="0.85">
+      <animate attributeName="x" values="-220;220;-220" dur="4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Left & Right Glowing Chakra Sparkles -->
+  <circle cx="118" cy="56" r="2.5" fill="#00C2FF" filter="url(#chakraGleam)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="2;3.5;2" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="362" cy="56" r="2.5" fill="#FF6A00" filter="url(#chakraGleam)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="3.5;2;3.5" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+</svg>

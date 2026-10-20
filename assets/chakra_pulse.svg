@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 60" width="100%" height="60">
+  <defs>
+    <linearGradient id="auraLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0B0F1A" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00C2FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7DF9FF" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="auraRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A00" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#D00000" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0B0F1A" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="auraGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left Rasengan Blue Chakra Stream -->
+  <path d="M 50,30 Q 250,15 440,30" fill="none" stroke="url(#auraLeft)" stroke-width="3" filter="url(#auraGlow)">
+    <animate attributeName="d" values="M 50,30 Q 250,15 440,30; M 50,30 Q 250,45 440,30; M 50,30 Q 250,15 440,30" dur="3s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Right Kurama Orange Chakra Stream -->
+  <path d="M 460,30 Q 650,45 850,30" fill="none" stroke="url(#auraRight)" stroke-width="3" filter="url(#auraGlow)">
+    <animate attributeName="d" values="M 460,30 Q 650,45 850,30; M 460,30 Q 650,15 850,30; M 460,30 Q 650,45 850,30" dur="3s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Central Clash Shockwave Rings -->
+  <g transform="translate(450, 30)">
+    <!-- Expanding Pulse Wave 1 -->
+    <ellipse cx="0" cy="0" rx="10" ry="10" fill="none" stroke="#7DF9FF" stroke-width="1.5" opacity="0.8">
+      <animate attributeName="rx" values="6;60;90" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="6;24;36" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0" dur="2s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Expanding Pulse Wave 2 (delayed) -->
+    <ellipse cx="0" cy="0" rx="10" ry="10" fill="none" stroke="#FF6A00" stroke-width="1.5" opacity="0.8">
+      <animate attributeName="rx" values="6;60;90" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="6;24;36" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Center Rotating Yin-Yang Chakra Core -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2s" repeatCount="indefinite"/>
+      <!-- Blue Rasengan half -->
+      <path d="M 0,-12 A 12,12 0 0,1 0,12 A 6,6 0 0,1 0,0 A 6,6 0 0,0 0,-12 Z" fill="#00C2FF" filter="url(#auraGlow)"/>
+      <circle cx="0" cy="6" r="2.5" fill="#FFFFFF"/>
+      <!-- Orange Kurama half -->
+      <path d="M 0,12 A 12,12 0 0,1 0,-12 A 6,6 0 0,1 0,0 A 6,6 0 0,0 0,12 Z" fill="#FF6A00" filter="url(#auraGlow)"/>
+      <circle cx="0" cy="-6" r="2.5" fill="#FFD700"/>
+    </g>
+  </g>
+</svg>

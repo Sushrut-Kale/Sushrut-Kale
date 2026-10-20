@@ -1,0 +1,3182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890 220" width="890" height="220">
+  <defs>
+    <!-- Ninja Scroll & Chakra Filters -->
+    <linearGradient id="bgGrad_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F1A"/>
+      <stop offset="50%" stop-color="#111726"/>
+      <stop offset="100%" stop-color="#0B0F1A"/>
+    </linearGradient>
+
+    <linearGradient id="scrollBorder_dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A00"/>
+      <stop offset="25%" stop-color="#D00000"/>
+      <stop offset="50%" stop-color="#00C2FF"/>
+      <stop offset="75%" stop-color="#FF6A00"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+
+    <!-- Rasengan Energy Radial Gradient -->
+    <radialGradient id="rasenganCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#7DF9FF"/>
+      <stop offset="70%" stop-color="#00C2FF"/>
+      <stop offset="100%" stop-color="rgba(0,194,255,0)"/>
+    </radialGradient>
+
+    <radialGradient id="chakraAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(0,194,255,0.85)"/>
+      <stop offset="60%" stop-color="rgba(125,249,255,0.4)"/>
+      <stop offset="100%" stop-color="rgba(0,194,255,0)"/>
+    </radialGradient>
+
+    <filter id="chakraGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="flameGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .ninja-title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 14px; fill: #F2E3C0; letter-spacing: 1px; }
+    .ninja-sub { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 10px; fill: #8E9BB0; letter-spacing: 0.5px; }
+    .stat-badge { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 11px; fill: #FFD700; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect x="2" y="2" width="886" height="216" rx="12" fill="url(#bgGrad_dark)" stroke="url(#scrollBorder_dark)" stroke-width="2"/>
+
+  <!-- Konoha Leaf Symbol Background Watermark -->
+  <g opacity="0.06" transform="translate(355.0, 20) scale(1.5)">
+    <path fill="#FF6A00" d="M60,10 C90,10 110,35 110,65 C110,95 85,115 55,115 C25,115 5,95 5,65 C5,35 25,15 50,15 L60,10 Z M55,30 C35,30 20,45 20,65 C20,85 35,100 55,100 C75,100 90,85 90,65 C90,45 75,35 60,35 C50,35 40,42 40,55 C40,65 48,72 58,72 C65,72 70,68 70,62 C70,57 66,54 61,54 C58,54 55,56 55,59 C55,61 56,63 58,63 C57,64 56,64 55,64 C52,64 50,62 50,59 C50,55 54,51 60,51 C66,51 72,56 72,63 C72,70 65,76 56,76 C46,76 36,67 36,55 C36,40 48,31 60,31 L55,30 Z"/>
+    <path stroke="#FF6A00" stroke-width="3" stroke-linecap="round" d="M100,20 L125,5"/>
+  </g>
+
+  <!-- Header Section -->
+  <g transform="translate(24, 22)">
+    <!-- Konoha Forehead Protector Badge -->
+    <rect x="0" y="0" width="34" height="20" rx="4" fill="#1E2638" stroke="#8E9BB0" stroke-width="1.5"/>
+    <circle cx="4" cy="10" r="1.5" fill="#C0C8D8"/>
+    <circle cx="30" cy="10" r="1.5" fill="#C0C8D8"/>
+    <!-- Leaf engraving -->
+    <path fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-linecap="round" d="M14,13 C12,11 12,8 15,7 C18,6 20,9 19,11 C18,12 16,12 16,10"/>
+    <path stroke="#FF6A00" stroke-width="1.2" stroke-linecap="round" d="M20,7 L23,5"/>
+
+    <!-- Title Texts -->
+    <text x="44" y="14" class="ninja-title">⚡ RASENGAN CHAKRA STRIKE <tspan fill="#FF6A00">•</tspan> <tspan font-weight="600" fill="#8E9BB0">NINJA MISSION LOG</tspan></text>
+    <text x="44" y="32" class="ninja-sub">SHINOBI CODE RECORD: <tspan fill="#00C2FF">SUSHRUT KALE</tspan> [RANK: S-CLASS GRIND]</text>
+
+    <!-- Missions Counter Badge -->
+    <g transform="translate(650, 0)">
+      <rect x="0" y="0" width="190" height="32" rx="6" fill="#121826" stroke="#FF6A00" stroke-width="1.2"/>
+      <circle cx="16" cy="16" r="6" fill="#FF6A00"/>
+      <circle cx="16" cy="16" r="3" fill="#FFD700">
+        <animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="30" y="15" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="9" font-weight="700">TOTAL JUTSU MISSIONS</text>
+      <text x="30" y="27" class="stat-badge">190 COMMITS CLEARED</text>
+    </g>
+  </g>
+
+  <!-- Labels -->
+  <text x="58" y="98.5" text-anchor="end" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600">Mon</text><text x="58" y="127.5" text-anchor="end" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600">Wed</text><text x="58" y="156.5" text-anchor="end" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600">Fri</text>
+  <text x="70.0" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Jan</text><text x="133.8" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Feb</text><text x="197.6" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Mar</text><text x="261.4" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Apr</text><text x="325.2" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">May</text><text x="389.0" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Jun</text><text x="452.8" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Jul</text><text x="516.6" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Aug</text><text x="580.4" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Sep</text><text x="644.2" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Oct</text><text x="708.0" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Nov</text><text x="771.8" y="65" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">Dec</text>
+
+  <!-- Contribution Grid Cells -->
+  <g id="contribGrid">
+    
+      <rect x="70.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.000;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="70.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.000;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="70.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.000;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="70.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.000;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="70.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.000;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="70.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.000;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="70.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.000;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="84.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.016;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.11s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="84.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.016;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.11s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="84.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.016;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.11s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="84.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.016;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.11s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="84.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.016;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.11s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="84.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-10-31</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.016;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.11s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="84.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.016;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.11s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="99.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.033;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="99.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.033;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="99.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.033;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="99.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.033;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="99.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.033;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="99.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.033;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="99.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.033;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="113.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.049;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.34s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="113.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.049;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.34s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="113.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.049;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.34s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="113.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.049;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.34s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="113.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.049;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.34s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="113.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.049;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.34s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="113.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.049;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.34s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="128.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.065;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="128.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.065;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="128.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.065;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="128.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.065;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="128.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.065;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="128.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.065;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="128.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.065;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="142.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.082;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.57s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="142.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.082;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.57s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="142.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.082;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.57s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="142.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.082;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.57s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="142.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.082;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.57s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="142.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.082;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.57s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="142.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.082;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.57s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="157.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-11-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.098;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="157.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.098;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="157.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.098;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="157.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.098;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="157.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.098;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="157.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.098;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="157.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.098;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="171.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.114;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.80s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="171.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.114;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.80s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="171.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.114;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.80s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="171.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.114;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.80s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="171.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.114;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.80s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="171.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.114;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.80s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="171.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.114;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.80s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="186.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.131;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="186.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.131;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="186.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.131;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="186.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.131;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="186.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.131;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="186.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.131;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="186.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.131;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="0.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="200.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.147;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="200.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.147;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="200.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.147;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="200.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.147;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="200.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.147;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="200.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.147;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="200.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.147;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="215.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.163;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.14s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="215.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.163;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.14s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="215.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.163;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.14s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="215.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2025-12-31</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.163;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.14s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="215.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.163;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.14s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="215.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.163;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.14s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="215.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.163;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.14s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="229.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.180;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="229.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.180;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="229.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.180;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="229.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.180;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="229.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.180;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="229.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.180;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="229.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.180;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="244.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.196;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.37s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="244.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.196;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.37s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="244.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.196;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.37s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="244.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.196;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.37s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="244.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.196;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.37s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="244.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.196;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.37s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="244.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.196;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.37s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="258.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.212;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="258.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.212;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="258.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.212;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="258.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.212;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="258.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.212;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="258.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.212;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="258.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.212;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="273.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.229;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.60s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="273.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.229;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.60s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="273.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.229;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.60s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="273.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.229;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.60s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="273.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.229;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.60s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="273.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.229;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.60s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="273.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-01-31</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.229;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.60s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="287.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.245;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="287.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.245;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="287.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.245;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="287.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.245;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="287.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.245;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="287.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.245;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="287.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.245;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="302.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.262;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.83s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="302.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.262;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.83s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="302.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.262;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.83s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="302.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.262;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.83s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="302.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.262;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.83s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="302.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.262;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.83s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="302.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.262;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.83s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="316.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.278;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.95s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="316.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.278;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.95s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="316.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.278;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.95s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="316.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.278;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.95s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="316.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.278;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.95s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="316.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.278;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.95s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="316.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.278;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="1.95s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="331.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.294;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.06s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="331.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.294;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.06s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="331.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.294;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.06s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="331.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.294;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.06s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="331.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.294;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.06s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="331.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.294;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.06s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="331.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-02-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.294;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.06s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="345.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.311;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.17s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="345.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.311;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.17s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="345.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.311;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.17s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="345.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.311;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.17s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="345.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.311;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.17s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="345.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.311;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.17s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="345.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.311;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.17s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="360.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.327;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.29s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="360.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.327;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.29s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="360.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.327;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.29s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="360.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.327;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.29s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="360.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.327;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.29s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="360.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.327;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.29s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="360.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.327;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.29s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="374.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.343;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.40s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="374.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.343;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.40s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="374.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.343;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.40s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="374.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.343;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.40s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="374.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.343;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.40s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="374.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.343;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.40s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="374.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.343;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.40s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="389.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.360;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.52s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="389.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.360;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.52s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="389.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.360;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.52s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="389.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.360;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.52s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="389.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.360;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.52s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="389.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.360;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.52s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="389.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.360;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.52s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="403.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.376;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.63s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="403.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.376;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.63s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="403.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-03-31</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.376;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.63s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="403.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.376;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.63s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="403.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.376;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.63s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="403.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.376;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.63s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="403.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.376;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.63s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="418.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.392;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.75s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="418.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.392;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.75s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="418.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.392;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.75s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="418.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.392;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.75s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="418.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.392;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.75s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="418.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.392;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.75s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="418.0" y="162.0" width="11" height="11" rx="2" fill="#803000">
+        <title>1 ninja missions on 2026-04-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.392;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.75s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="432.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.409;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.86s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="432.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.409;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.86s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="432.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.409;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.86s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="432.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.409;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.86s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="432.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.409;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.86s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="432.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.409;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.86s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="432.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.409;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.86s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="447.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.425;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.98s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="447.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.425;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.98s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="447.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.425;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.98s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="447.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.425;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.98s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="447.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.425;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.98s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="447.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.425;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.98s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="447.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.425;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="2.98s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="461.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.441;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.09s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="461.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.441;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.09s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="461.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.441;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.09s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="461.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.441;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.09s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="461.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-04-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.441;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.09s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="461.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.441;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.09s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="461.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.441;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.09s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="476.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.458;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.20s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="476.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.458;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.20s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="476.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.458;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.20s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="476.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.458;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.20s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="476.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.458;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.20s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="476.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.458;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.20s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="476.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.458;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.20s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="490.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.474;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.32s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="490.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.474;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.32s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="490.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.474;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.32s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="490.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.474;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.32s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="490.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.474;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.32s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="490.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.474;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.32s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="490.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.474;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.32s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="505.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.490;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.43s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="505.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.490;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.43s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="505.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.490;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.43s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="505.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.490;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.43s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="505.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.490;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.43s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="505.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.490;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.43s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="505.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.490;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.43s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="519.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.507;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.55s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="519.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.507;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.55s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="519.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.507;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.55s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="519.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.507;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.55s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="519.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.507;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.55s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="519.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.507;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.55s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="519.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.507;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.55s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="534.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-05-31</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.523;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.66s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="534.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.523;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.66s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="534.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.523;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.66s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="534.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.523;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.66s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="534.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.523;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.66s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="534.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.523;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.66s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="534.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.523;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.66s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="548.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.539;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.78s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="548.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.539;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.78s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="548.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.539;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.78s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="548.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.539;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.78s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="548.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.539;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.78s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="548.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.539;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.78s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="548.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.539;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.78s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="563.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.556;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.89s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="563.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.556;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.89s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="563.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.556;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.89s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="563.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.556;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.89s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="563.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.556;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.89s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="563.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.556;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.89s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="563.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.556;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="3.89s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="577.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.572;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="577.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.572;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="577.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.572;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="577.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.572;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="577.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.572;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="577.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.572;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="577.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.572;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.00s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="592.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.588;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.12s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="592.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.588;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.12s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="592.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-06-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.588;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.12s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="592.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.588;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.12s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="592.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.588;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.12s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="592.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.588;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.12s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="592.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.588;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.12s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="606.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.605;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="606.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.605;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="606.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.605;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="606.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.605;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="606.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.605;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="606.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.605;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="606.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.605;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.23s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="621.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.621;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.35s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="621.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.621;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.35s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="621.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.621;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.35s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="621.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.621;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.35s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="621.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.621;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.35s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="621.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.621;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.35s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="621.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.621;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.35s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="635.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.638;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="635.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.638;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="635.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.638;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="635.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.638;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="635.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.638;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="635.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.638;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="635.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.638;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.46s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="650.0" y="75.0" width="11" height="11" rx="2" fill="#ff6a00">
+        <title>7 ninja missions on 2026-07-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.654;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.58s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="650.0" y="89.5" width="11" height="11" rx="2" fill="#ffd700">
+        <title>16 ninja missions on 2026-07-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.654;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.58s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="650.0" y="104.0" width="11" height="11" rx="2" fill="#c94d00">
+        <title>3 ninja missions on 2026-07-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.654;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.58s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="650.0" y="118.5" width="11" height="11" rx="2" fill="#ff6a00">
+        <title>6 ninja missions on 2026-07-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.654;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.58s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="650.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.654;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.58s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="650.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-07-31</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.654;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.58s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="650.0" y="162.0" width="11" height="11" rx="2" fill="#803000">
+        <title>1 ninja missions on 2026-08-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.654;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.58s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="664.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.670;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="664.5" y="89.5" width="11" height="11" rx="2" fill="#803000">
+        <title>1 ninja missions on 2026-08-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.670;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="664.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.670;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="664.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.670;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="664.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.670;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="664.5" y="147.5" width="11" height="11" rx="2" fill="#c94d00">
+        <title>4 ninja missions on 2026-08-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.670;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="664.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.670;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.69s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="679.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.687;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.81s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="679.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.687;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.81s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="679.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.687;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.81s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="679.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.687;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.81s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="679.0" y="133.0" width="11" height="11" rx="2" fill="#803000">
+        <title>1 ninja missions on 2026-08-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.687;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.81s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="679.0" y="147.5" width="11" height="11" rx="2" fill="#c94d00">
+        <title>5 ninja missions on 2026-08-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.687;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.81s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="679.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.687;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.81s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="693.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.703;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="693.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.703;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="693.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.703;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="693.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.703;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="693.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.703;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="693.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.703;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="693.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.703;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="4.92s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="708.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.719;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="708.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.719;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="708.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.719;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="708.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.719;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="708.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.719;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="708.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.719;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="708.0" y="162.0" width="11" height="11" rx="2" fill="#803000">
+        <title>1 ninja missions on 2026-08-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.719;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.03s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="722.5" y="75.0" width="11" height="11" rx="2" fill="#ff6a00">
+        <title>7 ninja missions on 2026-08-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.736;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.15s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="722.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-08-31</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.736;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.15s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="722.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.736;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.15s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="722.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.736;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.15s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="722.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.736;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.15s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="722.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.736;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.15s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="722.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.736;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.15s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="737.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.752;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="737.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.752;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="737.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.752;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="737.0" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.752;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="737.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.752;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="737.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.752;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="737.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.752;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.26s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="751.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.768;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.38s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="751.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.768;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.38s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="751.5" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.768;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.38s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="751.5" y="118.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.768;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.38s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="751.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.768;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.38s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="751.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.768;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.38s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="751.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.768;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.38s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="766.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.785;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="766.0" y="89.5" width="11" height="11" rx="2" fill="#ff6a00">
+        <title>7 ninja missions on 2026-09-21</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.785;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="766.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-22</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.785;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="766.0" y="118.5" width="11" height="11" rx="2" fill="#c94d00">
+        <title>3 ninja missions on 2026-09-23</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.785;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="766.0" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-24</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.785;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="766.0" y="147.5" width="11" height="11" rx="2" fill="#ff6a00">
+        <title>8 ninja missions on 2026-09-25</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.785;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="766.0" y="162.0" width="11" height="11" rx="2" fill="#ffd700">
+        <title>11 ninja missions on 2026-09-26</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.785;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.49s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="780.5" y="75.0" width="11" height="11" rx="2" fill="#ffd700">
+        <title>21 ninja missions on 2026-09-27</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.801;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.61s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="780.5" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-09-28</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.801;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.61s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="780.5" y="104.0" width="11" height="11" rx="2" fill="#803000">
+        <title>1 ninja missions on 2026-09-29</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.801;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.61s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="780.5" y="118.5" width="11" height="11" rx="2" fill="#c94d00">
+        <title>4 ninja missions on 2026-09-30</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.801;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.61s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="780.5" y="133.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-10-01</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.801;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.61s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="780.5" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-10-02</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.801;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.61s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="780.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-10-03</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.801;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.61s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="795.0" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-10-04</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.817;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="795.0" y="89.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-10-05</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.817;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="795.0" y="104.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-10-06</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.817;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="795.0" y="118.5" width="11" height="11" rx="2" fill="#c94d00">
+        <title>3 ninja missions on 2026-10-07</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.817;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="795.0" y="133.0" width="11" height="11" rx="2" fill="#ff6a00">
+        <title>6 ninja missions on 2026-10-08</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.817;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="795.0" y="147.5" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-10-09</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.817;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="795.0" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-10-10</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.817;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.72s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="809.5" y="75.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-10-11</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.834;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.84s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="809.5" y="89.5" width="11" height="11" rx="2" fill="#c94d00">
+        <title>4 ninja missions on 2026-10-12</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.834;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.84s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="809.5" y="104.0" width="11" height="11" rx="2" fill="#803000">
+        <title>2 ninja missions on 2026-10-13</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.834;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.84s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="809.5" y="118.5" width="11" height="11" rx="2" fill="#803000">
+        <title>2 ninja missions on 2026-10-14</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.834;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.84s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="809.5" y="133.0" width="11" height="11" rx="2" fill="#ff6a00">
+        <title>7 ninja missions on 2026-10-15</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.834;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.84s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="809.5" y="147.5" width="11" height="11" rx="2" fill="#803000">
+        <title>2 ninja missions on 2026-10-16</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.834;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.84s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="809.5" y="162.0" width="11" height="11" rx="2" fill="#161d2d">
+        <title>0 ninja missions on 2026-10-17</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.834;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.84s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="824.0" y="75.0" width="11" height="11" rx="2" fill="#ffd700">
+        <title>16 ninja missions on 2026-10-18</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.850;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.95s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="824.0" y="89.5" width="11" height="11" rx="2" fill="#ffd700">
+        <title>11 ninja missions on 2026-10-19</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.850;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.95s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+      <rect x="824.0" y="104.0" width="11" height="11" rx="2" fill="#ffd700">
+        <title>29 ninja missions on 2026-10-20</title>
+        <animate attributeName="opacity" values="0.75;1;0.75" dur="7.0s" repeatCount="indefinite"
+          keyTimes="0;0.850;1"/>
+        <animate attributeName="transform" type="scale" 
+          values="1;1.2;1" dur="0.4s" begin="5.95s" repeatCount="1"
+          additive="sum"/>
+      </rect>
+  </g>
+
+  <!-- Dynamic Rasengan Shockwave Line (Sweeps across grid) -->
+  <line y1="67" y2="180.5" stroke="#7DF9FF" stroke-width="2" opacity="0.6" filter="url(#chakraGlow)">
+    <animate attributeName="x1" values="65;893.5" dur="7.0s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="65;893.5" dur="7.0s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="7.0s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- NARUTO RUNNER + SPINNING RASENGAN SPRITE GROUP -->
+  <g id="narutoRunnerGroup">
+    <!-- Horizontal translation across the entire calendar -->
+    <animateTransform attributeName="transform" type="translate"
+      values="35,110.75; 863.5,110.75"
+      dur="7.0s"
+      repeatCount="indefinite" />
+
+    <!-- Trailing Chakra Particles & Sparks -->
+    <g id="chakraTrail">
+      <circle cx="-15" cy="15" r="4" fill="#FF6A00" opacity="0.7">
+        <animate attributeName="r" values="4;1" dur="0.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="0.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-25" cy="10" r="3" fill="#00C2FF" opacity="0.6">
+        <animate attributeName="r" values="3;0.5" dur="0.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0" dur="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-35" cy="18" r="2.5" fill="#FFD700" opacity="0.5">
+        <animate attributeName="r" values="2.5;0" dur="0.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0" dur="0.7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Pixel Naruto Running Sprite (Authentic pixel vector construction) -->
+    <!-- Scale: 2x pixel size for crisp retro look -->
+    <g id="narutoSprite" transform="translate(0, 0)">
+      <!-- Bobbing running animation -->
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 0,-3; 0,0; 0,-2; 0,0"
+        dur="0.4s"
+        repeatCount="indefinite"/>
+
+      <!-- Naruto Spiky Yellow Hair -->
+      <polygon points="5,2 10,-5 14,0 18,-6 22,1 25,-4 27,4 20,6 7,6" fill="#FFE500" stroke="#E69500" stroke-width="0.8"/>
+      
+      <!-- Konoha Headband (Navy Cloth + Metal Plate) -->
+      <rect x="6" y="5" width="20" height="5" rx="1" fill="#1C263B"/>
+      <rect x="10" y="5.5" width="12" height="4" rx="0.8" fill="#C5CFDE"/>
+      <circle cx="16" cy="7.5" r="1.2" fill="#202A3D"/>
+
+      <!-- Face / Head (Skin Tone) -->
+      <rect x="8" y="10" width="17" height="9" rx="1.5" fill="#FFD2A8"/>
+      <!-- Whiskers on cheeks -->
+      <line x1="8" y1="13" x2="11" y2="13.5" stroke="#C88452" stroke-width="0.7"/>
+      <line x1="8" y1="15" x2="11" y2="15.5" stroke="#C88452" stroke-width="0.7"/>
+      <line x1="22" y1="13.5" x2="25" y2="13" stroke="#C88452" stroke-width="0.7"/>
+      <line x1="22" y1="15.5" x2="25" y2="15" stroke="#C88452" stroke-width="0.7"/>
+      <!-- Determined Eye & Smirk -->
+      <rect x="18" y="12" width="3" height="2" fill="#1B2234"/>
+      <rect x="19" y="12" width="1" height="1" fill="#00C2FF"/> <!-- Blue eyes! -->
+      <line x1="17" y1="17" x2="21" y2="17.5" stroke="#3A2412" stroke-width="0.8"/>
+
+      <!-- Torso: Classic Orange Jumpsuit with Blue Shoulders & White Collar -->
+      <path d="M7,19 L25,19 L27,32 L6,32 Z" fill="#FF6A00"/>
+      <!-- Blue shoulder yoke -->
+      <path d="M7,19 L13,19 L11,26 L6,25 Z" fill="#1C2E56"/>
+      <path d="M20,19 L25,19 L26,25 L21,26 Z" fill="#1C2E56"/>
+      <!-- White fur/fleece neck collar -->
+      <rect x="9" y="18" width="14" height="2.5" rx="1" fill="#FFFFFF"/>
+      <!-- Red Uzumaki swirl crest on back/chest -->
+      <circle cx="15" cy="25" r="3" fill="#D00000"/>
+      <circle cx="15" cy="25" r="1.5" fill="#FF6A00"/>
+
+      <!-- Trailing Arm (thrust backward in famous Naruto run) -->
+      <line x1="8" y1="22" x2="-6" y2="14" stroke="#FF6A00" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="-6" cy="14" r="2" fill="#FFD2A8"/>
+
+      <!-- Leading Arm (thrust forward wielding Rasengan!) -->
+      <line x1="24" y1="22" x2="35" y2="18" stroke="#FF6A00" stroke-width="3.2" stroke-linecap="round"/>
+      <circle cx="35" cy="18" r="2.2" fill="#FFD2A8"/>
+
+      <!-- Running Legs (Scissors Cycle) -->
+      <g>
+        <!-- Leg 1 -->
+        <line x1="12" y1="32" x2="7" y2="42" stroke="#FF6A00" stroke-width="3.5" stroke-linecap="round">
+          <animate attributeName="x2" values="7;22;7" dur="0.3s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="42;36;42" dur="0.3s" repeatCount="indefinite"/>
+        </line>
+        <!-- Shin bandage & blue ninja shoe -->
+        <circle cx="7" cy="42" r="2" fill="#1B2234">
+          <animate attributeName="cx" values="7;22;7" dur="0.3s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="42;36;42" dur="0.3s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Leg 2 -->
+        <line x1="19" y1="32" x2="24" y2="42" stroke="#FF6A00" stroke-width="3.5" stroke-linecap="round">
+          <animate attributeName="x2" values="24;8;24" dur="0.3s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="42;35;42" dur="0.3s" repeatCount="indefinite"/>
+        </line>
+        <circle cx="24" cy="42" r="2" fill="#1B2234">
+          <animate attributeName="cx" values="24;8;24" dur="0.3s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="42;35;42" dur="0.3s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+
+    <!-- THE SPINNING RASENGAN ORB -->
+    <g id="rasenganOrb" transform="translate(42, 17)">
+      <!-- Outer Pulsing Chakra Flare -->
+      <circle cx="0" cy="0" r="16" fill="url(#chakraAura)" filter="url(#chakraGlow)">
+        <animate attributeName="r" values="14;18;14" dur="0.35s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="0.35s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Dense Glowing Core -->
+      <circle cx="0" cy="0" r="9" fill="url(#rasenganCore)" filter="url(#chakraGlow)"/>
+
+      <!-- Rapidly Swirling Chakra Spirals (Pure SVG animateTransform) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          from="0" to="360" dur="0.25s" repeatCount="indefinite"/>
+        <path d="M-8,0 C-8,-6 0,-8 0,0 C0,6 8,8 8,0" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M0,-8 C6,-8 8,0 0,0 C-8,0 -8,8 0,8" fill="none" stroke="#7DF9FF" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          from="360" to="0" dur="0.18s" repeatCount="indefinite"/>
+        <circle cx="4" cy="-4" r="1.5" fill="#FFFFFF"/>
+        <circle cx="-4" cy="4" r="1.5" fill="#00C2FF"/>
+        <path d="M-6,-4 C-2,-7 4,-6 5,-2 C6,3 1,6 -3,5" fill="none" stroke="#7DF9FF" stroke-width="1.2"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Legend in Footer -->
+  <g transform="translate(650, 202)">
+    <text x="-40" y="9" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="9" font-weight="600">CHAKRA LEVEL</text>
+    <rect x="35" y="0" width="10" height="10" rx="2" fill="#161d2d"/>
+    <rect x="50" y="0" width="10" height="10" rx="2" fill="#803000"/>
+    <rect x="65" y="0" width="10" height="10" rx="2" fill="#c94d00"/>
+    <rect x="80" y="0" width="10" height="10" rx="2" fill="#ff6a00"/>
+    <rect x="95" y="0" width="10" height="10" rx="2" fill="#ffd700"/>
+    <text x="112" y="9" fill="#FF6A00" font-family="system-ui, sans-serif" font-size="9" font-weight="800">SAGE MODE</text>
+  </g>
+
+  <!-- Footer Tagline -->
+  <text x="24" y="211" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600">
+    DATTEBAYO! • REAL-TIME COMMIT CHAKRA CONVERTED TO SHINOBI MISSIONS
+  </text>
+</svg>

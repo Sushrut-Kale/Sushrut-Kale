@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 48" width="100%" height="48">
+  <defs>
+    <!-- Chakra Beam Line Gradient -->
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0B0F1A" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#FF6A00" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#00C2FF" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#FF6A00" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0B0F1A" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Metal Shuriken Gradient -->
+    <linearGradient id="shurikenSteel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+
+    <filter id="sparkGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Glowing Chakra Rail Beam -->
+  <line x1="10" y1="24" x2="890" y2="24" stroke="url(#beamGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="50" y1="24" x2="850" y2="24" stroke="#7DF9FF" stroke-width="1" stroke-dasharray="8,6" opacity="0.7">
+    <animate attributeName="stroke-dashoffset" values="0;28" dur="1s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Trailing Sparks & Chakra Orbs -->
+  <g>
+    <!-- Moving Group: Traverses left to right -->
+    <animateTransform attributeName="transform" type="translate"
+      values="-30, 24; 930, 24"
+      dur="4s"
+      repeatCount="indefinite" />
+
+    <!-- Trailing Energy Spark Particles -->
+    <g filter="url(#sparkGlow)">
+      <circle cx="-16" cy="-4" r="2" fill="#FF6A00">
+        <animate attributeName="opacity" values="0.9;0" dur="0.4s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="-4;-8" dur="0.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-24" cy="4" r="1.5" fill="#FFD700">
+        <animate attributeName="opacity" values="0.8;0" dur="0.3s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="4;7" dur="0.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-32" cy="-1" r="2.2" fill="#00C2FF">
+        <animate attributeName="opacity" values="0.9;0" dur="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-42" cy="3" r="1.2" fill="#7DF9FF">
+        <animate attributeName="opacity" values="0.7;0" dur="0.35s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Rapidly Rotating Shuriken -->
+    <g>
+      <!-- Spin 360 deg every 0.3s -->
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="360"
+        dur="0.25s"
+        repeatCount="indefinite" />
+
+      <!-- Shuriken 4-point Blades -->
+      <path d="M 0,-16 L 3,-5 L 14,-14 L 5,-3 L 16,0 L 5,3 L 14,14 L 3,5 L 0,16 L -3,5 L -14,14 L -5,3 L -16,0 L -5,-3 L -14,-14 L -3,-5 Z"
+            fill="url(#shurikenSteel)" stroke="#0F172A" stroke-width="0.8"/>
+      
+      <!-- Blade edge bevel highlights -->
+      <polygon points="0,-16 2,-5 0,-4" fill="#FFFFFF" opacity="0.8"/>
+      <polygon points="16,0 5,2 4,0" fill="#FFFFFF" opacity="0.8"/>
+      <polygon points="0,16 -2,5 0,4" fill="#FFFFFF" opacity="0.8"/>
+      <polygon points="-16,0 -5,-2 -4,0" fill="#FFFFFF" opacity="0.8"/>
+
+      <!-- Center Hole (Hollow Ninjutsu Ring) -->
+      <circle cx="0" cy="0" r="3.5" fill="#0B0F1A" stroke="#FF6A00" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="1.2" fill="#00C2FF"/>
+    </g>
+  </g>
+</svg>
