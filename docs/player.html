@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>⚡ Shinobi Audio Engine • Naruto Classic Theme</title>
+  <title>⚡ Naruto Shinobi Music Player</title>
   <link rel="icon" href="../assets/shuriken-divider.svg">
   <style>
     * {
@@ -26,29 +26,29 @@
     }
     .chakra-bg {
       position: absolute;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(0, 194, 255, 0.25) 0%, rgba(255, 106, 0, 0.15) 50%, transparent 70%);
-      filter: blur(50px);
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(0, 194, 255, 0.28) 0%, rgba(255, 106, 0, 0.18) 50%, transparent 70%);
+      filter: blur(55px);
       z-index: 0;
       animation: pulse 4s ease-in-out infinite alternate;
     }
     @keyframes pulse {
       0% { transform: scale(0.9); opacity: 0.6; }
-      100% { transform: scale(1.15); opacity: 0.9; }
+      100% { transform: scale(1.18); opacity: 0.95; }
     }
-    .card {
+    .player-card {
       position: relative;
       z-index: 10;
-      background: rgba(18, 24, 38, 0.85);
+      background: rgba(18, 24, 38, 0.9);
       border: 2px solid #FF6A00;
-      box-shadow: 0 0 35px rgba(255, 106, 0, 0.35), 0 0 60px rgba(0, 194, 255, 0.2);
-      border-radius: 18px;
-      padding: 32px;
+      box-shadow: 0 0 40px rgba(255, 106, 0, 0.35), 0 0 70px rgba(0, 194, 255, 0.25);
+      border-radius: 20px;
+      padding: 36px 32px;
       width: 90%;
       max-width: 480px;
       text-align: center;
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
     }
     .badge {
       display: inline-block;
@@ -66,7 +66,7 @@
     h1 {
       font-size: 20px;
       font-weight: 900;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
       color: #F2E3C0;
       margin-bottom: 6px;
     }
@@ -74,78 +74,59 @@
       font-size: 13px;
       color: #FF8C38;
       font-weight: 700;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
-    /* Visualizer Canvas */
     canvas {
       width: 100%;
-      height: 70px;
-      background: rgba(11, 15, 26, 0.8);
+      height: 74px;
+      background: rgba(11, 15, 26, 0.85);
       border-radius: 10px;
       border: 1px solid rgba(255, 106, 0, 0.3);
+      margin-bottom: 24px;
+    }
+    .mute-btn-container {
       margin-bottom: 20px;
     }
-    /* Controls */
-    .controls {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-    .btn {
+    .mute-btn {
       cursor: pointer;
-      border: none;
-      border-radius: 12px;
-      font-weight: 800;
-      font-size: 13px;
-      letter-spacing: 0.5px;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid #00C2FF;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(0, 194, 255, 0.2) 0%, rgba(28, 46, 86, 0.8) 100%);
+      color: #7DF9FF;
+      padding: 16px 42px;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      text-decoration: none;
+      gap: 12px;
+      box-shadow: 0 4px 20px rgba(0, 194, 255, 0.3);
     }
-    .btn-primary {
-      background: linear-gradient(135deg, #FF6A00 0%, #D00000 100%);
-      color: #FFFFFF;
-      padding: 12px 28px;
-      box-shadow: 0 4px 15px rgba(255, 106, 0, 0.4);
-    }
-    .btn-primary:hover {
+    .mute-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 22px rgba(255, 106, 0, 0.6);
+      box-shadow: 0 8px 28px rgba(0, 194, 255, 0.5);
+      border-color: #7DF9FF;
+      color: #FFFFFF;
     }
-    .btn-mute {
-      background: rgba(28, 46, 86, 0.8);
-      border: 1px solid #00C2FF;
-      color: #7DF9FF;
-      padding: 12px 20px;
-    }
-    .btn-mute:hover {
-      background: rgba(0, 194, 255, 0.25);
-    }
-    .btn-mute.muted {
-      background: rgba(208, 0, 0, 0.3);
+    .mute-btn.muted {
+      background: linear-gradient(135deg, rgba(208, 0, 0, 0.35) 0%, rgba(30, 15, 15, 0.85) 100%);
       border-color: #D00000;
       color: #FFAAA6;
+      box-shadow: 0 4px 20px rgba(208, 0, 0, 0.3);
     }
-    .volume-slider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
+    .mute-btn.muted:hover {
+      box-shadow: 0 8px 28px rgba(208, 0, 0, 0.5);
+    }
+    .status-text {
       font-size: 11px;
       font-weight: 700;
+      letter-spacing: 0.5px;
       color: #8E9BB0;
-    }
-    input[type=range] {
-      accent-color: #FF6A00;
-      cursor: pointer;
+      margin-bottom: 16px;
     }
     .back-link {
-      margin-top: 22px;
       display: inline-block;
       font-size: 12px;
       color: #8E9BB0;
@@ -154,130 +135,95 @@
       transition: color 0.2s;
     }
     .back-link:hover {
-      color: #00C2FF;
+      color: #FF6A00;
     }
   </style>
 </head>
 <body>
   <div class="chakra-bg"></div>
 
-  <div class="card">
-    <div class="badge">⚡ Hidden Leaf Sound Engine</div>
+  <div class="player-card">
+    <div class="badge">⚡ Shinobi Sound Engine</div>
     <h1>NARUTO: RISE OF A NINJA</h1>
     <div class="subtitle">"I Said I'm Naruto!" • Theme of the Main Menu</div>
 
     <canvas id="visualizer"></canvas>
 
-    <div class="controls">
-      <button class="btn btn-primary" id="playBtn" onclick="togglePlay()">
-        <span id="playIcon">⏸️</span> <span id="playText">PAUSE</span>
-      </button>
-      <button class="btn btn-mute" id="muteBtn" onclick="toggleMute()">
-        <span id="muteIcon">🔊</span> <span id="muteText">MUTE</span>
+    <div class="mute-btn-container">
+      <button class="mute-btn" id="muteBtn" onclick="toggleMute()">
+        <span id="muteIcon">🔊</span> <span id="muteText">MUTE AUDIO</span>
       </button>
     </div>
 
-    <div class="volume-slider">
-      <span>CHAKRA VOLUME</span>
-      <input type="range" id="volRange" min="0" max="1" step="0.05" value="0.8" oninput="changeVol(this.value)">
-    </div>
+    <div class="status-text" id="statusText">CHAKRA SOUNDTRACK PLAYING</div>
 
     <div>
-      <a class="back-link" href="https://github.com/Sushrut-Kale/Sushrut-Kale">← Back to Sushrut-Kale Shinobi Profile</a>
+      <a class="back-link" href="https://github.com/Sushrut-Kale/Sushrut-Kale">← Return to GitHub Profile</a>
     </div>
   </div>
 
   <audio id="audio" loop preload="auto">
+    <source src="audio/naruto-theme.mp3" type="audio/mpeg">
     <source src="../assets/audio/naruto-theme.mp3" type="audio/mpeg">
   </audio>
 
   <script>
     const audio = document.getElementById('audio');
-    const playBtn = document.getElementById('playBtn');
-    const playIcon = document.getElementById('playIcon');
-    const playText = document.getElementById('playText');
     const muteBtn = document.getElementById('muteBtn');
     const muteIcon = document.getElementById('muteIcon');
     const muteText = document.getElementById('muteText');
+    const statusText = document.getElementById('statusText');
     const canvas = document.getElementById('visualizer');
     const ctx = canvas.getContext('2d');
 
-    // Parse URL params (e.g. ?muted=true)
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('muted') === 'true') {
-      audio.muted = true;
-      muteBtn.classList.add('muted');
-      muteIcon.innerText = '🔇';
-      muteText.innerText = 'UNMUTE';
-    }
+    // Auto-start audio with volume
+    audio.volume = 0.85;
 
-    // Attempt autoplay
-    window.addEventListener('DOMContentLoaded', () => {
-      audio.volume = 0.8;
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise.then(() => {
-          playIcon.innerText = '⏸️';
-          playText.innerText = 'PAUSE';
+    function startPlayback() {
+      const p = audio.play();
+      if (p !== undefined) {
+        p.then(() => {
+          updateUI(false);
         }).catch(() => {
-          // Autoplay blocked by browser policy until interaction
-          playIcon.innerText = '▶️';
-          playText.innerText = 'PLAY';
+          // Browser requires user interaction before unmuting
+          statusText.innerText = "CLICK ANYWHERE TO UNMUTE & PLAY";
         });
       }
-    });
+    }
 
-    // Any click on document enables audio if blocked
+    window.addEventListener('DOMContentLoaded', startPlayback);
     document.body.addEventListener('click', () => {
       if (audio.paused) {
-        audio.play().then(() => {
-          playIcon.innerText = '⏸️';
-          playText.innerText = 'PAUSE';
-        }).catch(() => {});
+        audio.play().then(() => updateUI(false)).catch(() => {});
       }
     }, { once: true });
 
-    function togglePlay() {
+    function toggleMute() {
       if (audio.paused) {
         audio.play();
-        playIcon.innerText = '⏸️';
-        playText.innerText = 'PAUSE';
-      } else {
-        audio.pause();
-        playIcon.innerText = '▶️';
-        playText.innerText = 'PLAY';
-      }
-    }
-
-    function toggleMute() {
-      audio.muted = !audio.muted;
-      if (audio.muted) {
-        muteBtn.classList.add('muted');
-        muteIcon.innerText = '🔇';
-        muteText.innerText = 'UNMUTE';
-      } else {
-        muteBtn.classList.remove('muted');
-        muteIcon.innerText = '🔊';
-        muteText.innerText = 'MUTE';
-      }
-    }
-
-    function changeVol(val) {
-      audio.volume = parseFloat(val);
-      if (audio.volume === 0) {
-        audio.muted = true;
-        muteBtn.classList.add('muted');
-        muteIcon.innerText = '🔇';
-        muteText.innerText = 'UNMUTE';
-      } else if (audio.muted) {
         audio.muted = false;
-        muteBtn.classList.remove('muted');
-        muteIcon.innerText = '🔊';
-        muteText.innerText = 'MUTE';
+        updateUI(false);
+      } else {
+        audio.muted = !audio.muted;
+        updateUI(audio.muted);
       }
     }
 
-    // Visualizer simulation
+    function updateUI(isMuted) {
+      if (isMuted) {
+        muteBtn.classList.add('muted');
+        muteIcon.innerText = '🔇';
+        muteText.innerText = 'UNMUTE AUDIO';
+        statusText.innerText = 'AUDIO MUTED (STANDBY)';
+      } else {
+        muteBtn.classList.remove('muted');
+        muteIcon.innerText = '🔊';
+        muteText.innerText = 'MUTE AUDIO';
+        statusText.innerText = 'CHAKRA SOUNDTRACK PLAYING';
+      }
+    }
+
+    // Audio Visualizer Animation
     function renderVisualizer() {
       canvas.width = canvas.clientWidth * window.devicePixelRatio;
       canvas.height = canvas.clientHeight * window.devicePixelRatio;
@@ -285,22 +231,22 @@
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const bars = 48;
       const barWidth = canvas.width / bars;
-      const isPlaying = !audio.paused && !audio.muted;
-      const time = Date.now() * 0.006;
+      const isAudible = !audio.paused && !audio.muted;
+      const time = Date.now() * 0.007;
 
       for (let i = 0; i < bars; i++) {
-        let heightMultiplier = isPlaying ? Math.abs(Math.sin(time + i * 0.28) * Math.cos(time * 0.7 + i * 0.15)) : 0.08;
-        const barHeight = Math.max(3, heightMultiplier * (canvas.height * 0.85));
+        let mult = isAudible ? Math.abs(Math.sin(time + i * 0.25) * Math.cos(time * 0.6 + i * 0.18)) : 0.06;
+        const barH = Math.max(3, mult * (canvas.height * 0.85));
         const x = i * barWidth;
-        const y = (canvas.height - barHeight) / 2;
+        const y = (canvas.height - barH) / 2;
 
-        const grad = ctx.createLinearGradient(0, y, 0, y + barHeight);
+        const grad = ctx.createLinearGradient(0, y, 0, y + barH);
         grad.addColorStop(0, '#00C2FF');
         grad.addColorStop(0.5, '#7DF9FF');
         grad.addColorStop(1, '#FF6A00');
 
         ctx.fillStyle = grad;
-        ctx.fillRect(x + 1, y, barWidth - 2, barHeight);
+        ctx.fillRect(x + 1, y, barWidth - 2, barH);
       }
 
       requestAnimationFrame(renderVisualizer);

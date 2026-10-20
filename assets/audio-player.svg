@@ -10,6 +10,10 @@
       <stop offset="50%" stop-color="#00C2FF"/>
       <stop offset="100%" stop-color="#FF6A00"/>
     </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6A00"/>
+      <stop offset="100%" stop-color="#D00000"/>
+    </linearGradient>
     <filter id="pGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge>
@@ -42,7 +46,7 @@
   </g>
 
   <!-- Center: Animated Audio Equalizer Bars -->
-  <g transform="translate(390, 48)">
+  <g transform="translate(395, 48)">
     <rect x="0" y="-12" width="3.5" height="12" rx="1.5" fill="#00C2FF">
       <animate attributeName="height" values="8;24;14;30;12;8" dur="1.1s" repeatCount="indefinite"/>
       <animate attributeName="y" values="-8;-24;-14;-30;-12;-8" dur="1.1s" repeatCount="indefinite"/>
@@ -85,16 +89,12 @@
     </rect>
   </g>
 
-  <!-- Right: Status Badges -->
-  <g transform="translate(500, 20)">
-    <rect x="0" y="0" width="105" height="32" rx="6" fill="#FF6A00" opacity="0.2"/>
-    <rect x="0" y="0" width="105" height="32" rx="6" fill="none" stroke="#FF6A00" stroke-width="1.2"/>
-    <text x="52.5" y="20" fill="#FF8C38" font-family="system-ui, sans-serif" font-size="11" font-weight="900" letter-spacing="0.5" text-anchor="middle">SHINOBI OST</text>
-  </g>
-
-  <g transform="translate(615, 20)">
-    <rect x="0" y="0" width="85" height="32" rx="6" fill="#00C2FF" opacity="0.15"/>
-    <rect x="0" y="0" width="85" height="32" rx="6" fill="none" stroke="#00C2FF" stroke-width="1.2"/>
-    <text x="42.5" y="20" fill="#7DF9FF" font-family="system-ui, sans-serif" font-size="10.5" font-weight="800" text-anchor="middle">320 KBPS</text>
+  <!-- Right: SINGLE HERO MUTE / SOUND BUTTON -->
+  <g transform="translate(560, 18)">
+    <rect x="0" y="0" width="138" height="36" rx="8" fill="url(#btnGrad)" filter="url(#pGlow)">
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="0" width="138" height="36" rx="8" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.6"/>
+    <text x="69" y="23" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900" letter-spacing="0.8" text-anchor="middle">🔊 MUTE / PLAY</text>
   </g>
 </svg>

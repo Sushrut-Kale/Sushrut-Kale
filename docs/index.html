@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚡ Naruto Shinobi Music Player</title>
+  <link rel="icon" href="../assets/shuriken-divider.svg">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+    body {
+      background: #0B0F1A;
+      color: #F2E3C0;
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .chakra-bg {
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(0, 194, 255, 0.28) 0%, rgba(255, 106, 0, 0.18) 50%, transparent 70%);
+      filter: blur(55px);
+      z-index: 0;
+      animation: pulse 4s ease-in-out infinite alternate;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      100% { transform: scale(1.18); opacity: 0.95; }
+    }
+    .player-card {
+      position: relative;
+      z-index: 10;
+      background: rgba(18, 24, 38, 0.9);
+      border: 2px solid #FF6A00;
+      box-shadow: 0 0 40px rgba(255, 106, 0, 0.35), 0 0 70px rgba(0, 194, 255, 0.25);
+      border-radius: 20px;
+      padding: 36px 32px;
+      width: 90%;
+      max-width: 480px;
+      text-align: center;
+      backdrop-filter: blur(14px);
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      background: rgba(0, 194, 255, 0.15);
+      border: 1px solid #00C2FF;
+      color: #7DF9FF;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #F2E3C0;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #FF8C38;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+    canvas {
+      width: 100%;
+      height: 74px;
+      background: rgba(11, 15, 26, 0.85);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 106, 0, 0.3);
+      margin-bottom: 24px;
+    }
+    .mute-btn-container {
+      margin-bottom: 20px;
+    }
+    .mute-btn {
+      cursor: pointer;
+      border: 2px solid #00C2FF;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(0, 194, 255, 0.2) 0%, rgba(28, 46, 86, 0.8) 100%);
+      color: #7DF9FF;
+      padding: 16px 42px;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 4px 20px rgba(0, 194, 255, 0.3);
+    }
+    .mute-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0, 194, 255, 0.5);
+      border-color: #7DF9FF;
+      color: #FFFFFF;
+    }
+    .mute-btn.muted {
+      background: linear-gradient(135deg, rgba(208, 0, 0, 0.35) 0%, rgba(30, 15, 15, 0.85) 100%);
+      border-color: #D00000;
+      color: #FFAAA6;
+      box-shadow: 0 4px 20px rgba(208, 0, 0, 0.3);
+    }
+    .mute-btn.muted:hover {
+      box-shadow: 0 8px 28px rgba(208, 0, 0, 0.5);
+    }
+    .status-text {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #8E9BB0;
+      margin-bottom: 16px;
+    }
+    .back-link {
+      display: inline-block;
+      font-size: 12px;
+      color: #8E9BB0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: #FF6A00;
+    }
+  </style>
+</head>
+<body>
+  <div class="chakra-bg"></div>
+
+  <div class="player-card">
+    <div class="badge">⚡ Shinobi Sound Engine</div>
+    <h1>NARUTO: RISE OF A NINJA</h1>
+    <div class="subtitle">"I Said I'm Naruto!" • Theme of the Main Menu</div>
+
+    <canvas id="visualizer"></canvas>
+
+    <div class="mute-btn-container">
+      <button class="mute-btn" id="muteBtn" onclick="toggleMute()">
+        <span id="muteIcon">🔊</span> <span id="muteText">MUTE AUDIO</span>
+      </button>
+    </div>
+
+    <div class="status-text" id="statusText">CHAKRA SOUNDTRACK PLAYING</div>
+
+    <div>
+      <a class="back-link" href="https://github.com/Sushrut-Kale/Sushrut-Kale">← Return to GitHub Profile</a>
+    </div>
+  </div>
+
+  <audio id="audio" loop preload="auto">
+    <source src="audio/naruto-theme.mp3" type="audio/mpeg">
+    <source src="../assets/audio/naruto-theme.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const muteBtn = document.getElementById('muteBtn');
+    const muteIcon = document.getElementById('muteIcon');
+    const muteText = document.getElementById('muteText');
+    const statusText = document.getElementById('statusText');
+    const canvas = document.getElementById('visualizer');
+    const ctx = canvas.getContext('2d');
+
+    // Auto-start audio with volume
+    audio.volume = 0.85;
+
+    function startPlayback() {
+      const p = audio.play();
+      if (p !== undefined) {
+        p.then(() => {
+          updateUI(false);
+        }).catch(() => {
+          // Browser requires user interaction before unmuting
+          statusText.innerText = "CLICK ANYWHERE TO UNMUTE & PLAY";
+        });
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', startPlayback);
+    document.body.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play().then(() => updateUI(false)).catch(() => {});
+      }
+    }, { once: true });
+
+    function toggleMute() {
+      if (audio.paused) {
+        audio.play();
+        audio.muted = false;
+        updateUI(false);
+      } else {
+        audio.muted = !audio.muted;
+        updateUI(audio.muted);
+      }
+    }
+
+    function updateUI(isMuted) {
+      if (isMuted) {
+        muteBtn.classList.add('muted');
+        muteIcon.innerText = '🔇';
+        muteText.innerText = 'UNMUTE AUDIO';
+        statusText.innerText = 'AUDIO MUTED (STANDBY)';
+      } else {
+        muteBtn.classList.remove('muted');
+        muteIcon.innerText = '🔊';
+        muteText.innerText = 'MUTE AUDIO';
+        statusText.innerText = 'CHAKRA SOUNDTRACK PLAYING';
+      }
+    }
+
+    // Audio Visualizer Animation
+    function renderVisualizer() {
+      canvas.width = canvas.clientWidth * window.devicePixelRatio;
+      canvas.height = canvas.clientHeight * window.devicePixelRatio;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const bars = 48;
+      const barWidth = canvas.width / bars;
+      const isAudible = !audio.paused && !audio.muted;
+      const time = Date.now() * 0.007;
+
+      for (let i = 0; i < bars; i++) {
+        let mult = isAudible ? Math.abs(Math.sin(time + i * 0.25) * Math.cos(time * 0.6 + i * 0.18)) : 0.06;
+        const barH = Math.max(3, mult * (canvas.height * 0.85));
+        const x = i * barWidth;
+        const y = (canvas.height - barH) / 2;
+
+        const grad = ctx.createLinearGradient(0, y, 0, y + barH);
+        grad.addColorStop(0, '#00C2FF');
+        grad.addColorStop(0.5, '#7DF9FF');
+        grad.addColorStop(1, '#FF6A00');
+
+        ctx.fillStyle = grad;
+        ctx.fillRect(x + 1, y, barWidth - 2, barH);
+      }
+
+      requestAnimationFrame(renderVisualizer);
+    }
+    renderVisualizer();
+  </script>
+</body>
+</html>

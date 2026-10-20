@@ -3,13 +3,9 @@
 
 <!-- Shinobi Audio Player (Naruto: Rise of a Ninja Theme) -->
 <p align="center">
-  <img src="./assets/audio-player.svg" width="720" alt="Naruto: Rise of a Ninja Audio Player"/>
-</p>
-
-<p align="center">
-  <video src="https://github.com/Sushrut-Kale/Sushrut-Kale/raw/main/assets/audio/naruto-theme.mp4" controls width="720" height="72" poster="./assets/audio/player-poster.png">
-    <audio controls src="./assets/audio/naruto-theme.mp3"></audio>
-  </video>
+  <a href="https://sushrut-kale.github.io/Sushrut-Kale/" target="_blank" title="Click to Play Soundtrack with Mute Controls">
+    <img src="./assets/audio-player.svg" width="720" alt="Naruto: Rise of a Ninja Audio Player"/>
+  </a>
 </p>
 
 <br/>
