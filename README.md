@@ -1,15 +1,6 @@
 <a name="top"></a>
 <div align="center">
 
-<!-- Shinobi Audio Player (Naruto: Rise of a Ninja Theme) -->
-<p align="center">
-  <a href="https://sushrut-kale.github.io/Sushrut-Kale/" target="_blank" title="Click to Play Soundtrack with Mute Controls">
-    <img src="./assets/audio-player.svg" width="720" alt="Naruto: Rise of a Ninja Audio Player"/>
-  </a>
-</p>
-
-<br/>
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6A00,25:E8590C,50:D00000,75:00C2FF,100:0B0F1A&height=220&section=header&text=SUSHRUT%20KALE&fontSize=65&fontColor=F2E3C0&animation=twinkling&fontAlignY=38&desc=Shinobi%20of%20Code%20%E2%80%A2%20AI%2FML%20%E2%80%A2%203D%20Worlds&descAlignY=58&descSize=20&descColor=7DF9FF" width="100%" alt="Sushrut Kale Banner"/>
 
 <p align="center">
