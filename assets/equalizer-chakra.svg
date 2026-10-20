@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" width="160" height="36">
+  <defs>
+    <filter id="eqGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Bar 1 (Chakra Blue) -->
+  <g transform="translate(15, 32)">
+    <rect x="0" y="-30" width="12" height="30" rx="3" fill="#00C2FF" filter="url(#eqGlow)">
+      <animate attributeName="height" values="8;28;12;24;6;28" dur="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-8;-28;-12;-24;-6;-28" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Bar 2 (Naruto Orange) -->
+  <g transform="translate(35, 32)">
+    <rect x="0" y="-30" width="12" height="30" rx="3" fill="#FF6A00" filter="url(#eqGlow)">
+      <animate attributeName="height" values="24;10;30;8;26;10" dur="0.9s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-24;-10;-30;-8;-26;-10" dur="0.9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Bar 3 (Sharingan Red) -->
+  <g transform="translate(55, 32)">
+    <rect x="0" y="-30" width="12" height="30" rx="3" fill="#D00000" filter="url(#eqGlow)">
+      <animate attributeName="height" values="14;28;6;20;30;14" dur="1.1s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-14;-28;-6;-20;-30;-14" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Bar 4 (Rasengan Cyan) -->
+  <g transform="translate(75, 32)">
+    <rect x="0" y="-30" width="12" height="30" rx="3" fill="#7DF9FF" filter="url(#eqGlow)">
+      <animate attributeName="height" values="30;14;22;6;28;14" dur="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-30;-14;-22;-6;-28;-14" dur="1.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Bar 5 (Gold) -->
+  <g transform="translate(95, 32)">
+    <rect x="0" y="-30" width="12" height="30" rx="3" fill="#FFD700" filter="url(#eqGlow)">
+      <animate attributeName="height" values="10;26;16;30;12;26" dur="1.0s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="-10;-26;-16;-30;-12;-26" dur="1.0s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

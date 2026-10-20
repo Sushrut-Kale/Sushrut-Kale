@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 70" width="100%" height="70">
+  <defs>
+    <!-- Wind Trail Line Gradient -->
+    <linearGradient id="windGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3FA34D" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#3FA34D" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#FFD700" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FF6A00" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Green Leaf Path -->
+    <g id="konohaLeafGreen">
+      <path d="M 0,-12 C 8,-12 14,-4 12,6 C 10,12 4,14 0,16 C -4,14 -10,12 -12,6 C -14,-4 -8,-12 0,-12 Z" fill="#3FA34D" stroke="#2D7A39" stroke-width="0.8"/>
+      <!-- Midrib & spiral -->
+      <line x1="0" y1="-10" x2="0" y2="14" stroke="#79D888" stroke-width="0.8"/>
+      <path d="M -2,0 C -3,-3 3,-3 2,0 C 1,2 -1,2 -1,0" fill="none" stroke="#79D888" stroke-width="0.7"/>
+    </g>
+
+    <!-- Golden Leaf Path -->
+    <g id="konohaLeafGold">
+      <path d="M 0,-12 C 8,-12 14,-4 12,6 C 10,12 4,14 0,16 C -4,14 -10,12 -12,6 C -14,-4 -8,-12 0,-12 Z" fill="#FFD700" stroke="#D99B00" stroke-width="0.8"/>
+      <line x1="0" y1="-10" x2="0" y2="14" stroke="#FFF3A8" stroke-width="0.8"/>
+      <path d="M -2,0 C -3,-3 3,-3 2,0 C 1,2 -1,2 -1,0" fill="none" stroke="#FFF3A8" stroke-width="0.7"/>
+    </g>
+
+    <!-- Orange Leaf Path -->
+    <g id="konohaLeafOrange">
+      <path d="M 0,-12 C 8,-12 14,-4 12,6 C 10,12 4,14 0,16 C -4,14 -10,12 -12,6 C -14,-4 -8,-12 0,-12 Z" fill="#FF6A00" stroke="#B84800" stroke-width="0.8"/>
+      <line x1="0" y1="-10" x2="0" y2="14" stroke="#FFA366" stroke-width="0.8"/>
+      <path d="M -2,0 C -3,-3 3,-3 2,0 C 1,2 -1,2 -1,0" fill="none" stroke="#FFA366" stroke-width="0.7"/>
+    </g>
+  </defs>
+
+  <!-- Gentle Wind Streamline Curves across the screen -->
+  <path d="M 0,35 Q 220,15 450,38 T 900,28" fill="none" stroke="url(#windGrad)" stroke-width="1.5" stroke-dasharray="12,12" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;120" dur="4s" repeatCount="indefinite"/>
+  </path>
+
+  <path d="M 0,48 Q 280,62 550,42 T 900,52" fill="none" stroke="url(#windGrad)" stroke-width="1" stroke-dasharray="8,8" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;96" dur="5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Leaf 1: Drifting across left-center -->
+  <g transform="translate(140, 32)">
+    <animateTransform attributeName="transform" type="translate"
+      values="80,10; 180,50; 240,25; 80,10" dur="8s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="0; 45; -30; 0" dur="4s" repeatCount="indefinite"/>
+      <use href="#konohaLeafGreen" transform="scale(0.9)"/>
+    </g>
+  </g>
+
+  <!-- Leaf 2: Drifting across center -->
+  <g transform="translate(380, 25)">
+    <animateTransform attributeName="transform" type="translate"
+      values="320,40; 430,15; 490,48; 320,40" dur="7s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="20; -40; 35; 20" dur="5s" repeatCount="indefinite"/>
+      <use href="#konohaLeafGold" transform="scale(1.1)"/>
+    </g>
+  </g>
+
+  <!-- Leaf 3: Drifting across right -->
+  <g transform="translate(680, 30)">
+    <animateTransform attributeName="transform" type="translate"
+      values="620,15; 730,52; 790,20; 620,15" dur="9s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="-15; 35; -45; -15" dur="4.5s" repeatCount="indefinite"/>
+      <use href="#konohaLeafOrange" transform="scale(1.0)"/>
+    </g>
+  </g>
+
+  <!-- Leaf 4: Fast small leaf in the breeze -->
+  <g transform="translate(20, 20)">
+    <animateTransform attributeName="transform" type="translate"
+      values="-20,25; 920,45" dur="5s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="360" dur="2s" repeatCount="indefinite"/>
+      <use href="#konohaLeafGreen" transform="scale(0.7)"/>
+    </g>
+  </g>
+</svg>

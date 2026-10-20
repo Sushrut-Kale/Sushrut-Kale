@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 230" width="540" height="230">
+  <defs>
+    <linearGradient id="chartBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F1A"/>
+      <stop offset="100%" stop-color="#141D2E"/>
+    </linearGradient>
+    <linearGradient id="barOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A00"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    <linearGradient id="barCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00C2FF"/>
+      <stop offset="100%" stop-color="#7DF9FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="536" height="226" rx="10" fill="url(#chartBg)" stroke="#FF6A00" stroke-width="1.6"/>
+
+  <text x="24" y="26" fill="#FF6A00" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800">📜 JUTSU MASTERY MATRIX &amp; CHAKRA CONTROL</text>
+
+  <g transform="translate(24, 46)" font-family="system-ui, -apple-system, sans-serif" font-size="11">
+    <!-- Bar 1: Python -->
+    <text x="0" y="10" fill="#F2E3C0" font-weight="600">Python 90% • Rasengan (Core Jutsu)</text>
+    <rect x="230" y="0" width="260" height="12" rx="4" fill="#1C2E56"/>
+    <rect x="230" y="0" width="234" height="12" rx="4" fill="url(#barOrange)">
+      <animate attributeName="width" values="0;234" dur="1.2s" fill="freeze"/>
+    </rect>
+
+    <!-- Bar 2: Optimization -->
+    <text x="0" y="34" fill="#F2E3C0" font-weight="600">Optimization 80% • Shadow Clone (CP-SAT)</text>
+    <rect x="230" y="24" width="260" height="12" rx="4" fill="#1C2E56"/>
+    <rect x="230" y="24" width="208" height="12" rx="4" fill="url(#barCyan)">
+      <animate attributeName="width" values="0;208" dur="1.2s" fill="freeze"/>
+    </rect>
+
+    <!-- Bar 3: React / Next -->
+    <text x="0" y="58" fill="#F2E3C0" font-weight="600">React/Next 78% • Wind Style Rasenshuriken</text>
+    <rect x="230" y="48" width="260" height="12" rx="4" fill="#1C2E56"/>
+    <rect x="230" y="48" width="202" height="12" rx="4" fill="url(#barOrange)">
+      <animate attributeName="width" values="0;202" dur="1.2s" fill="freeze"/>
+    </rect>
+
+    <!-- Bar 4: JS / TS -->
+    <text x="0" y="82" fill="#F2E3C0" font-weight="600">JS/TS 75% • Chakra Flow Manipulation</text>
+    <rect x="230" y="72" width="260" height="12" rx="4" fill="#1C2E56"/>
+    <rect x="230" y="72" width="195" height="12" rx="4" fill="url(#barCyan)">
+      <animate attributeName="width" values="0;195" dur="1.2s" fill="freeze"/>
+    </rect>
+
+    <!-- Bar 5: 3D Engines -->
+    <text x="0" y="106" fill="#F2E3C0" font-weight="600">3D Engines 72% • Sharingan 3D Spatial Space</text>
+    <rect x="230" y="96" width="260" height="12" rx="4" fill="#1C2E56"/>
+    <rect x="230" y="96" width="187" height="12" rx="4" fill="url(#barOrange)">
+      <animate attributeName="width" values="0;187" dur="1.2s" fill="freeze"/>
+    </rect>
+
+    <!-- Bar 6: Game Systems -->
+    <text x="0" y="130" fill="#F2E3C0" font-weight="600">Game Systems 68% • Flying Raijin Navigation</text>
+    <rect x="230" y="120" width="260" height="12" rx="4" fill="#1C2E56"/>
+    <rect x="230" y="120" width="176" height="12" rx="4" fill="url(#barCyan)">
+      <animate attributeName="width" values="0;176" dur="1.2s" fill="freeze"/>
+    </rect>
+
+    <!-- Bar 7: AI/ML -->
+    <text x="0" y="154" fill="#F2E3C0" font-weight="600">AI/ML 65% • Sage Mode Perception (Gemini)</text>
+    <rect x="230" y="144" width="260" height="12" rx="4" fill="#1C2E56"/>
+    <rect x="230" y="144" width="169" height="12" rx="4" fill="url(#barOrange)">
+      <animate attributeName="width" values="0;169" dur="1.2s" fill="freeze"/>
+    </rect>
+  </g>
+</svg>

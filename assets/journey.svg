@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 150" width="760" height="150">
+  <defs>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3FA34D"/>
+      <stop offset="25%" stop-color="#00C2FF"/>
+      <stop offset="50%" stop-color="#FF6A00"/>
+      <stop offset="75%" stop-color="#D00000"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="756" height="146" rx="10" fill="#0B0F1A" stroke="#FF6A00" stroke-width="1.8"/>
+
+  <text x="24" y="26" fill="#FF6A00" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800">🗺️ CHRONICLES OF KONOHA — SHINOBI TIMELINE</text>
+
+  <!-- Main Timeline Track -->
+  <line x1="60" y1="75" x2="700" y2="75" stroke="#1A243B" stroke-width="4" stroke-linecap="round"/>
+  <line x1="60" y1="75" x2="700" y2="75" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Checkpoint 1: Academy (2024) -->
+  <g transform="translate(60, 75)">
+    <circle cx="0" cy="0" r="7" fill="#3FA34D" stroke="#0B0F1A" stroke-width="2"/>
+    <text x="0" y="-18" fill="#F2E3C0" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">ACADEMY</text>
+    <text x="0" y="22" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">2024</text>
+    <text x="0" y="34" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="8" text-anchor="middle">Power BI / Basics</text>
+  </g>
+
+  <!-- Checkpoint 2: Genin (2025) -->
+  <g transform="translate(220, 75)">
+    <circle cx="0" cy="0" r="7" fill="#00C2FF" stroke="#0B0F1A" stroke-width="2"/>
+    <text x="0" y="-18" fill="#F2E3C0" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">GENIN</text>
+    <text x="0" y="22" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">2025</text>
+    <text x="0" y="34" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="8" text-anchor="middle">ClubSync / EduCore</text>
+  </g>
+
+  <!-- Checkpoint 3: Chunin Exams (2025) -->
+  <g transform="translate(380, 75)">
+    <circle cx="0" cy="0" r="7" fill="#FF6A00" stroke="#0B0F1A" stroke-width="2"/>
+    <text x="0" y="-18" fill="#F2E3C0" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">CHUNIN EXAMS</text>
+    <text x="0" y="22" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">2025</text>
+    <text x="0" y="34" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="8" text-anchor="middle">CampusCompass</text>
+  </g>
+
+  <!-- Checkpoint 4: Special Jonin (2026) -->
+  <g transform="translate(540, 75)">
+    <circle cx="0" cy="0" r="7" fill="#D00000" stroke="#0B0F1A" stroke-width="2"/>
+    <text x="0" y="-18" fill="#F2E3C0" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">SPECIAL JONIN</text>
+    <text x="0" y="22" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">2026</text>
+    <text x="0" y="34" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="8" text-anchor="middle">Campus Twin 3D</text>
+  </g>
+
+  <!-- Checkpoint 5: Sage Mode (NOW) -->
+  <g transform="translate(700, 75)">
+    <circle cx="0" cy="0" r="8" fill="#FFD700" stroke="#0B0F1A" stroke-width="2">
+      <animate attributeName="r" values="7;10;7" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="-18" fill="#FFD700" font-family="system-ui, sans-serif" font-size="10" font-weight="800" text-anchor="middle">SAGE TRAINING</text>
+    <text x="0" y="22" fill="#7DF9FF" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">CURRENT</text>
+    <text x="0" y="34" fill="#8E9BB0" font-family="system-ui, sans-serif" font-size="8" text-anchor="middle">LLM Fine-Tuning</text>
+  </g>
+
+  <!-- Animated Ninja Runner Sprite traversing the line -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      values="45, 55; 700, 55"
+      dur="7s"
+      repeatCount="indefinite"/>
+    <!-- Yellow Hair & Headband -->
+    <rect x="-4" y="-8" width="8" height="4" fill="#FFD700"/>
+    <rect x="-5" y="-4" width="10" height="2" fill="#1C2E56"/>
+    <!-- Orange Body -->
+    <rect x="-4" y="-2" width="8" height="8" fill="#FF6A00"/>
+    <!-- Blue Shoes -->
+    <rect x="-3" y="6" width="3" height="3" fill="#1C2E56"/>
+    <rect x="2" y="6" width="3" height="3" fill="#1C2E56"/>
+  </g>
+</svg>
