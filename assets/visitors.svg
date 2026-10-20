@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="28" viewBox="0 0 180 28">
+  <defs>
+    <linearGradient id="visGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A00"/>
+      <stop offset="100%" stop-color="#D00000"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="28" rx="4" fill="#0B0F1A"/>
+  <rect x="110" width="70" height="28" rx="4" fill="url(#visGrad)"/>
+  <rect x="110" width="3" height="28" fill="#FF8C38"/>
+  <g fill="#F2E3C0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="800" letter-spacing="0.5">
+    <text x="12" y="18" fill="#F2E3C0">SHINOBI VISITORS</text>
+    <circle cx="122" cy="14" r="3.5" fill="#FFFFFF">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="132" y="18" fill="#FFFFFF">ACTIVE</text>
+  </g>
+</svg>

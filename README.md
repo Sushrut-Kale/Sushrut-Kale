@@ -3,18 +3,15 @@
 
 <!-- Shinobi Background Audio Engine & Mute Control -->
 <p align="center">
-  <a href="https://sushrut-kale.github.io/Sushrut-Kale/player.html" title="Play Classic Naruto Theme"><img src="https://img.shields.io/badge/%F0%9F%94%8A%20AUDIO%20THEME-NARUTO%20%7C%20THE%20RISING%20FIGHTING%20SPIRIT-FF6A00?style=for-the-badge&logo=soundcharts&logoColor=white&labelColor=0B0F1A" alt="Audio Theme"/></a>
-  <a href="https://sushrut-kale.github.io/Sushrut-Kale/player.html?muted=true" title="Mute Theme Audio"><img src="https://img.shields.io/badge/%F0%9F%94%87%20MUTE-D00000?style=for-the-badge&labelColor=0B0F1A" alt="Mute Audio"/></a>
-  <a href="https://sushrut-kale.github.io/Sushrut-Kale/player.html" title="Open Interactive Chakra Player"><img src="https://img.shields.io/badge/%E2%9A%A1%20CHAKRA%20PLAYER-00C2FF?style=for-the-badge&logo=youtube&logoColor=white&labelColor=0B0F1A" alt="Chakra Player"/></a>
+  <a href="https://www.youtube.com/watch?v=daPo6npLQcs" target="_blank" title="Click to Play Classic Naruto Theme: The Rising Fighting Spirit">
+    <img src="./assets/audio-player.svg" width="700" alt="Naruto Theme Shinobi Audio Engine"/>
+  </a>
 </p>
-
-<details>
-<summary align="center"><b>🎧 <i>Click to reveal Built-In Video Player &amp; Audio Visualizer</i></b></summary>
-<br/>
 <p align="center">
-  <video src="https://github.com/Sushrut-Kale/Sushrut-Kale/raw/main/assets/audio/naruto-theme.mp4" controls width="640"></video>
+  <a href="https://www.youtube.com/watch?v=daPo6npLQcs" target="_blank"><img src="https://img.shields.io/badge/%E2%96%B6%EF%B8%8F%20PLAY%20THEME-THE%20RISING%20FIGHTING%20SPIRIT-FF6A00?style=for-the-badge&logo=youtube&logoColor=white&labelColor=0B0F1A" alt="Play Theme"/></a>
+  <a href="https://www.youtube.com/watch?v=daPo6npLQcs" target="_blank" title="Control volume or mute on YouTube player"><img src="https://img.shields.io/badge/%F0%9F%94%87%20MUTE-D00000?style=for-the-badge&labelColor=0B0F1A" alt="Mute Audio"/></a>
+  <a href="./assets/audio/naruto-theme.mp3" download title="Download Local MP3 Soundtrack"><img src="https://img.shields.io/badge/%F0%9F%8E%B5%20LOCAL-MP3-00C2FF?style=for-the-badge&labelColor=0B0F1A" alt="Download MP3"/></a>
 </p>
-</details>
 
 <br/>
 
@@ -42,7 +39,7 @@
 
 <br/><br/>
 
-[![Shinobi Visitors](https://komarev.com/ghpvc/?username=Sushrut-Kale&style=for-the-badge&color=FF6A00&label=SHINOBI+VISITORS&labelColor=0B0F1A)](https://github.com/Sushrut-Kale)
+<a href="https://github.com/Sushrut-Kale"><img src="./assets/visitors.svg" height="28" alt="Shinobi Visitors"/></a>
 [![Shinobi Squad](https://img.shields.io/github/followers/Sushrut-Kale?style=for-the-badge&color=00C2FF&labelColor=0B0F1A&logo=github&label=SHINOBI+SQUAD)](https://github.com/Sushrut-Kale?tab=followers)
 <img src="https://img.shields.io/badge/RANK-GENIN%20%E2%9E%94%20CHUNIN-E8590C?style=for-the-badge&labelColor=0B0F1A" alt="Rank"/>
 <img src="https://img.shields.io/badge/VILLAGE-MIT%20AOE%2C%20PUNE-3FA34D?style=for-the-badge&labelColor=0B0F1A" alt="Village"/>
