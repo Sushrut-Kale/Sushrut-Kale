@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 195" width="420" height="195">
+  <defs>
+    <linearGradient id="statsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F1A"/>
+      <stop offset="100%" stop-color="#141B2D"/>
+    </linearGradient>
+    <linearGradient id="orangeLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A00"/>
+      <stop offset="50%" stop-color="#D00000"/>
+      <stop offset="100%" stop-color="#00C2FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="416" height="191" rx="8" fill="url(#statsBg)" stroke="url(#orangeLine)" stroke-width="1.8"/>
+
+  <!-- Title -->
+  <g transform="translate(20, 24)">
+    <text x="0" y="8" fill="#FF6A00" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800">⚡ SHINOBI STATS DOSSIER</text>
+    <text x="0" y="24" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600">Sushrut-Kale • Hidden Leaf Intelligence</text>
+  </g>
+
+  <!-- Metric Rows -->
+  <g transform="translate(20, 68)" font-family="system-ui, -apple-system, sans-serif" font-size="12">
+    <!-- Row 1: Total Repos -->
+    <text x="0" y="10" fill="#F2E3C0" font-weight="600">📜 Shinobi Repositories</text>
+    <text x="380" y="10" fill="#FFD700" font-weight="800" text-anchor="end">21</text>
+    <line x1="0" y1="18" x2="380" y2="18" stroke="#1A243B" stroke-width="1"/>
+
+    <!-- Row 2: Live Deployments -->
+    <text x="0" y="38" fill="#F2E3C0" font-weight="600">🌐 Live Mission Deployments</text>
+    <text x="380" y="38" fill="#00C2FF" font-weight="800" text-anchor="end">6</text>
+    <line x1="0" y1="46" x2="380" y2="46" stroke="#1A243B" stroke-width="1"/>
+
+    <!-- Row 3: Specialty Jutsu (Replaced CGPA so CGPA is only in ID Card!) -->
+    <text x="0" y="66" fill="#F2E3C0" font-weight="600">🌀 Primary Specialty Jutsu</text>
+    <text x="380" y="66" fill="#FF6A00" font-weight="800" text-anchor="end">AI/ML &amp; 3D Spatial Engines</text>
+    <line x1="0" y1="74" x2="380" y2="74" stroke="#1A243B" stroke-width="1"/>
+
+    <!-- Row 4: Ninja Rank -->
+    <text x="0" y="94" fill="#F2E3C0" font-weight="600">🥷 Shinobi Rank</text>
+    <text x="380" y="94" fill="#7DF9FF" font-weight="800" text-anchor="end">Genin ➔ Chunin (In Progress)</text>
+  </g>
+</svg>
