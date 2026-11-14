@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 135" width="380" height="135">
+  <defs>
+    <linearGradient id="bg_farm-friend" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F1A"/>
+      <stop offset="60%" stop-color="#121828"/>
+      <stop offset="100%" stop-color="#0B0F1A"/>
+    </linearGradient>
+    <linearGradient id="edge_farm-friend" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6A00"/>
+      <stop offset="50%" stop-color="#3FA34D"/>
+      <stop offset="100%" stop-color="#FF6A00"/>
+    </linearGradient>
+    <filter id="glow_farm-friend" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Scroll Frame -->
+  <rect x="2" y="2" width="376" height="131" rx="8" fill="url(#bg_farm-friend)" stroke="url(#edge_farm-friend)" stroke-width="1.6"/>
+
+  <!-- Left Accent Line -->
+  <rect x="2" y="2" width="5" height="131" rx="2" fill="#FF6A00"/>
+
+  <!-- Rank Badge -->
+  <g transform="translate(16, 14)">
+    <rect x="0" y="0" width="62" height="18" rx="4" fill="#FF6A00" opacity="0.2"/>
+    <rect x="0" y="0" width="62" height="18" rx="4" fill="none" stroke="#FF6A00" stroke-width="1"/>
+    <text x="31" y="13" fill="#FF6A00" font-family="system-ui, sans-serif" font-size="9" font-weight="900" text-anchor="middle">A-RANK</text>
+  </g>
+
+  <!-- Title -->
+  <text x="86" y="27" fill="#F2E3C0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">FarmFriend AI</text>
+
+  <!-- Live Pulse Dot -->
+  <g transform="translate(345, 18)">
+    <circle cx="0" cy="5" r="4" fill="#00C2FF" filter="url(#glow_farm-friend)"><animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Subtitle Category -->
+  <text x="16" y="48" fill="#3FA34D" font-family="system-ui, sans-serif" font-size="10" font-weight="700">Explainable AI &amp; Agronomic Engine</text>
+
+  <!-- Description -->
+  <text x="16" y="66" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500">Data-driven crop recommendation engine with</text>
+  <text x="16" y="80" fill="#8E9BB0" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500">SHAP explainability, crop calendars, and</text>
+
+  <!-- Bottom Row: Stack and Deployment Status -->
+  <g transform="translate(16, 108)">
+    <circle cx="5" cy="5" r="4" fill="#3572A5"/>
+    <text x="15" y="9" fill="#F2E3C0" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Python • Scikit-Learn</text>
+
+    <rect x="250" y="-3" width="96" height="18" rx="3" fill="#00C2FF" opacity="0.2"/>
+    <text x="298" y="9" fill="#00C2FF" font-family="system-ui, sans-serif" font-size="9" font-weight="800" text-anchor="middle">⚡ LIVE DEMO</text>
+  </g>
+</svg>
